@@ -1,3 +1,6 @@
+# this allows us to use "sudo" with aliases
+alias sudo='sudo '
+
 # git aliases
 alias gs='git status'
 alias gd='git diff'
