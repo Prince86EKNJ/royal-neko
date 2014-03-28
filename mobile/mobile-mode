@@ -1,0 +1,3 @@
+#!/bin/bash
+bind -f ~/.inputrc-mobile
+alias vim='vim -S ~/.vimrc-mobile'

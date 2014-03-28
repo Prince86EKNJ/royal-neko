@@ -8,3 +8,6 @@ alias gb='git branch'
 alias gbb='git branch -avv'
 alias gc='git checkout'
 alias gp='git pull'
+
+# mobile
+alias mvim='vim -s ~/.vimrc-mobile'
