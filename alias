@@ -10,4 +10,4 @@ alias gc='git checkout'
 alias gp='git pull'
 
 # mobile
-alias mvim='vim -s ~/.vimrc-mobile'
+alias mvim='vim -S ~/.vimrc-mobile'
