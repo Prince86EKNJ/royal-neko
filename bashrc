@@ -10,8 +10,9 @@ if [ -x /usr/bin/archey ]; then
 fi
 
 # source the nvm file if it exists
-# TODO: Add check for nvm file
+if [ -x ~/.nvm/nvm.sh ]; then
 . ~/.nvm/nvm.sh
+fi
 
 # Load mobile-mode on port SSH Port 2222
 SSH_INCOMING_PORT=$(echo $SSH_CONNECTION | cut -d' ' -f4)

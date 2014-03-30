@@ -1,7 +1,11 @@
 # this allows us to use "sudo" with aliases
 alias sudo='sudo '
 
-# git aliases
+# ls
+alias ls='ls --color=auto'
+alias ll='ls -al'
+
+# git
 alias gs='git status'
 alias gd='git diff'
 alias gb='git branch'
@@ -10,4 +14,4 @@ alias gc='git checkout'
 alias gp='git pull'
 
 # mobile
-alias mvim='vim -S ~/.vimrc-mobile'
+alias mvim='vim -S ~/royal-neko/mobile/vimrc-mobile'
