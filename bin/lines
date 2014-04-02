@@ -1,0 +1,9 @@
+#!/bin/bash
+start_line="$1"
+end_line="$2"
+
+if [ -z "$end_line" ]; then
+	end_line="$start_line"
+fi
+
+head -"$end_line" - | tail -"$(( $end_line - $start_line + 1 ))"

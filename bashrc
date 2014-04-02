@@ -1,5 +1,6 @@
 # Include user "bin" dir
 PATH=$PATH:~/bin
+PATH=$PATH:~/royal-neko/bin
 
 # Include default aliases
 . ~/royal-neko/alias
