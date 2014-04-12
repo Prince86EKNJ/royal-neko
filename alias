@@ -1,6 +1,9 @@
 # this allows us to use "sudo" with aliases
 alias sudo='sudo '
 
+# general
+alias pd='pushd'
+
 # ls
 alias l='ls -CF'
 alias la='ls -A'
