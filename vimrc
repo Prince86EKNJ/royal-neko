@@ -1,4 +1,5 @@
 set number
-set listchars=eol:$,tab:>-
+set listchars=eol:$,tab:>-,precedes:<,extends:>
+set nowrap
 
 syntax on
