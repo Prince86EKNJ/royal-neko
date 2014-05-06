@@ -22,5 +22,8 @@ alias gl='git log'
 # mobile
 alias mvim='vim -S ~/royal-neko/mobile/vimrc-mobile'
 
+# ssh
+alias ssh-fox-empire='ssh prince@fox.everempire.com'
+
 # youtube-dl
 alias dl-playlist="youtube-dl -t 'http://m.youtube.com/playlist?list=PLPtCbDcDJfWQ5WbU5twB78NLSpBuXk3B9'"
