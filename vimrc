@@ -18,6 +18,8 @@ noremap <Leader>yy 0y$
 """"""""""""
 " Commands "
 """"""""""""
+command! ClearSearch let @/=''
+
 command! EditVimrc vnew ~/royal-neko/vimrc
 command! ReloadVimrc source ~/royal-neko/vimrc
 command! SaveAndReloadVimrc write | ReloadVimrc
