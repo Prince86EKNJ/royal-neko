@@ -20,6 +20,7 @@ alias gp='git pull'
 alias gl='git log'
 
 # mobile
+alias mobile-mode='source ~/royal-neko/mobile/mobile-mode'
 alias mvim='vim -S ~/royal-neko/mobile/vimrc-mobile'
 
 # ssh
