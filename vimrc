@@ -6,6 +6,7 @@ set listchars=eol:$,tab:>-,precedes:<,extends:>
 set nowrap
 set wildmode=longest,list
 set hlsearch
+set incsearch
 
 syntax on
 
