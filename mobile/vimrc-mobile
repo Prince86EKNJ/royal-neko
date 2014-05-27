@@ -3,11 +3,15 @@ set number
 " nvo modes
 noremap qq `
 noremap qQ ~
+noremap q' ~
 
 noremap qo [
-noremap qO {
 noremap qp ]
+
+noremap qO {
+noremap q9 {
 noremap qP }
+noremap q0 }
 
 noremap q<Up> \|
 noremap q<Down> \
@@ -19,11 +23,15 @@ noremap q1 <Esc>
 " ic modes
 noremap! qq `
 noremap! qQ ~
+noremap! q' ~
 
 noremap! qo [
-noremap! qO {
 noremap! qp ]
+
+noremap! qO {
+noremap! q9 {
 noremap! qP }
+noremap! q0 }
 
 noremap! q<Up> \|
 noremap! q<Down> \
