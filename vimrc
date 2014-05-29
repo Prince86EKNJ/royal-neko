@@ -24,3 +24,11 @@ command! ClearSearch let @/=''
 command! EditVimrc vnew ~/royal-neko/vimrc
 command! ReloadVimrc source ~/royal-neko/vimrc
 command! SaveAndReloadVimrc write | ReloadVimrc
+
+"""""""""""""""""""""""""""""""""""""""
+" Add .vimrc (if one exists) from CWD "
+"""""""""""""""""""""""""""""""""""""""
+
+if filereadable(".vimrc")
+	source .vimrc
+endif
