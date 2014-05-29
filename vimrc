@@ -11,12 +11,6 @@ set incsearch
 syntax on
 
 """"""""""""
-" Mappings "
-""""""""""""
-noremap <Leader>yw m`bye``
-noremap <Leader>yy 0y$
-
-""""""""""""
 " Commands "
 """"""""""""
 command! ClearSearch let @/=''
@@ -24,6 +18,15 @@ command! ClearSearch let @/=''
 command! EditVimrc vnew ~/royal-neko/vimrc
 command! ReloadVimrc source ~/royal-neko/vimrc
 command! SaveAndReloadVimrc write | ReloadVimrc
+
+""""""""""""
+" Mappings "
+""""""""""""
+noremap <Leader>e :EditVimrc<CR>
+noremap <Leader>r :SaveAndReloadVimrc<CR>
+noremap <Leader>l :vnew .vimrc<CR>
+noremap <Leader>yw m`bye``
+noremap <Leader>yy 0y$
 
 """""""""""""""""""""""""""""""""""""""
 " Add .vimrc (if one exists) from CWD "
