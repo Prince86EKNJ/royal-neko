@@ -7,6 +7,7 @@ set nowrap
 set wildmode=longest,list
 set hlsearch
 set incsearch
+set autoindent
 
 syntax on
 

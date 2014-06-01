@@ -1,41 +1,41 @@
 set number
 
 " nvo modes
-noremap qq `
-noremap qQ ~
-noremap q' ~
+map qq `
+map qQ ~
+map q' ~
 
-noremap qo [
-noremap qp ]
+map qo [
+map qp ]
 
-noremap qO {
-noremap q9 {
-noremap qP }
-noremap q0 }
+map qO {
+map q9 {
+map qP }
+map q0 }
 
-noremap q<Up> \|
-noremap q<Down> \
-noremap q<Right> >
-noremap q<Left> <
+map q<Up> \|
+map q<Down> \
+map q<Right> >
+map q<Left> <
 
-noremap q1 <Esc>
+map q1 <Esc>
 
 " ic modes
-noremap! qq `
-noremap! qQ ~
-noremap! q' ~
+map! qq `
+map! qQ ~
+map! q' ~
 
-noremap! qo [
-noremap! qp ]
+map! qo [
+map! qp ]
 
-noremap! qO {
-noremap! q9 {
-noremap! qP }
-noremap! q0 }
+map! qO {
+map! q9 {
+map! qP }
+map! q0 }
 
-noremap! q<Up> \|
-noremap! q<Down> \
-noremap! q<Right> >
-noremap! q<Left> <
+map! q<Up> \|
+map! q<Down> \
+map! q<Right> >
+map! q<Left> <
 
-noremap! q1 <Esc>
+map! q1 <Esc>
