@@ -15,6 +15,7 @@ syntax on
 " Commands "
 """"""""""""
 command! ClearSearch let @/=''
+command! WhitespaceCleanup %s/\s\+$//gc
 
 command! EditVimrc vnew ~/royal-neko/vimrc
 command! ReloadVimrc source ~/royal-neko/vimrc
@@ -26,8 +27,9 @@ command! SaveAndReloadVimrc write | ReloadVimrc
 noremap <Leader>e :EditVimrc<CR>
 noremap <Leader>r :SaveAndReloadVimrc<CR>
 noremap <Leader>l :vnew .vimrc<CR>
+noremap <Leader>w :WhitespaceCleanup<CR>
 noremap <Leader>yw m`bye``
-noremap <Leader>yy 0y$
+noremap <Leader>yy m`0y$``
 
 """""""""""""""""""""""""""""""""""""""
 " Add .vimrc (if one exists) from CWD "
