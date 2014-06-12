@@ -31,6 +31,12 @@ noremap <Leader>w :WhitespaceCleanup<CR>
 noremap <Leader>yw m`bye``
 noremap <Leader>yy m`0y$``
 
+"""""""""""""""""""""""
+" JavaScript mappings "
+"""""""""""""""""""""""
+inoremap <Leader>f function()<CR>{<CR>}<ESC>kk$F(a
+inoremap <Leader>F function() {}<ESC>F(a
+
 """""""""""""""""""""""""""""""""""""""
 " Add .vimrc (if one exists) from CWD "
 """""""""""""""""""""""""""""""""""""""
