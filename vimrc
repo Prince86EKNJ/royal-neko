@@ -15,6 +15,8 @@ syntax on
 " Commands "
 """"""""""""
 command! ClearSearch let @/=''
+
+command! WhitespaceHighlight normal /\s\+$<CR>
 command! WhitespaceCleanup %s/\s\+$//gc
 
 command! EditVimrc vnew ~/royal-neko/vimrc
@@ -28,6 +30,7 @@ noremap <Leader>e :EditVimrc<CR>
 noremap <Leader>r :SaveAndReloadVimrc<CR>
 noremap <Leader>l :vnew .vimrc<CR>
 noremap <Leader>w :WhitespaceCleanup<CR>
+noremap <Leader>h :WhitespaceHighlight<CR>
 noremap <Leader>yw m`bye``
 noremap <Leader>yy m`0y$``
 
