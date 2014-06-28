@@ -1,0 +1,16 @@
+# Include user "bin" dir
+PATH=$PATH:~/bin
+PATH=$PATH:~/royal-neko/bin
+
+# Include default aliases
+source ~/royal-neko/alias
+
+# source the nvm file if it exists
+if [ -x ~/.nvm/nvm.sh ]; then
+	source ~/.nvm/nvm.sh
+fi
+
+# Run archey if it exists
+if [ -x /usr/bin/archey ]; then
+	/usr/bin/archey
+fi

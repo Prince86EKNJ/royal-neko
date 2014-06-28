@@ -1,0 +1,1 @@
+source ~/royal-neko/commonrc
