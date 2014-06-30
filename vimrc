@@ -42,8 +42,10 @@ inoremap <Leader>F function() {}<ESC>F(a
 
 """""""""""""""""""""""""""""""""""""""
 " Add .vimrc (if one exists) from CWD "
+" but only if it's not this one       "
 """""""""""""""""""""""""""""""""""""""
 
-if filereadable(".vimrc")
+let s:path = expand('<sfile>')
+if filereadable(".vimrc") && s:path != $MYVIMRC
 	source .vimrc
 endif
