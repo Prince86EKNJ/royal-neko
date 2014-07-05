@@ -5,6 +5,7 @@ setopt noautomenu
 setopt autonamedirs
 setopt braceccl
 setopt cdablevars
+setopt noclobber
 setopt correct
 setopt extendedhistory
 setopt pushdignoredups
