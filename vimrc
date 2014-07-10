@@ -34,6 +34,11 @@ noremap <Leader>h :WhitespaceHighlight<CR>
 noremap <Leader>yw m`bye``
 noremap <Leader>yy m`0y$``
 
+"""""""""""""""""
+" Abbreviations "
+"""""""""""""""""
+abbreviate conlog console.log(");2hi
+
 """""""""""""""""""""""
 " JavaScript mappings "
 """""""""""""""""""""""
