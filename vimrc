@@ -37,7 +37,10 @@ noremap <Leader>yy m`0y$``
 """""""""""""""""
 " Abbreviations "
 """""""""""""""""
-abbreviate clog console.log("");2hi
+abbreviate clog console.log("");<Esc>2hi
+abbreviate des describe("", function()<CR>{<CR>});<Esc>2k^f"a
+abbreviate it it("", function()<CR>{<CR>});<Esc>2k^f"a
+abbreviate ex expect().toEqual();<Esc>^f(a
 
 """""""""""""""""""""""
 " JavaScript mappings "
