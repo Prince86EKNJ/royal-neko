@@ -37,7 +37,7 @@ noremap <Leader>yy m`0y$``
 """""""""""""""""
 " Abbreviations "
 """""""""""""""""
-abbreviate conlog console.log(");2hi
+abbreviate clog console.log("");2hi
 
 """""""""""""""""""""""
 " JavaScript mappings "
@@ -49,7 +49,6 @@ inoremap <Leader>F function() {}<ESC>F(a
 " Add .vimrc (if one exists) from CWD "
 " but only if it's not this one       "
 """""""""""""""""""""""""""""""""""""""
-
 let s:path = expand('<sfile>')
 if filereadable(".vimrc") && s:path != $MYVIMRC
 	source .vimrc
