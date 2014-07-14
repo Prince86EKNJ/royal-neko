@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ -n "$1" ]; then
+	git status -s | sed 's/.\{3\}//' | tail -n +${1} | head -1
+else
+	git status -s | nl
+fi
