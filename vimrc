@@ -37,16 +37,12 @@ noremap <Leader>yy m`0y$``
 """""""""""""""""
 " Abbreviations "
 """""""""""""""""
-abbreviate clog console.log("");<Esc>2hi
-abbreviate des describe("", function()<CR>{<CR>});<Esc>2k^f"a
-abbreviate it it("", function()<CR>{<CR>});<Esc>2k^f"a
-abbreviate ex expect().toEqual();<Esc>^f(a
-
-"""""""""""""""""""""""
-" JavaScript mappings "
-"""""""""""""""""""""""
-inoremap <Leader>f function()<CR>{<CR>}<ESC>kk$F(a
-inoremap <Leader>F function() {}<ESC>F(a
+abbreviate func! function()<CR>{<CR>}<ESC>kk$F(a
+abbreviate Func! function() {}<ESC>F(a
+abbreviate clog! console.log("");<Esc>2hi
+abbreviate des! describe("", function()<CR>{<CR>});<Esc>2k^f"a
+abbreviate it! it("", function()<CR>{<CR>});<Esc>2k^f"a
+abbreviate ex! expect().toEqual();<Esc>^f(a
 
 """""""""""""""""""""""""""""""""""""""
 " Add .vimrc (if one exists) from CWD "
