@@ -1,7 +1,7 @@
 source ~/royal-neko/commonrc
 
 setopt autocd
-setopt noautomenu
+setopt automenu
 setopt autonamedirs
 setopt braceccl
 setopt cdablevars
