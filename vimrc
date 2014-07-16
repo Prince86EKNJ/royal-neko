@@ -39,7 +39,7 @@ noremap <Leader>yy m`0y$``
 """""""""""""""""
 abbreviate func! function()<CR>{<CR>}<ESC>kk$F(a
 abbreviate Func! function() {}<ESC>F(a
-abbreviate clog! console.log("");<Esc>2hi
+abbreviate clog! console.log();<Esc>hi
 abbreviate desc! describe("", function()<CR>{<CR>});<Esc>2k^f"a
 abbreviate it! it("", function()<CR>{<CR>});<Esc>2k^f"a
 abbreviate ex! expect().toEqual();<Esc>^f(a
