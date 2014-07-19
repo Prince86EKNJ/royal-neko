@@ -1,13 +1,14 @@
 """"""""""""
 " Settings "
 """"""""""""
-set number
-set listchars=eol:$,tab:>-,precedes:<,extends:>
-set nowrap
-set wildmode=longest,list
+set autoindent
 set hlsearch
 set incsearch
-set autoindent
+set listchars=eol:$,tab:>-,precedes:<,extends:>
+set nowrap
+set number
+set smartcase
+set wildmode=longest,list
 
 syntax on
 
