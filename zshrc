@@ -13,3 +13,5 @@ setopt rcquotes
 
 alias help='info zsh "Shell Builtin Commands"'
 alias mobile-mode='source ~/royal-neko/mobile/zsh-mobile'
+
+alias -g SILENT='>/dev/null 2>&1'
