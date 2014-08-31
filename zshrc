@@ -6,7 +6,7 @@ setopt autonamedirs
 setopt braceccl
 setopt cdablevars
 setopt noclobber
-setopt correct
+setopt nocorrect
 setopt extendedhistory
 setopt pushdignoredups
 setopt rcquotes
