@@ -36,25 +36,19 @@ noremap <Leader>h :WhitespaceHighlight<CR>
 noremap <Leader>yw m`bye``
 noremap <Leader>yy m`0y$``
 
-"""""""""""""""""
-" Abbreviations "
-"""""""""""""""""
-abbreviate func! function()<CR>{<CR>}<ESC>kk$F(a
-abbreviate Func! function() {}<ESC>F(a
-abbreviate clog! console.log();<Esc>hi
-abbreviate desc! describe("", function()<CR>{<CR>});<Esc>2k^f"a
-abbreviate it! it("", function()<CR>{<CR>});<Esc>2k^f"a
-abbreviate ex! expect().toEqual();<Esc>^f(a
-
 """"""""""""
 " Snippets "
 """"""""""""
 let snippet = {}
-let snippet['log'] = 'console.log();F('
-let snippet['func'] = 'function(){ }klx'
+let snippet['log'] = 'console.log(!!!);'
+let snippet['func'] = 'function(){!!!}'
+let snippet['Func'] = 'function() { !!! }'
+let snippet['des'] = 'describe("!!!", function(){});'
+let snippet['it'] = 'it("!!!", function(){});'
+let snippet['ex'] = 'expect(!!!).to.equal();'
 
 inoremap \r <Esc>bywivar <C-O>A = require("<C-R>"");
-inoremap \q <Esc>bcw<C-R>=snippet[@"]<CR>a
+inoremap \q <Esc>bcw<C-R>=snippet[@"]<CR>?!!!<CR>c3l
 
 """""""""""""""""""""""""""""""""""""""
 " Add .vimrc (if one exists) from CWD "
