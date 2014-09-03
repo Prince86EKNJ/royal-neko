@@ -8,6 +8,7 @@ set listchars=eol:$,tab:>-,precedes:<,extends:>
 set nowrap
 set number
 set smartcase
+set smartindent
 set wildmode=longest,list
 
 syntax on
@@ -44,6 +45,16 @@ abbreviate clog! console.log();<Esc>hi
 abbreviate desc! describe("", function()<CR>{<CR>});<Esc>2k^f"a
 abbreviate it! it("", function()<CR>{<CR>});<Esc>2k^f"a
 abbreviate ex! expect().toEqual();<Esc>^f(a
+
+""""""""""""
+" Snippets "
+""""""""""""
+let snippet = {}
+let snippet['log'] = 'console.log();F('
+let snippet['func'] = 'function(){ }klx'
+
+inoremap \r <Esc>bywivar <C-O>A = require("<C-R>"");
+inoremap \q <Esc>bdw:exec 'normal a'.snippet[@"]<C-M>a
 
 """""""""""""""""""""""""""""""""""""""
 " Add .vimrc (if one exists) from CWD "
