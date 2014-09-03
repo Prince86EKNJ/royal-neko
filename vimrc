@@ -54,7 +54,7 @@ let snippet['log'] = 'console.log();F('
 let snippet['func'] = 'function(){ }klx'
 
 inoremap \r <Esc>bywivar <C-O>A = require("<C-R>"");
-inoremap \q <Esc>bdw:exec 'normal a'.snippet[@"]<C-M>a
+inoremap \q <Esc>bcw<C-R>=snippet[@"]<CR>a
 
 """""""""""""""""""""""""""""""""""""""
 " Add .vimrc (if one exists) from CWD "
