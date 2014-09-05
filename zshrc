@@ -8,6 +8,7 @@ setopt cdablevars
 setopt noclobber
 setopt nocorrect
 setopt extendedhistory
+setopt nohistverify
 setopt pushdignoredups
 setopt rcquotes
 
