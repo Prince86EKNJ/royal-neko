@@ -25,6 +25,17 @@ alias gl='git log'
 alias mobile-mode='source ~/royal-neko/mobile/mobile-mode'
 alias mvim='vim -S ~/royal-neko/mobile/vimrc-mobile'
 
+# packages
+alias ag='apt-get'
+alias agg='apt-get install'
+alias ac='apt-cache'
+alias acc='apt-cache search'
+alias dp='dpkg'
+
+# screen
+alias s='screen -S $STY'
+alias sls='screen -ls'
+
 # ssh
 alias ssh-fox-empire='ssh prince@fox.everempire.com'
 
