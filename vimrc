@@ -47,8 +47,8 @@ let snippet['des'] = 'describe("!!!", function(){});'
 let snippet['it'] = 'it("!!!", function(){});'
 let snippet['ex'] = 'expect(!!!).to.equal();'
 
-inoremap \r <Esc>bywivar <C-O>A = require("<C-R>"");
-inoremap \q <Esc>bcw<C-R>=snippet[@"]<CR>?!!!<CR>c3l
+inoremap \r <Esc>ByWivar <C-O>A = require("<C-R>"");
+inoremap \q <Esc>BcW<C-R>=snippet[@"]<CR>?!!!<CR>c3l
 
 """""""""""""""""""""""""""""""""""""""
 " Add .vimrc (if one exists) from CWD "
