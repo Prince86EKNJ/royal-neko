@@ -30,6 +30,8 @@ alias ag='apt-get'
 alias agg='apt-get install'
 alias ac='apt-cache'
 alias acc='apt-cache search'
+alias af='apt-file'
+alias aff='apt-file search'
 alias dp='dpkg'
 
 # screen
