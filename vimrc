@@ -1,60 +1,61 @@
-""""""""""""
-" Settings "
-""""""""""""
-set autoindent
-set hlsearch
-set incsearch
-set listchars=eol:$,tab:>-,precedes:<,extends:>
-set nowrap
-set number
-set smartcase
-set smartindent
-set wildmode=longest,list
+" Guarantees that this file is only loaded once
+if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 
-syntax on
+	let g:royalHimeVimrcLoaded = 1
 
-""""""""""""
-" Commands "
-""""""""""""
-command! ClearSearch let @/=''
+	""""""""""""
+	" Settings "
+	""""""""""""
+	set autoindent
+	set hlsearch
+	set incsearch
+	set listchars=eol:$,tab:>-,precedes:<,extends:>
+	set nowrap
+	set number
+	set smartcase
+	set smartindent
+	set wildmode=longest,list
 
-command! WhitespaceHighlight normal /\s\+$<CR>
-command! WhitespaceCleanup %s/\s\+$//gc
+	syntax on
 
-command! EditVimrc vnew ~/royal-neko/vimrc
-command! ReloadVimrc source ~/royal-neko/vimrc
-command! SaveAndReloadVimrc write | ReloadVimrc
+	""""""""""""
+	" Commands "
+	""""""""""""
+	command! ClearSearch let @/=''
 
-""""""""""""
-" Mappings "
-""""""""""""
-noremap <Leader>e :EditVimrc<CR>
-noremap <Leader>r :SaveAndReloadVimrc<CR>
-noremap <Leader>l :vnew .vimrc<CR>
-noremap <Leader>w :WhitespaceCleanup<CR>
-noremap <Leader>h :WhitespaceHighlight<CR>
-noremap <Leader>yw m`bye``
-noremap <Leader>yy m`0y$``
+	command! WhitespaceHighlight normal /\s\+$<CR>
+	command! WhitespaceCleanup %s/\s\+$//gc
 
-""""""""""""
-" Snippets "
-""""""""""""
-let snippet = {}
-let snippet['log'] = 'console.log(!!!);'
-let snippet['func'] = 'function(){!!!}'
-let snippet['Func'] = 'function() { !!! }'
-let snippet['des'] = 'describe("!!!", function(){});'
-let snippet['it'] = 'it("!!!", function(){});'
-let snippet['ex'] = 'expect(!!!).to.equal();'
+	command! EditVimrc vnew ~/royal-neko/vimrc
+	command! ReloadVimrc source ~/royal-neko/vimrc
+	command! SaveAndReloadVimrc write | ReloadVimrc
 
-inoremap \r <Esc>ByWivar <C-O>A = require("<C-R>"");
-inoremap \q <Esc>BcW<C-R>=snippet[@"]<CR>?!!!<CR>c3l
+	""""""""""""
+	" Mappings "
+	""""""""""""
+	noremap <Leader>e :EditVimrc<CR>
+	noremap <Leader>r :SaveAndReloadVimrc<CR>
+	noremap <Leader>l :vnew .vimrc<CR>
+	noremap <Leader>w :WhitespaceCleanup<CR>
+	noremap <Leader>h :WhitespaceHighlight<CR>
+	noremap <Leader>yw m`bye``
+	noremap <Leader>yy m`0y$``
 
-"""""""""""""""""""""""""""""""""""""""
-" Add .vimrc (if one exists) from CWD "
-" but only if it's not this one       "
-"""""""""""""""""""""""""""""""""""""""
-let s:path = expand('<sfile>')
-if filereadable(".vimrc") && s:path != $MYVIMRC
-	source .vimrc
+	""""""""""""
+	" Snippets "
+	""""""""""""
+	let snippet = {}
+	let snippet['log'] = 'console.log(!!!);'
+	let snippet['func'] = 'function(){!!!}'
+	let snippet['Func'] = 'function() { !!! }'
+	let snippet['des'] = 'describe("!!!", function(){});'
+	let snippet['it'] = 'it("!!!", function(){});'
+	let snippet['ex'] = 'expect(!!!).to.equal();'
+
+	inoremap \r <Esc>ByWivar <C-O>A = require("<C-R>"");
+	inoremap \q <Esc>BcW<C-R>=snippet[@"]<CR>?!!!<CR>c3l
+
+	if filereadable(".vimrc")
+		source .vimrc
+	endif
 endif
