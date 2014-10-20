@@ -1,4 +1,7 @@
 source ~/royal-neko/commonrc
+if [ -e ~/royal-neko/local/zshrc ]; then
+	source ~/royal-neko/local/zshrc
+fi
 
 setopt autocd
 setopt automenu
