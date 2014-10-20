@@ -55,6 +55,11 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 	inoremap \r <Esc>ByWivar <C-O>A = require("<C-R>"");
 	inoremap \q <Esc>BcW<C-R>=snippet[@"]<CR>?!!!<CR>c3l
 
+	let localVimrc = $HOME."/royal-neko/local/vimrc"
+	if filereadable(localVimrc)
+		exec "source ".localVimrc
+	endif
+
 	if filereadable(".vimrc")
 		source .vimrc
 	endif
