@@ -10,6 +10,10 @@ alias la='ls -A'
 alias ll='ls -al'
 alias ls='ls --color=auto'
 
+# bookmarks
+alias bm='bookmark'
+alias lbm='load-bookmarks'
+
 # git
 alias gs='git status'
 alias gd='git diff'

@@ -2,8 +2,14 @@
 PATH=$PATH:~/bin
 PATH=$PATH:~/royal-neko/bin
 
-# Include default aliases
+# Include functions
+source ~/royal-neko/functions
+
+# Include aliases
 source ~/royal-neko/alias
+
+# Load Bookmarks
+load-bookmarks
 
 # source the nvm file if it exists
 if [ -x ~/.nvm/nvm.sh ]; then

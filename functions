@@ -1,0 +1,14 @@
+bookmark () {
+	export $1="$(pwd)"
+	if [ -e ~/royal-neko/local/bookmarks ]; then
+		echo "$1=\"$(pwd)\"" >> ~/royal-neko/local/bookmarks
+	else
+		echo "$1=\"$(pwd)\"" >> ~/royal-neko/local/bookmarks
+	fi
+}
+
+load-bookmarks () {
+	if [ -e ~/royal-neko/local/bookmarks ]; then
+		source ~/royal-neko/local/bookmarks
+	fi
+}
