@@ -3,7 +3,7 @@ bookmark () {
 	if [ -e ~/royal-neko/local/bookmarks ]; then
 		echo "$1=\"$(pwd)\"" >> ~/royal-neko/local/bookmarks
 	else
-		echo "$1=\"$(pwd)\"" >> ~/royal-neko/local/bookmarks
+		echo "$1=\"$(pwd)\"" > ~/royal-neko/local/bookmarks
 	fi
 }
 
