@@ -12,3 +12,10 @@ load-bookmarks () {
 		source ~/royal-neko/local/bookmarks
 	fi
 }
+
+gitignore () {
+	if [ ! -f .gitignore ]; then
+		echo ".gitignore" > .gitignore
+	fi
+	echo "$1" >> .gitignore
+}
