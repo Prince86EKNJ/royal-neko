@@ -3,6 +3,7 @@ alias sudo='sudo '
 
 # general
 alias pd='pushd'
+alias watch='watch --color'
 
 # ls
 alias l='ls -CF'
