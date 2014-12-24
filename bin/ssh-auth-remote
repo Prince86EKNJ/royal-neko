@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ ! -e ~/.ssh/id_rsa.pub ]; then
+	ssh-keygen -t rsa
+fi
+
+# TODO: Don't append public key if it already exists
+cat ~/.ssh/id_rsa.pub | ssh "$1" 'mkdir -p ~/.ssh; cat >> ~/.ssh/authorized_keys'
