@@ -2,6 +2,8 @@
 PATH=$PATH:~/bin
 PATH=$PATH:~/royal-neko/bin
 
+export EDITOR=vim
+export PAGER=less
 # Include functions
 source ~/royal-neko/functions
 
