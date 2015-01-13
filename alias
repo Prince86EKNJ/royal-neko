@@ -2,6 +2,7 @@
 alias sudo='sudo '
 
 # general
+alias grep='grep --color=auto'
 alias pd='pushd'
 alias watch='watch --color'
 
