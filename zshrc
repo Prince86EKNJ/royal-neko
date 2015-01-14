@@ -19,3 +19,7 @@ alias help='info zsh "Shell Builtin Commands"'
 alias mobile-mode='source ~/royal-neko/mobile/zsh-mobile'
 
 alias -g SILENT='>/dev/null 2>&1'
+
+# keymap
+bindkey "^A" beginning-of-line
+bindkey "^E" end-of-line
