@@ -47,6 +47,7 @@ alias sls='screen -ls'
 # ssh
 alias ssh-fox-empire='ssh prince@fox.everempire.com'
 alias ssh-home-media='ssh prince@home.everempire.com -p2222'
+alias sar='ssh-auth-remote'
 
 # youtube-dl
 alias dl-playlist="youtube-dl -t 'http://m.youtube.com/playlist?list=PLPtCbDcDJfWQ5WbU5twB78NLSpBuXk3B9'"
