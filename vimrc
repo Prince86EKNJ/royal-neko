@@ -30,7 +30,7 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 	command! ReloadVimrc source ~/royal-neko/vimrc
 	command! SaveAndReloadVimrc write | ReloadVimrc
 
-	command! SimpleSave set nowritebackup
+	command! SimpleSave set nowritebackup|set noswapfile
 
 	""""""""""""
 	" Mappings "
