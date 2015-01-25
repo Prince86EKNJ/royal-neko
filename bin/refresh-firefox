@@ -1,5 +1,0 @@
-OLD_WID=$(xdotool getactivewindow)
-WID=$(xdotool search --name "Mozilla Firefox")
-xdotool windowactivate $WID
-xdotool key F5
-xdotool windowactivate $OLD_WID

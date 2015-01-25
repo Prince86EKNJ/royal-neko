@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ "$#" -eq 0 ]; then
+	browser="Mozilla Firefox"
+else
+	browser="$1"
+fi
+
+OLD_WID=$(xdotool getactivewindow)
+WID=$(xdotool search --name "$browser")
+xdotool windowactivate $WID
+xdotool key F5
+xdotool windowactivate $OLD_WID
