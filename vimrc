@@ -10,6 +10,7 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 	set hlsearch
 	set incsearch
 	set listchars=eol:$,tab:>-,precedes:<,extends:>
+	set modeline
 	set nowrap
 	set number
 	set smartcase
@@ -17,6 +18,12 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 	set wildmode=longest,list
 
 	syntax on
+
+	"""""""""""""""""
+	" Abbreviations "
+	"""""""""""""""""
+	abbr ftJS /* vim: set filetype=javascript : */
+	abbr ftHtml <!-- vim: set filetype=html : -->
 
 	""""""""""""
 	" Commands "
@@ -36,7 +43,7 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 	" Mappings "
 	""""""""""""
 	noremap <Leader>e :EditVimrc<CR>
-	noremap <Leader>r :SaveAndReloadVimrc<CR>
+	noremap <Leader>r :let g:royalHimeVimrcLoaded=0<CR>:SaveAndReloadVimrc<CR>
 	noremap <Leader>l :vnew .vimrc<CR>
 	noremap <Leader>w :WhitespaceCleanup<CR>
 	noremap <Leader>h :WhitespaceHighlight<CR>
