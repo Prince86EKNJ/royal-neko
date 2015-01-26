@@ -43,12 +43,14 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 	" Mappings "
 	""""""""""""
 	noremap <Leader>e :EditVimrc<CR>
-	noremap <Leader>r :let g:royalHimeVimrcLoaded=0<CR>:SaveAndReloadVimrc<CR>
-	noremap <Leader>l :vnew .vimrc<CR>
-	noremap <Leader>w :WhitespaceCleanup<CR>
 	noremap <Leader>h :WhitespaceHighlight<CR>
+	noremap <Leader>l :vnew .vimrc<CR>
+	noremap <Leader>n :set invrelativenumber<CR>
+	noremap <Leader>r :let g:royalHimeVimrcLoaded=0<CR>:SaveAndReloadVimrc<CR>
+	noremap <Leader>w :WhitespaceCleanup<CR>
 	noremap <Leader>yw m`bye``
 	noremap <Leader>yy m`0y$``
+	noremap <Leader>YY m`^yg_``
 
 	""""""""""""
 	" Snippets "
