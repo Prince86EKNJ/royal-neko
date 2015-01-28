@@ -63,8 +63,8 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 	let snippet['it'] = 'it("!!!", function(){!!!});'
 	let snippet['ex'] = 'expect(!!!).to.equal(!!!);'
 
-	inoremap \r <Esc>ByWivar <C-O>A = require("<C-R>"");
-	inoremap \q <Esc>vBc<C-O>m`<C-R>=snippet[@"]<CR><Esc>``/!!!<CR>:ClearSearch<CR>c3l
+	inoremap \r <Esc>vbcvar <C-R>" = require("<C-R>"");
+	inoremap \q <Esc>vbc<C-O>m`<C-R>=snippet[@"]<CR><Esc>``/!!!<CR>:ClearSearch<CR>c3l
 	inoremap \<Tab> <Esc>/!!!<CR><Esc>:ClearSearch<CR>c3l
 
 	let localVimrc = $HOME."/royal-neko/local/vimrc"
