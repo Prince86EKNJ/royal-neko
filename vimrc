@@ -13,6 +13,7 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 	set modeline
 	set nowrap
 	set number
+	set showcmd
 	set smartcase
 	set smartindent
 	set wildmode=longest,list
