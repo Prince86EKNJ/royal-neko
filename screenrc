@@ -6,5 +6,7 @@ bind -k kd focus down
 bind -k kl focus left
 bind -k kr focus right
 
-bind S eval 'split' 'focus down'
-bind | eval 'split -v' 'focus right'
+bind S eval 'split' 'focus down' 'screen'
+bind s eval 'split' 'focus down'
+bind | eval 'split -v' 'focus right' 'screen'
+bind \ eval 'split -v' 'focus right'
