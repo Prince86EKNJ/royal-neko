@@ -7,6 +7,7 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 	" Settings "
 	""""""""""""
 	set autoindent
+	set backspace=indent,eol,start
 	set hlsearch
 	set incsearch
 	set listchars=eol:$,tab:>-,precedes:<,extends:>
