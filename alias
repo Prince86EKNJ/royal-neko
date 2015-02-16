@@ -1,6 +1,8 @@
 # this allows us to use "sudo" with aliases
 alias sudo='sudo '
 
+alias s='sudo '
+
 # general
 alias grep='grep --color=auto'
 alias pd='pushd'
@@ -32,7 +34,7 @@ alias gsh='git show'
 alias mobile-mode='source ~/royal-neko/mobile/mobile-mode'
 alias mvim='vim -S ~/royal-neko/mobile/vimrc-mobile'
 
-# packages
+# dpkg and apt-*
 alias ag='apt-get'
 alias agg='apt-get install'
 alias ac='apt-cache'
@@ -41,9 +43,13 @@ alias af='apt-file'
 alias aff='apt-file search'
 alias dp='dpkg'
 
+# pacman
+alias pm='pacman'
+
 # screen
-alias s='screen -S $STY'
-alias sls='screen -ls'
+alias sc='screen'
+alias scs='screen -S $STY'
+alias scls='screen -ls'
 
 # ssh
 alias ssh-fox-empire='ssh prince@fox.everempire.com'
