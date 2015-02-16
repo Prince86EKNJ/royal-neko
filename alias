@@ -45,6 +45,10 @@ alias dp='dpkg'
 
 # pacman
 alias pm='pacman'
+alias pmq='pacman -Q'
+alias pms='pacman -S'
+
+alias pf='pkgfile'
 
 # screen
 alias sc='screen'
