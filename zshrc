@@ -23,3 +23,7 @@ alias -g SILENT='>/dev/null 2>&1'
 # keymap
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
+
+prompt=$'
+%F{cyan}%n%f at %F{green}%m%f in %F{yellow}%~%f
+$ '
