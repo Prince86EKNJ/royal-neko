@@ -10,6 +10,7 @@ git-completion
 git-svn
 nano
 ncurses
+perl-Term-ReadKey
 ping
 screen
 unzip
