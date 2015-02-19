@@ -7,11 +7,13 @@ PATH=$PATH:node_modules/.bin
 
 export EDITOR=vim
 export PAGER=less
+
 # Include functions
 source ~/royal-neko/functions
 
 # Include aliases
 source ~/royal-neko/alias
+source ~/royal-neko/local/alias
 
 # Load Bookmarks
 load-bookmarks
