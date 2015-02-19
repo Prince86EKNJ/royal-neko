@@ -5,6 +5,7 @@ alias s='sudo '
 
 # general
 alias grep='grep --color=auto'
+alias nl='nl -ba'
 alias pd='pushd'
 alias watch='watch --color'
 
