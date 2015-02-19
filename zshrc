@@ -21,7 +21,11 @@ alias mobile-mode='source ~/royal-neko/mobile/zsh-mobile'
 alias -g SILENT='>/dev/null 2>&1'
 
 # keymap
-bindkey -e
+bindkey -e # emacs
+bindkey "^[[A" up-line-or-search
+bindkey "^[[B" down-line-or-search
+bindkey "^{[1;5C" forward-word
+bindkey "^{[1;5D" backward-word
 
 prompt=$'
 %F{cyan}%n%f at %F{green}%m%f in %F{yellow}%~%f
