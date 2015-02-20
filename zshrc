@@ -3,6 +3,8 @@ if [ -e ~/royal-neko/local/zshrc ]; then
 	source ~/royal-neko/local/zshrc
 fi
 
+# Options
+setopt append_history
 setopt autocd
 setopt automenu
 setopt autonamedirs
@@ -11,9 +13,17 @@ setopt cdablevars
 setopt noclobber
 setopt nocorrect
 setopt extendedhistory
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_no_functions
 setopt nohistverify
 setopt pushdignoredups
 setopt rcquotes
+
+# Environment variables / settings
+export HISTFILE="$HOME/.history"
+export HISTSIZE=999
+export SAVEHIST="$HISTSIZE"
 
 alias help='info zsh "Shell Builtin Commands"'
 alias mobile-mode='source ~/royal-neko/mobile/zsh-mobile'
