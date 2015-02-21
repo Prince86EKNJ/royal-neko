@@ -1,3 +1,4 @@
+ascii
 curl
 git
 lynx
@@ -5,3 +6,12 @@ pkgfile
 screen
 vim
 zsh
+
+
+### optional ###
+
+# xorg-server
+# xorg-xinit
+# xorg-xclock
+# xterm
+# xfce4
