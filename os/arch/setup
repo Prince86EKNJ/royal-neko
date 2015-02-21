@@ -1,0 +1,8 @@
+# get package list from royal-neko
+archPackages=$(https://raw.githubusercontent.com/Prince86EKNJ/royal-neko/master/os/arch/packages)
+pacman --noconfirm --needed -S ${archPackages}
+
+# setup fox user
+useradd -m -s /usr/bin/zsh fox
+echo "fox ALL=(ALL) ALL" >> /etc/sudoers
+# update /etc/sudoers directly here (carefully)
