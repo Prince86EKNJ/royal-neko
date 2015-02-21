@@ -13,7 +13,11 @@ source ~/royal-neko/functions
 
 # Include aliases
 source ~/royal-neko/alias
-source ~/royal-neko/local/alias
+
+localAlias='~/royal-neko/local/alias'
+if [ -f "$localAlias" ]; then
+	source "$localAlias"
+fi
 
 # Load Bookmarks
 load-bookmarks
