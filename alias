@@ -55,9 +55,12 @@ alias pms='pacman -S'
 alias pf='pkgfile'
 
 # screen
-alias sc='screen'
-alias scs='screen -S $STY'
-alias scls='screen -ls'
+#alias sc='screen'
+#alias scs='screen -S $STY'
+#alias scls='screen -ls'
+
+# systemd
+sc='systemctl'
 
 # ssh
 alias ssh-fox-empire='ssh prince@fox.everempire.com'
