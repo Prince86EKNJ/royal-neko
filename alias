@@ -60,7 +60,7 @@ alias pf='pkgfile'
 #alias scls='screen -ls'
 
 # systemd
-sc='systemctl'
+alias sc='systemctl'
 
 # ssh
 alias ssh-fox-empire='ssh prince@fox.everempire.com'
