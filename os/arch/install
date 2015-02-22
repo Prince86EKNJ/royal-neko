@@ -1,4 +1,5 @@
 #!/bin/bash
+lsblk
 read -p "Enter parition device: " part
 read -p "Enter hostname: " hostname
 
@@ -7,21 +8,14 @@ mount "$part" /mnt
 # Install base
 pacstrap /mnt base base-devel
 genfstab -p /mnt >> /mnt/etc/fstab
+echo "$hostname" >/mnt/etc/hostname
 
-arch-chroot /mnt
-echo "$hostname" > /etc/hostname
-ln -s /usr/share/zoneinfo/America/Chicago /etc/localtime
+# Copy setup file and execute
+curl https://raw.github.com/Prince86EKNJ/royal-neko/master/os/arch/setup > /mnt/root/setup
+chmod +x /mnt/root/setup
+arch-chroot /mnt /bin/bash /root/setup
 
-# Generate locale
-sed -i '/^#en_US\.UTF-8 UTF-8/ s/#//' /etc/locale.gen
-locale-gen
-echo LANG=en_US.UTF-8 > /etc/locale.conf
-
-mkinitcpio -p linux
-
-passwd
-
-# Install wifi-menu
-pacman --noconfirm -S netctl dialog wpa_supplicant
+# Clean up setup file
+rm /mnt/root/setup
 
 echo "Done!"

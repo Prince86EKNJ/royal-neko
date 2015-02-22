@@ -1,13 +1,27 @@
-# Get curl so we can pull from the internet
-pacman --noconfirm -S curl
+ln -s /usr/share/zoneinfo/America/Chicago /etc/localtime
 
-# get package list from royal-neko
-archPackages=$(curl https://raw.githubusercontent.com/Prince86EKNJ/royal-neko/master/os/arch/packages)
-pacman --noconfirm --needed -S ${archPackages}
+# Generate locale
+sed -i '/^#en_US\.UTF-8 UTF-8/ s/#//' /etc/locale.gen
+locale-gen
+echo LANG=en_US.UTF-8 > /etc/locale.conf
+
+mkinitcpio -p linux
 
 # setup fox user
 useradd -m -s /usr/bin/zsh fox
+passwd fox
 
 # update /etc/sudoers directly here (carefully)
 echo "fox ALL=(ALL) ALL" >> /etc/sudoers
-echo "fox ALL=(ALL) NOPASSWD: reboot" >> /etc/sudoers
+echo "fox ALL=(ALL) NOPASSWD: /sbin/reboot" >> /etc/sudoers
+
+# Get git so we can clone royal-neko
+pacman --noconfirm -S git
+
+pushd ~fox
+sudo -u fox git clone https://Prince86EKNJ@github.com/Prince86EKNJ/royal-neko
+popd
+
+# get package list from royal-neko
+archPackages=$(cat ~fox/royal-neko/master/os/arch/packages | grep -v "^#")
+pacman --noconfirm --needed -S ${archPackages}

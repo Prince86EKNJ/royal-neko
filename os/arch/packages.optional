@@ -1,0 +1,8 @@
+### optional ###
+xorg-server
+xorg-xinit
+xorg-xclock
+xterm
+xfce4
+
+firefox

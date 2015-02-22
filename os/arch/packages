@@ -7,13 +7,7 @@ screen
 vim
 zsh
 
-
-### optional ###
-
-# xorg-server
-# xorg-xinit
-# xorg-xclock
-# xterm
-# xfce4
-
-# firefox
+### wifi-menu packages ###
+netctl
+dialog
+wpa_supplicant
