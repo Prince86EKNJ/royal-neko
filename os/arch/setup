@@ -9,7 +9,6 @@ mkinitcpio -p linux
 
 # setup fox user
 useradd -m -s /usr/bin/zsh fox
-passwd fox
 
 # update /etc/sudoers directly here (carefully)
 echo "fox ALL=(ALL) ALL" >> /etc/sudoers
@@ -20,8 +19,12 @@ pacman --noconfirm -S git
 
 pushd ~fox
 sudo -u fox git clone https://Prince86EKNJ@github.com/Prince86EKNJ/royal-neko
+sudo -u fox royal-neko/install/link-neko
 popd
 
 # get package list from royal-neko
 archPackages=$(cat ~fox/royal-neko/os/arch/packages | grep -v "^#")
 pacman --noconfirm --needed -S ${archPackages}
+
+# Finished it off with a password
+passwd fox
