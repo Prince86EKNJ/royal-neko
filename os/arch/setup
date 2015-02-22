@@ -23,5 +23,5 @@ sudo -u fox git clone https://Prince86EKNJ@github.com/Prince86EKNJ/royal-neko
 popd
 
 # get package list from royal-neko
-archPackages=$(cat ~fox/royal-neko/master/os/arch/packages | grep -v "^#")
+archPackages=$(cat ~fox/royal-neko/os/arch/packages | grep -v "^#")
 pacman --noconfirm --needed -S ${archPackages}

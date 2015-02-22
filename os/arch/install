@@ -1,9 +1,11 @@
 #!/bin/bash
 lsblk
 read -p "Enter parition device: " part
+read -p "Enter swap partition: " swapPart
 read -p "Enter hostname: " hostname
 
 mount "$part" /mnt
+swapon "$swapPart"
 
 # Install base
 pacstrap /mnt base base-devel
@@ -11,7 +13,7 @@ genfstab -p /mnt >> /mnt/etc/fstab
 echo "$hostname" >/mnt/etc/hostname
 
 # Copy setup file and execute
-curl https://raw.github.com/Prince86EKNJ/royal-neko/master/os/arch/setup > /mnt/root/setup
+wget https://raw.github.com/Prince86EKNJ/royal-neko/master/os/arch/setup -O /mnt/root/setup
 chmod +x /mnt/root/setup
 arch-chroot /mnt /bin/bash /root/setup
 
