@@ -1,0 +1,27 @@
+#!/bin/bash
+read -p "Enter parition device: " part
+read -p "Enter hostname: " hostname
+
+mount "$part" /mnt
+
+# Install base
+pacstrap /mnt base base-devel
+genfstab -p /mnt >> /mnt/etc/fstab
+
+arch-chroot /mnt
+echo "$hostname" > /etc/hostname
+ln -s /usr/share/zoneinfo/America/Chicago /etc/localtime
+
+# Generate locale
+sed -i '/^#en_US\.UTF-8 UTF-8/ s/#//' /etc/locale.gen
+locale-gen
+echo LANG=en_US.UTF-8 > /etc/locale.conf
+
+mkinitcpio -p linux
+
+passwd
+
+# Install wifi-menu
+pacman --noconfirm -S netctl dialog wpa_supplicant
+
+echo "Done!"

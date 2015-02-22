@@ -1,8 +1,13 @@
+# Get curl so we can pull from the internet
+pacman --noconfirm -S curl
+
 # get package list from royal-neko
-archPackages=$(https://raw.githubusercontent.com/Prince86EKNJ/royal-neko/master/os/arch/packages)
+archPackages=$(curl https://raw.githubusercontent.com/Prince86EKNJ/royal-neko/master/os/arch/packages)
 pacman --noconfirm --needed -S ${archPackages}
 
 # setup fox user
 useradd -m -s /usr/bin/zsh fox
-echo "fox ALL=(ALL) ALL" >> /etc/sudoers
+
 # update /etc/sudoers directly here (carefully)
+echo "fox ALL=(ALL) ALL" >> /etc/sudoers
+echo "fox ALL=(ALL) NOPASSWD: reboot" >> /etc/sudoers
