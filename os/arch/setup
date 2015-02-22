@@ -28,3 +28,6 @@ pacman --noconfirm --needed -S ${archPackages}
 
 # Finished it off with a password
 passwd fox
+
+# Disable root login (lock password)
+passwd root -l
