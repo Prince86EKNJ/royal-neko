@@ -2,6 +2,7 @@ ascii
 curl
 git
 lynx
+openssh
 pkgfile
 screen
 vim
