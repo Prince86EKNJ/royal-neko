@@ -1,3 +1,4 @@
 ln -s ~/royal-neko/gitconfig .gitconfig
 ln -s ~/royal-neko/screenrc .screenrc
 ln -s ~/royal-neko/vimrc .vimrc
+ln -s ~/royal-neko/zshrc .zshrc
