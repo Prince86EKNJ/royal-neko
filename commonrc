@@ -5,8 +5,11 @@ PATH=$PATH:~/royal-neko/bin
 # Include local node modules
 PATH=$PATH:node_modules/.bin
 
-export EDITOR=vim
-export PAGER=less
+export EDITOR='vim'
+export PAGER='less'
+
+# default less settings
+export LESS='-S'
 
 # Include functions
 source ~/royal-neko/functions
