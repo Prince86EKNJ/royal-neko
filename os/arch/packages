@@ -3,6 +3,7 @@ curl
 git
 lynx
 openssh
+mlocate
 pkgfile
 screen
 vim
