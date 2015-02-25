@@ -9,7 +9,7 @@ export EDITOR='vim'
 export PAGER='less'
 
 # default less settings
-export LESS='-FSR'
+export LESS='-FSRX'
 
 # Include functions
 source ~/royal-neko/functions
