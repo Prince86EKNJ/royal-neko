@@ -28,7 +28,12 @@ export SAVEHIST="$HISTSIZE"
 alias help='info zsh "Shell Builtin Commands"'
 alias mobile-mode='source ~/royal-neko/mobile/zsh-mobile'
 
-alias -g SILENT='>/dev/null 2>&1'
+# global aliases
+alias -g 'G+'='| grep' # Grep
+alias -g 'L+'='| lines' # Lines
+alias -g 'Q+'='>/dev/null 2>&1' # Quiet - no stdout or stderr
+alias -g 'SO+'='SOUT+' # only print StdOUT
+alias -g 'X+'='| xargs ' # Xargs
 
 # keymap
 bindkey -e # emacs
