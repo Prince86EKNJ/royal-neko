@@ -9,6 +9,7 @@ dos2unix
 git
 git-completion
 git-svn
+hexedit
 nano
 ncurses
 perl-Term-ReadKey
