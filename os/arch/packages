@@ -9,6 +9,7 @@ pkgfile
 screen
 tmux
 vim
+wget
 zsh
 
 ### wifi-menu packages ###
