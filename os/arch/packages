@@ -2,10 +2,11 @@ ascii
 curl
 git
 lynx
-openssh
 mlocate
+openssh
 pkgfile
 screen
+tmux
 vim
 zsh
 
