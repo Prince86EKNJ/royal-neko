@@ -15,6 +15,7 @@ ncurses
 perl-Term-ReadKey
 ping
 screen
+tmux
 unzip
 vim
 wget
