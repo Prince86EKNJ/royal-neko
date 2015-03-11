@@ -1,10 +1,6 @@
 bookmark () {
 	export $1="$(pwd)"
-	if [ -e ~/royal-neko/local/bookmarks ]; then
-		echo "$1=\"$(pwd)\"" >> ~/royal-neko/local/bookmarks
-	else
-		echo "$1=\"$(pwd)\"" > ~/royal-neko/local/bookmarks
-	fi
+	echo "export $1=\"$(pwd)\"" >>! ~/royal-neko/local/bookmarks
 }
 
 load-bookmarks () {
