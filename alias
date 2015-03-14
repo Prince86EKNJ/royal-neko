@@ -50,12 +50,14 @@ alias af='apt-file'
 alias aff='apt-file search'
 alias dp='dpkg'
 
-# pacman
+# pacman and yaourt
 alias pm='pacman'
 alias pmq='pacman -Q'
 alias pms='pacman -S'
 
 alias pf='pkgfile'
+
+alias yao='yaourt'
 
 # screen
 #alias sc='screen'
