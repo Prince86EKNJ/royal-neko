@@ -10,6 +10,10 @@ alias pu='pushd'
 alias po='popd'
 alias watch='watch --color'
 
+# extra
+alias neko-pull='git -C ~/royal-neko/ pull'
+alias np='neko-pull'
+
 # ls
 alias l='ls -CF'
 alias la='ls -A'
