@@ -59,10 +59,10 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 	""""""""""""
 	let snippet = {}
 	let snippet['log'] = 'console.log(!!!);'
-	let snippet['func'] = 'function(!!!){!!!}'
+	let snippet['func'] = 'function(!!!) {!!!}'
 	let snippet['Func'] = 'function(!!!) { !!! }'
-	let snippet['des'] = 'describe("!!!", function(){!!!});'
-	let snippet['it'] = 'it("!!!", function(){!!!});'
+	let snippet['des'] = 'describe("!!!", function() {!!!});'
+	let snippet['it'] = 'it("!!!", function() {!!!});'
 	let snippet['ex'] = 'expect(!!!).to.equal(!!!);'
 
 	inoremap \r <Esc>vbcvar <C-R>" = require("<C-R>"");
