@@ -16,6 +16,7 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 	set modeline
 	set nowrap
 	set number
+	set rnu
 	set showcmd
 	set smartcase
 	set smartindent
@@ -51,6 +52,7 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 	noremap <Leader>l :vnew .vimrc<CR>
 	noremap <Leader>n :set invrelativenumber<CR>
 	noremap <Leader>r :let g:royalHimeVimrcLoaded=0<CR>:SaveAndReloadVimrc<CR>
+	noremap <Leader>s :!sort<CR>
 	noremap <Leader>w :WhitespaceCleanup<CR>
 	noremap <Leader>yw m`bye``
 	noremap <Leader>yy m`0y$``
