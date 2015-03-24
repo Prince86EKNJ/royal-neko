@@ -47,6 +47,7 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 	""""""""""""
 	" Mappings "
 	""""""""""""
+	noremap <Leader>c :ClearSearch<CR>
 	noremap <Leader>e :EditVimrc<CR>
 	noremap <Leader>h :WhitespaceHighlight<CR>
 	noremap <Leader>l :vnew .vimrc<CR>
