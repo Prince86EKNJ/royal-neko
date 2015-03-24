@@ -10,6 +10,7 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 	set backspace=indent,eol,start
 	set hlsearch
 	set incsearch
+	set ignorecase
 	set listchars=eol:$,tab:>-,precedes:<,extends:>
 	set modeline
 	set nowrap
