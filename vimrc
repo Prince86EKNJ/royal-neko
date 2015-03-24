@@ -8,9 +8,10 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 	""""""""""""
 	set autoindent
 	set backspace=indent,eol,start
+	set cursorline
 	set hlsearch
-	set incsearch
 	set ignorecase
+	set incsearch
 	set listchars=eol:$,tab:>-,precedes:<,extends:>
 	set modeline
 	set nowrap
