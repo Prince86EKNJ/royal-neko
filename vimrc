@@ -1,6 +1,41 @@
 " Guarantees that this file is only loaded once
 if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 
+	""""""""""
+	" Vundle "
+	""""""""""
+	" 1. Install Vundle with this command:
+	" git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	" 2. Run this command in vim
+	" :PluginInstall
+
+	set nocompatible              " be iMproved, required
+	filetype off                  " required
+
+	" set the runtime path to include Vundle and initialize
+	set rtp+=~/.vim/bundle/Vundle.vim
+	call vundle#begin()
+
+		" let Vundle manage Vundle, required
+		Plugin 'gmarik/Vundle.vim'
+
+		Plugin 'kien/ctrlp.vim'
+			let g:ctrlp_by_filename=1
+			let g:ctrlp_match_window='order:ttb'
+			let g:ctrlp_custom_ignore = {
+			\ 'dir': 'node_modules',
+			\ 'file': '.*\.class$'
+			\ }
+		Plugin 'tpope/vim-commentary'
+		Plugin 'Lokaltog/vim-easymotion'
+
+	" All of your Plugins must be added before the following line
+	call vundle#end()            " required
+	filetype plugin indent on    " required
+
+	"""""""""""""
+	" Load Once "
+	"""""""""""""
 	let g:royalHimeVimrcLoaded = 1
 
 	""""""""""""
@@ -74,6 +109,9 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 	inoremap \q <Esc>vbc<C-O>m`<C-R>=snippet[@"]<CR><Esc>``/!!!<CR>:ClearSearch<CR>c3l
 	inoremap \<Tab> <Esc>/!!!<CR><Esc>:ClearSearch<CR>c3l
 
+	""""""""""""""""
+	" Local Config "
+	""""""""""""""""
 	let localVimrc = $HOME."/royal-neko/local/vimrc"
 	if filereadable(localVimrc)
 		exec "source ".localVimrc
