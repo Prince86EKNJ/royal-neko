@@ -57,6 +57,7 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 	set showcmd
 	set smartcase
 	set smartindent
+	set laststatus=2 " Always show status line
 	set wildmode=longest,list
 
 	syntax on
