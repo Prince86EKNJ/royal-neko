@@ -26,6 +26,7 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 			\ 'dir': 'node_modules',
 			\ 'file': '.*\.class$'
 			\ }
+		Plugin 'tpope/vim-abolish'
 		Plugin 'tpope/vim-commentary'
 		Plugin 'Lokaltog/vim-easymotion'
 
