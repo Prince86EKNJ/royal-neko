@@ -62,6 +62,7 @@ alias pms='pacman -S'
 alias pf='pkgfile'
 
 alias yao='yaourt'
+alias yaourt='yaourt --pager --color'
 
 # screen
 #alias sc='screen'
