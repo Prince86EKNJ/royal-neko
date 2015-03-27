@@ -29,6 +29,7 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 		Plugin 'tpope/vim-abolish'
 		Plugin 'tpope/vim-commentary'
 		Plugin 'Lokaltog/vim-easymotion'
+		Plugin 'bling/vim-airline'
 
 	" All of your Plugins must be added before the following line
 	call vundle#end()            " required
