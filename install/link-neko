@@ -2,5 +2,6 @@ ln -s ~/royal-neko/gitconfig .gitconfig
 ln -s ~/royal-neko/screenrc .screenrc
 ln -s ~/royal-neko/tmux.conf .tmux.conf
 ln -s ~/royal-neko/vimrc .vimrc
+ln -s ~/royal-neko/xbindkeysrc .xbindkeysrc
 ln -s ~/royal-neko/Xdefaults .Xdefaults
 ln -s ~/royal-neko/zshrc .zshrc
