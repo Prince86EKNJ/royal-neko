@@ -1,8 +1,8 @@
 ### optional ###
 xorg-server
 xorg-xinit
+xorg-xrandr
 xterm
-xrandr
 
 xfce4
 awesome
