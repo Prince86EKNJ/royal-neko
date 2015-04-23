@@ -1,8 +1,10 @@
 ### optional ###
 xorg-server
 xorg-xinit
-xorg-xclock
 xterm
+xrandr
+
 xfce4
+awesome
 
 firefox
