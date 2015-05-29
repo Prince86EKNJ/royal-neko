@@ -1,6 +1,6 @@
 apt-file
 curl
 git
-screen
+tmux
 vim
 zsh
