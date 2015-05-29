@@ -107,10 +107,11 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 	let snippet['des'] = 'describe("!!!", function() {!!!});'
 	let snippet['it'] = 'it("!!!", function() {!!!});'
 	let snippet['ex'] = 'expect(!!!).to.equal(!!!);'
+	let snippet['each'] = '_.each(!!!, function(!!!) {!!!});'
 
-	inoremap \r <Esc>vbcvar <C-R>" = require("<C-R>"");
-	inoremap \q <Esc>vbc<C-O>m`<C-R>=snippet[@"]<CR><Esc>``/!!!<CR>:ClearSearch<CR>c3l
-	inoremap \<Tab> <Esc>/!!!<CR><Esc>:ClearSearch<CR>c3l
+	inoremap <Leader>r <Esc>vbcvar <C-R>" = require("<C-R>"");
+	inoremap <Leader>q <Esc>vbc<C-O>m`<C-R>=snippet[@"]<CR><Esc>``/!!!<CR>:ClearSearch<CR>c3l
+	inoremap <Leader><Tab> <Esc>/!!!<CR><Esc>:ClearSearch<CR>c3l
 
 	""""""""""""""""
 	" Local Config "

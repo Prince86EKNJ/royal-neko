@@ -5,6 +5,7 @@ alias s='sudo '
 
 # general
 alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
 alias nl='nl -ba'
 alias pu='pushd'
 alias po='popd'
