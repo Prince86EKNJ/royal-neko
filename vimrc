@@ -23,7 +23,7 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 			let g:ctrlp_by_filename=1
 			let g:ctrlp_match_window='order:ttb'
 			let g:ctrlp_custom_ignore = {
-			\ 'dir': 'node_modules',
+			\ 'dir': 'node_modules/.*/node_modules$',
 			\ 'file': '.*\.class$'
 			\ }
 		Plugin 'tpope/vim-abolish'
