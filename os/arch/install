@@ -9,6 +9,8 @@
 # After install
 # * Install grub
 # * Setup networking
+#	ex. ip link
+#	    sudo systemctl enable dhcpcd@interface
 
 lsblk
 read -p "Enter parition device: " part
