@@ -35,7 +35,7 @@ alias mobile-mode='source ~/royal-neko/mobile/zsh-mobile'
 alias -g 'G+'='| grep' # Grep
 alias -g 'L+'='| lines' # Lines
 alias -g 'Q+'='>/dev/null 2>&1' # Quiet - no stdout or stderr
-alias -g 'SO+'='SOUT+' # only print StdOUT
+alias -g 'SO+'='2>/dev/null' # only print StdOUT
 alias -g 'X+'='| xargs ' # Xargs
 
 # keymap

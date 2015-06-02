@@ -1,10 +1,14 @@
-### optional ###
+# optional
 xorg-server
 xorg-xinit
 xorg-xrandr
 xterm
 
+# video drivers
+# xf86-video-vesa
+
 xfce4
 awesome
+i3
 
 firefox
