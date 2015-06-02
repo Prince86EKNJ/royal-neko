@@ -1,14 +1,22 @@
-# optional
+## optional
 xorg-server
 xorg-xinit
 xorg-xrandr
 xterm
 
-# video drivers
+## video drivers
 # xf86-video-vesa
 
+## desktop environments
 xfce4
+
+## window managers
 awesome
 i3
+
+## wifi-menu packges
+# netctl
+# dialog
+# wpa_supplicant
 
 firefox

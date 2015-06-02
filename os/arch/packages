@@ -10,8 +10,3 @@ tmux
 vim
 wget
 zsh
-
-### wifi-menu packages ###
-netctl
-dialog
-wpa_supplicant
