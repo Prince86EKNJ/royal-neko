@@ -1,5 +1,11 @@
 #!/bin/bash
-part=/dev/null
+part=''
+
+if [ $part -z ]; then
+	echo "Please set \"\$part\" in this script"
+	exit 1
+fi
+
 pacman -S grub os-prober
 grub-install --target=i386-pc "$part"
 grub-mkconfig -o /boot/grub/grub.cfg
