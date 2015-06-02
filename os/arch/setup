@@ -19,7 +19,10 @@ pacman --noconfirm -S git
 
 pushd ~fox
 sudo -u fox git clone https://Prince86EKNJ@github.com/Prince86EKNJ/royal-neko
+
+# Run royal-neko install scripts
 sudo -u fox royal-neko/install/link-neko
+sudo -u fox royal-neko/install/vundle
 popd
 
 # get package list from royal-neko
