@@ -1,4 +1,13 @@
 #!/bin/bash
+
+# Before install:
+# Format partition
+# ex. mkfs.ext4 /dev/sda
+
+# After install
+# * Install grub
+# * Setup networking
+
 lsblk
 read -p "Enter parition device: " part
 read -p "Enter swap partition: " swapPart
