@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # Before install:
-# Format partition
-# ex. mkfs.ext4 /dev/sda
+# * Create partition
+#	ex. fdisk /dev/sda
+# * Format partition
+# 	ex. mkfs.ext4 /dev/sda1
 
 # After install
 # * Install grub
