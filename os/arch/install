@@ -8,6 +8,8 @@
 
 # After install
 # * Install grub
+#	ex. vim ./grub-setup
+#	    sudo ./grub-setup
 # * Setup networking
 #	ex. ip link
 #	    sudo systemctl enable dhcpcd@interface
