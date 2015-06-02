@@ -1,0 +1,13 @@
+#!/bin/bash
+mkdir -p ~/aur
+cd ~/aur
+wget https://aur.archlinux.org/packages/pa/package-query/package-query.tar.gz
+wget https://aur.archlinux.org/packages/ya/yaourt/yaourt.tar.gz
+tar -xf package-query.tar.gz 
+tar -xf yaourt.tar.gz
+cd package-query
+makepkg
+sudo pacman --noconfirm -U package-query*.pkg.tar.xz
+cd ../yaourt
+makepkg
+sudo pacman --noconfirm -U yaourt*.pkg.tar.xz
