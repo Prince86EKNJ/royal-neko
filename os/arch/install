@@ -20,7 +20,7 @@
 
 read -p "Enter hostname: " hostname
 
-lsblk
+lsblk -f
 read -p "Enter swap partition: " swapPart
 
 swapon "$swapPart"
