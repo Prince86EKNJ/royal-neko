@@ -19,4 +19,9 @@ i3
 # dialog
 # wpa_supplicant
 
+# browsers
 firefox
+lynx
+
+# utils
+ascii
