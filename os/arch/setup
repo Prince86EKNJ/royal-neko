@@ -17,13 +17,16 @@ echo "fox ALL=(ALL) NOPASSWD: /sbin/reboot" >> /etc/sudoers
 # Get git so we can clone royal-neko
 pacman --noconfirm -S git
 
-pushd ~fox
-sudo -u fox git clone https://Prince86EKNJ@github.com/Prince86EKNJ/royal-neko
+# royal-neko setup
+if [ ! -d ~/royal-neko ]; then
+	pushd ~fox
+	sudo -u fox git clone https://Prince86EKNJ@github.com/Prince86EKNJ/royal-neko
 
-# Run royal-neko install scripts
-sudo -u fox royal-neko/install/link-neko
-sudo -u fox royal-neko/install/vundle
-popd
+	# Run royal-neko install scripts
+	sudo -u fox royal-neko/install/link-neko
+	sudo -u fox royal-neko/install/vundle
+	popd
+fi
 
 # get package list from royal-neko
 archPackages=$(cat ~fox/royal-neko/os/arch/packages | grep -v "^#")
