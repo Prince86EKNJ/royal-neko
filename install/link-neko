@@ -5,3 +5,5 @@ ln -s ~/royal-neko/vimrc ~/.vimrc
 ln -s ~/royal-neko/xbindkeysrc ~/.xbindkeysrc
 ln -s ~/royal-neko/Xdefaults ~/.Xdefaults
 ln -s ~/royal-neko/zshrc ~/.zshrc
+
+ln -s ~/royal-neko/config/htop/htoprc ~/.config/htop/htoprc
