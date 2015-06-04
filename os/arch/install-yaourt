@@ -6,8 +6,8 @@ wget https://aur.archlinux.org/packages/ya/yaourt/yaourt.tar.gz
 tar -xf package-query.tar.gz 
 tar -xf yaourt.tar.gz
 cd package-query
-makepkg
+makepkg -s --noconfirm
 sudo pacman --noconfirm -U package-query*.pkg.tar.xz
 cd ../yaourt
-makepkg
+makepkg -s --noconfirm
 sudo pacman --noconfirm -U yaourt*.pkg.tar.xz
