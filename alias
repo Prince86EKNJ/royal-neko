@@ -1,7 +1,9 @@
 # this allows us to use "sudo" with aliases
-alias sudo='sudo '
 
-alias s='sudo '
+# sudo
+alias sudo='sudo '
+alias s='sudo'
+alias se='sudo -E'
 
 # general
 alias grep='grep --color=auto'
