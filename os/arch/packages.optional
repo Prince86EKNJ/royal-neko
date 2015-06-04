@@ -1,18 +1,19 @@
 ## optional
 xorg-server
 xorg-xinit
-xorg-xrandr
+# xorg-xrandr
 xterm
 
 ## video drivers
 # xf86-video-vesa
 
 ## desktop environments
-xfce4
+# xfce4
 
 ## window managers
 awesome
 i3
+dmenu
 
 ## wifi-menu packges
 # netctl
@@ -21,7 +22,7 @@ i3
 
 # browsers
 firefox
-lynx
+# lynx
 
 # utils
-ascii
+# ascii
