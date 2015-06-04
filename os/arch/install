@@ -5,6 +5,10 @@
 #	ex. fdisk /dev/sda
 # * Format partition
 # 	ex. mkfs.ext4 /dev/sda1
+# * Mount partitions
+#	ex. mount /dev/sda1 /mnt
+#	    mount /dev/vol-group/home /mnt/home
+#	    mount /dev/sdb5 /mnt/boot
 
 # After install
 # * Install grub
@@ -14,12 +18,11 @@
 #	ex. ip link
 #	    sudo systemctl enable dhcpcd@interface
 
-lsblk
-read -p "Enter parition device: " part
-read -p "Enter swap partition: " swapPart
 read -p "Enter hostname: " hostname
 
-mount "$part" /mnt
+lsblk
+read -p "Enter swap partition: " swapPart
+
 swapon "$swapPart"
 
 # Install base
