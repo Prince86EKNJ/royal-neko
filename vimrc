@@ -22,6 +22,7 @@ if !exists("g:royalHimeVimrcLoaded") || g:royalHimeVimrcLoaded == 0
 		Plugin 'kien/ctrlp.vim'
 			let g:ctrlp_by_filename=1
 			let g:ctrlp_match_window='order:ttb'
+			let g:ctrlp_working_path_mode = ''
 			let g:ctrlp_custom_ignore = {
 			\ 'dir': 'node_modules/.*/node_modules$',
 			\ 'file': '.*\.class$'
