@@ -15,3 +15,9 @@ gitignore () {
 	fi
 	echo "$1" >> .gitignore
 }
+
+gclone () {
+	user=${1%/*}
+	url="https://$user@github.com/$1"
+	git clone $url
+}
