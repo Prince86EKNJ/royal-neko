@@ -2,6 +2,9 @@
 PATH=$PATH:~/bin
 PATH=$PATH:~/royal-neko/bin
 
+# Include local binaries
+PATH=$PATH:./bin
+
 # Include local node modules
 PATH=$PATH:node_modules/.bin
 
