@@ -6,7 +6,7 @@ alias s='sudo'
 alias se='sudo -E'
 
 # general
-alias dtime="date +'%Y-%m-%dT%H:%M:%S'"
+alias dtime="date +$DTIME_FORMAT"
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias nl='nl -ba'
