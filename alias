@@ -68,13 +68,9 @@ alias pf='pkgfile'
 alias yao='yaourt'
 alias yaourt='yaourt --pager --color'
 
-# screen
-#alias sc='screen'
-#alias scs='screen -S $STY'
-#alias scls='screen -ls'
-
 # systemd
 alias sc='systemctl'
+alias scu='systemctl --user'
 
 # ssh
 alias ssh-fox-empire='ssh prince@fox.everempire.com'
