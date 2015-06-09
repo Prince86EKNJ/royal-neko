@@ -52,3 +52,7 @@ bindkey "^[[3~" delete-char # del key
 prompt=$'
 %F{cyan}%n%f at %F{green}%m%f in %F{yellow}%~%f
 $ '
+
+# completion
+autoload -Uz compinit
+compinit
