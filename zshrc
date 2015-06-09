@@ -54,5 +54,8 @@ prompt=$'
 $ '
 
 # completion
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' menu select=1
+
 autoload -Uz compinit
 compinit

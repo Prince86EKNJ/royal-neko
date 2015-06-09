@@ -37,3 +37,6 @@ fi
 if [ -x /usr/bin/archey ]; then
 	/usr/bin/archey
 fi
+
+# set LS_COLORS
+eval $(dircolors)
