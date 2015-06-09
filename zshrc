@@ -1,5 +1,5 @@
 source ~/royal-neko/commonrc
-if [ -e ~/royal-neko/local/zshrc ]; then
+if [ -f ~/royal-neko/local/zshrc ]; then
 	source ~/royal-neko/local/zshrc
 fi
 
@@ -59,3 +59,8 @@ zstyle ':completion:*' menu select=1
 
 autoload -Uz compinit
 compinit
+
+# highlighting
+if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi

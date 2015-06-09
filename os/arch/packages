@@ -9,3 +9,4 @@ vim
 wget
 zsh
 zsh-doc
+zsh-syntax-highlighting
