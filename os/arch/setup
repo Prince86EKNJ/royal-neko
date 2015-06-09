@@ -25,6 +25,7 @@ if [ ! -d /home/fox/royal-neko ]; then
 	# Run royal-neko install scripts
 	sudo -u fox royal-neko/install/link-neko
 	sudo -u fox royal-neko/install/vundle
+		vim -c "execute \"VundleInstall\" | q | q"
 	popd
 fi
 
