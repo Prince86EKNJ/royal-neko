@@ -1,2 +1,7 @@
 XTerm*foreground:white
 XTerm*background:black
+
+# Fixes for emacs
+XTerm*metaSendsEscape:true
+XTerm*ttyModes:erase ^?
+XTerm*backarrowKey:false
