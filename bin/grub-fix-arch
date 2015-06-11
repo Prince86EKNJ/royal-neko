@@ -2,6 +2,6 @@
 
 chmod u+w /boot/grub/grub.cfg
 
-sed -i.bak 's/ad4103fa-d940-47ca-8506-301d8071d467/df0097b1-e831-42d1-9ece-b877c41a98c5/' /boot/grub/grub.cfg 
+sed -i.bak 's/c4167af3-1306-4cc9-a3be-cef905039c22/df0097b1-e831-42d1-9ece-b877c41a98c5/' /boot/grub/grub.cfg 
 
 chmod u-w /boot/grub/grub.cfg

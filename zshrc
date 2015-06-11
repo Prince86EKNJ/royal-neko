@@ -27,6 +27,7 @@ export SAVEHIST="$HISTSIZE"
 
 # Default bookmarks
 export neko="$HOME/royal-neko"
+export os="$neko/os/arch"
 
 alias help='info zsh "Shell Builtin Commands"'
 alias mobile-mode='source ~/royal-neko/mobile/zsh-mobile'

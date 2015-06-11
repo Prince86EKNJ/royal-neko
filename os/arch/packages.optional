@@ -7,6 +7,10 @@ xterm
 ## video drivers
 # xf86-video-vesa
 
+# lightdm
+lightdm
+lightdm-gtk-greeter
+
 ## desktop environments
 # xfce4
 
