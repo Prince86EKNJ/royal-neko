@@ -21,3 +21,7 @@ gclone () {
 	url="https://$user@github.com/$1"
 	git clone $url
 }
+
+try-emacs () {
+	alias vim='emacs'
+}

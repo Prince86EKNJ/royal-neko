@@ -3,7 +3,7 @@
 # sudo
 alias sudo='sudo '
 alias s='sudo'
-alias se='sudo -E'
+alias se='sudo -E '
 
 # general
 alias dtime="date +$DTIME_FORMAT"
