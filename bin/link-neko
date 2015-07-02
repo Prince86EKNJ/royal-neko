@@ -8,3 +8,6 @@ ln -s ~/royal-neko/zshrc ~/.zshrc
 
 mkdir -p ~/.config/htop
 ln -s ~/royal-neko/config/htop/htoprc ~/.config/htop/htoprc
+
+mkdir -p ~/.emacs.d/
+ln -s ~/royal-neko/config/emacs.d/init.el ~/.emacs.d/init.el
