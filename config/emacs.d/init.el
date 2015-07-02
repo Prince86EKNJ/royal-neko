@@ -1,4 +1,4 @@
 (setq
 	backup-directory-alist `(("." . ,temporary-file-directory))
-	auto-save-file-transforms `(("." ,temporary-file-directory t))
+	auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
 )
