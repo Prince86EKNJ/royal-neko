@@ -5,6 +5,9 @@ alias sudo='sudo '
 alias s='sudo'
 alias se='sudo -E '
 
+# man
+alias man='man '
+
 # general
 alias dtime="date +$DTIME_FORMAT"
 alias grep='grep --color=auto'
