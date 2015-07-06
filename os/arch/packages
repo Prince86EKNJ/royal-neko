@@ -2,6 +2,7 @@ curl
 git
 htop
 mlocate
+net-tools
 openssh
 pkgfile
 tmux
