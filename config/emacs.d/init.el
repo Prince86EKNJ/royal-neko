@@ -3,6 +3,10 @@
 	auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
 )
 
+(require 'package)
+(push '("melpa" . "http://stable.melpa.org/packages/") package-archives)
+(package-initialize)
+
 (add-hook 'text-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'linum-mode)
 
