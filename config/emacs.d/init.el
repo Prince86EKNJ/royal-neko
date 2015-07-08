@@ -1,12 +1,24 @@
+ ;; Manual Settings
 (setq
-	backup-directory-alist `(("." . ,temporary-file-directory))
+	backup-directory-alist `((".*" . ,temporary-file-directory))
 	auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
 )
 
+ ;; Extra package repos
 (require 'package)
 (push '("melpa" . "http://stable.melpa.org/packages/") package-archives)
 (package-initialize)
 
+ ;; Functions
+(defun open-init-file ()
+	(interactive)
+	(setq bak vc-follow-symlinks)
+	(setq vc-follow-symlinks nil)
+	(find-file user-init-file)
+	(setq vc-follow-symlinks bak)
+)
+
+ ;; Mode hooks
 (add-hook 'text-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'linum-mode)
 
