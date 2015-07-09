@@ -1,4 +1,7 @@
-# this allows us to use "sudo" with aliases
+#!/bin/bash
+
+# Training
+alias vim='echo "Try emacs instead" || true'
 
 # sudo
 alias sudo='sudo '
@@ -88,3 +91,4 @@ alias dl-playlist="youtube-dl -t 'http://m.youtube.com/playlist?list=PLPtCbDcDJf
 
 # emacs
 alias emacs='emacs -nw'
+alias em='emacs'
