@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Include user "bin" dir
 PATH=$PATH:~/bin
 PATH=$PATH:~/royal-neko/bin
@@ -11,7 +13,7 @@ PATH=$PATH:node_modules/.bin
 # set DTIME_FORMAT
 DTIME_FORMAT='%Y-%m-%dT%H:%M:%S'
 
-export EDITOR='vim'
+export EDITOR='emacs -nw'
 export PAGER='less'
 
 # default less settings
