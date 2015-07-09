@@ -9,6 +9,10 @@
 (push '("melpa" . "http://stable.melpa.org/packages/") package-archives)
 (package-initialize)
 
+ ;; Package list - figure out how to turn this into a command
+ ;; projectile
+ ;; magit
+
  ;; Functions
 (defun open-init-file ()
 	(interactive)
@@ -21,6 +25,7 @@
  ;; Key bindings
 (global-set-key (kbd "C-c C-i") 'open-init-file)
 (global-set-key (kbd "C-p") 'projectile-find-file)
+(global-set-key (kbd "C-x g") 'magit-status)
 
 (projectile-global-mode)
 
