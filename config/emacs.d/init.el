@@ -1,19 +1,19 @@
- ;; Manual Settings
+;; Manual Settings
 (setq
 	backup-directory-alist `((".*" . ,temporary-file-directory))
 	auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
 )
 
- ;; Extra package repos
+;; Extra package repos
 (require 'package)
 (push '("melpa" . "http://stable.melpa.org/packages/") package-archives)
 (package-initialize)
 
- ;; Package list - figure out how to turn this into a command
- ;; projectile
- ;; magit
+;; Package list - figure out how to turn this into a command
+;; projectile
+;; magit
 
- ;; Functions
+;; Functions
 (defun open-init-file ()
 	(interactive)
 	(setq bak vc-follow-symlinks)
@@ -22,14 +22,14 @@
 	(setq vc-follow-symlinks bak)
 )
 
- ;; Key bindings
+;; Key bindings
 (global-set-key (kbd "C-c C-i") 'open-init-file)
 (global-set-key (kbd "C-p") 'projectile-find-file)
 (global-set-key (kbd "C-x g") 'magit-status)
 
 (projectile-global-mode)
 
- ;; Mode hooks
+;; Mode hooks
 (add-hook 'text-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'linum-mode)
 
