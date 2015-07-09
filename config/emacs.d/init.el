@@ -18,6 +18,12 @@
 	(setq vc-follow-symlinks bak)
 )
 
+ ;; Key bindings
+(global-set-key (kbd "C-c C-i") 'open-init-file)
+(global-set-key (kbd "C-p") 'projectile-find-file)
+
+(projectile-global-mode)
+
  ;; Mode hooks
 (add-hook 'text-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'linum-mode)
