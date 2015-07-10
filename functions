@@ -16,10 +16,13 @@ gitignore () {
 	echo "$1" >> .gitignore
 }
 
-gclone () {
+gurl () {
 	user=${1%/*}
-	url="https://$user@github.com/$1"
-	git clone $url
+	echo "https://$user@github.com/$user/$2"
+}
+
+gclone () {
+	git clone $(gurl $*)
 }
 
 try-emacs () {
