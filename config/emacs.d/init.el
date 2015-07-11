@@ -10,9 +10,37 @@
 (package-initialize)
 
 ;; Package list - figure out how to turn this into a command
-(setq local-package-list '(projectile magit))
+(setq neko-package-list '(
+	helm
+	magit
+	projectile
+))
+
+;; Package Settings
+(when (require 'helm nil t)
+	(helm-mode)
+)
+
+(when (require 'magit nil t)
+	(global-set-key (kbd "C-x g") 'magit-status)
+)
+
+(when (require 'projectile nil t)
+	(projectile-global-mode)
+	(global-set-key (kbd "C-p") 'projectile-find-file)
+)
 
 ;; Functions
+(defun install-neko-packages ()
+	(interactive)
+	(dolist (package neko-package-list)
+		(if (require package nil t)
+			nil
+			(package-install package)
+		)
+	)
+)
+
 (defun open-init-file ()
 	(interactive)
 	(setq 
@@ -41,18 +69,14 @@
 )
 
 ;; Key Bindings
-(global-set-key (kbd "C-p") 'projectile-find-file)
-(global-set-key (kbd "C-x g") 'magit-status)
-
-(global-set-key (kbd "C-c C-i") 'open-init-file)
-(global-set-key (kbd "C-c C-r") 'reload-init-file)
-
 (global-set-key (kbd "C-o") 'open-line-forwards)
 (global-set-key (kbd "C-S-o") 'open-line-backwards)
 (global-set-key (kbd "TAB") 'self-insert-command)
 
-;; Global Modes
-(projectile-global-mode)
+(global-unset-key (kbd "C-z"))
+(global-set-key (kbd "C-z C-c") 'customize)
+(global-set-key (kbd "C-z C-i") 'open-init-file)
+(global-set-key (kbd "C-z C-r") 'reload-init-file)
 
 ;; Mode Hooks
 (add-hook 'text-mode-hook 'linum-mode)
@@ -66,6 +90,8 @@
  '(backward-delete-char-untabify-method nil)
  '(electric-indent-mode nil)
  '(linum-format "%d ")
+ '(projectile-completion-system (quote helm))
+ '(projectile-require-project-root nil)
  '(truncate-lines t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
