@@ -6,7 +6,8 @@
 
 ;; Extra Package Repos
 (require 'package)
-(push '("melpa" . "http://stable.melpa.org/packages/") package-archives)
+(push '("marmalade" . "http://marmalade-repo.org/packages/") package-archives)
+(push '("melpa" . "http://melpa.org/packages/") package-archives)
 (package-initialize)
 
 ;; Package list - figure out how to turn this into a command
@@ -77,6 +78,8 @@
 (global-set-key (kbd "C-z C-c") 'customize)
 (global-set-key (kbd "C-z C-i") 'open-init-file)
 (global-set-key (kbd "C-z C-r") 'reload-init-file)
+(global-set-key (kbd "C-z C-p") 'list-packages)
+(global-set-key (kbd "C-z C-S-p") 'package-install)
 
 ;; Mode Hooks
 (add-hook 'text-mode-hook 'linum-mode)
