@@ -1,3 +1,16 @@
+;; Key Bindings
+(global-unset-key (kbd "C-z"))
+
+(global-set-key (kbd "C-z C-i") 'open-init-file)
+(global-set-key (kbd "C-z C-c") 'customize)
+(global-set-key (kbd "C-z C-r") 'reload-init-file)
+(global-set-key (kbd "C-z C-p") 'list-packages)
+(global-set-key (kbd "C-z p") 'package-install)
+
+(global-set-key (kbd "C-o") 'open-line-forwards)
+(global-set-key (kbd "C-z C-o") 'open-line-backwards)
+(global-set-key (kbd "TAB") 'self-insert-command)
+
 ;; Manual Settings
 (setq
 	backup-directory-alist `((".*" . ,temporary-file-directory))
@@ -68,18 +81,6 @@
 	(interactive)
 	(load-file user-init-file)
 )
-
-;; Key Bindings
-(global-set-key (kbd "C-o") 'open-line-forwards)
-(global-set-key (kbd "C-S-o") 'open-line-backwards)
-(global-set-key (kbd "TAB") 'self-insert-command)
-
-(global-unset-key (kbd "C-z"))
-(global-set-key (kbd "C-z C-c") 'customize)
-(global-set-key (kbd "C-z C-i") 'open-init-file)
-(global-set-key (kbd "C-z C-r") 'reload-init-file)
-(global-set-key (kbd "C-z C-p") 'list-packages)
-(global-set-key (kbd "C-z C-S-p") 'package-install)
 
 ;; Mode Hooks
 (add-hook 'text-mode-hook 'linum-mode)
