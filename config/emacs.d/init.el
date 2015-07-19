@@ -19,6 +19,14 @@
 	auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
 )
 
+;; Darken inactive window
+; TODO: Restore me
+;(set-face-attribute  'mode-line-inactive
+;                 nil
+;                 :foreground "black"
+;                 :background "white"
+;                 :box '(:line-width 1 :style released-button))
+
 ;; Extra Package Repos
 (require 'package)
 (push '("marmalade" . "http://marmalade-repo.org/packages/") package-archives)
