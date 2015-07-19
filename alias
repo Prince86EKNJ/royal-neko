@@ -50,6 +50,7 @@ alias gr='git reset HEAD'
 alias grr='git reset --hard HEAD'
 alias gs='git status'
 alias gsh='git show'
+alias gsub='git submodule'
 
 # mobile
 alias mobile-mode='source ~/royal-neko/mobile/mobile-mode'
