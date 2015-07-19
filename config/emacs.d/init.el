@@ -3,9 +3,10 @@
 
 (global-set-key (kbd "C-z C-i") 'open-init-file)
 (global-set-key (kbd "C-z C-c") 'customize)
-(global-set-key (kbd "C-z C-r") 'reload-init-file)
+(global-set-key (kbd "C-z C-n") 'open-royal-neko-dir)
 (global-set-key (kbd "C-z C-p") 'list-packages)
 (global-set-key (kbd "C-z p") 'package-install)
+(global-set-key (kbd "C-z C-r") 'reload-init-file)
 
 (global-set-key (kbd "C-o") 'open-line-forwards)
 (global-set-key (kbd "C-z C-o") 'open-line-backwards)
@@ -80,6 +81,11 @@
 (defun reload-init-file ()
 	(interactive)
 	(load-file user-init-file)
+)
+
+(defun open-royal-neko-dir ()
+	(interactive)
+	(find-file "~/royal-neko")
 )
 
 ;; Mode Hooks
