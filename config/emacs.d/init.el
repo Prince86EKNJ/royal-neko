@@ -4,7 +4,7 @@
 (global-set-key (kbd "C-z C-i") 'open-init-file)
 (global-set-key (kbd "C-z C-c") 'customize)
 (global-set-key (kbd "C-z C-n") 'open-royal-neko-dir)
-(global-set-key (kbd "C-z C-p") 'list-packages)
+(global-set-key (kbd "C-z C-p") 'open-project)
 (global-set-key (kbd "C-z p") 'package-install)
 (global-set-key (kbd "C-z C-r") 'reload-init-file)
 (global-set-key (kbd "C-z C-s") 'switch-to-scratch)
@@ -92,6 +92,18 @@
 (defun switch-to-scratch ()
 	(interactive)
 	(switch-to-buffer "*scratch*")
+)
+
+(defun open-project ()
+	(interactive)
+	(dired
+		(concat
+			"~/projects/"
+			(ido-completing-read "Project: "
+				(directory-files "~/projects" nil "^[^\\.]")
+			)
+		)
+	)
 )
 
 ;; Mode Hooks
