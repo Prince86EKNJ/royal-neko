@@ -7,6 +7,7 @@
 (global-set-key (kbd "C-z C-p") 'list-packages)
 (global-set-key (kbd "C-z p") 'package-install)
 (global-set-key (kbd "C-z C-r") 'reload-init-file)
+(global-set-key (kbd "C-z C-s") 'switch-to-scratch)
 
 (global-set-key (kbd "C-o") 'open-line-forwards)
 (global-set-key (kbd "C-z C-o") 'open-line-backwards)
@@ -86,6 +87,11 @@
 (defun open-royal-neko-dir ()
 	(interactive)
 	(find-file "~/royal-neko")
+)
+
+(defun switch-to-scratch ()
+	(interactive)
+	(switch-to-buffer "*scratch*")
 )
 
 ;; Mode Hooks
