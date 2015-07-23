@@ -7,6 +7,7 @@
 (global-set-key (kbd "C-z C-p") 'open-project)
 (global-set-key (kbd "C-z C-r") 'reload-init-file)
 (global-set-key (kbd "C-z C-s") 'switch-to-scratch)
+(global-set-key (kbd "C-z w") 'whitespace-mode)
 
 (global-set-key (kbd "C-o") 'open-line-forwards)
 (global-set-key (kbd "C-z C-o") 'open-line-backwards)
@@ -65,7 +66,7 @@
 
 (defun open-init-file ()
 	(interactive)
-	(setq 
+	(setq
 		defaultVal vc-follow-symlinks
 		vc-follow-symlinks nil)
 	(find-file user-init-file)
