@@ -5,9 +5,9 @@
 (global-set-key (kbd "C-z C-c") 'customize)
 (global-set-key (kbd "C-z C-n") 'open-royal-neko-dir)
 (global-set-key (kbd "C-z C-p") 'open-project)
-(global-set-key (kbd "C-z C-r") 'reload-init-file)
+(global-set-key (kbd "C-z C-r") 'revert-buffer)
 (global-set-key (kbd "C-z C-s") 'switch-to-scratch)
-(global-set-key (kbd "C-z w") 'whitespace-mode)
+(global-set-key (kbd "C-z C-w") 'whitespace-mode)
 
 (global-set-key (kbd "C-o") 'open-line-forwards)
 (global-set-key (kbd "C-z C-o") 'open-line-backwards)
@@ -41,7 +41,7 @@
 
 ;; Package Settings
 (when (require 'helm nil t)
-	(helm-mode)
+	(helm-mode 1)
 )
 
 (when (require 'magit nil t)
