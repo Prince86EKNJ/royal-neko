@@ -10,7 +10,6 @@
 
 (global-set-key (kbd "C-o") 'open-line-forwards)
 (global-set-key (kbd "C-z C-o") 'open-line-backwards)
-(global-set-key (kbd "TAB") 'self-insert-command)
 
 ;; Manual Settings
 (setq
@@ -122,11 +121,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(backward-delete-char-untabify-method nil)
- '(electric-indent-mode nil)
  '(linum-format "%d ")
  '(projectile-completion-system (quote helm))
  '(projectile-require-project-root nil)
+ '(tab-width 4)
  '(truncate-lines t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
