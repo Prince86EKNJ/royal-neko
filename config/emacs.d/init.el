@@ -51,7 +51,7 @@
 	projectile
 ))
 
-(when (require 'helm nil t)
+(when (require 'helm-config nil t)
 	(helm-mode t)
 )
 
