@@ -62,7 +62,7 @@
 ;; Package Settings
 (when (require 'ace-jump-mode nil t)
 	(global-set-key (kbd "C-z C-a") 'ace-jump-word-mode)
-	(global-set-key (kbd "C-z a") 'ace-jump-word-mode)
+	(global-set-key (kbd "C-z a") 'ace-jump-char-mode)
 	(global-set-key (kbd "C-z A") 'ace-jump-line-mode)
 )
 
