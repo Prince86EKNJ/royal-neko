@@ -53,14 +53,21 @@
 
 ;; Package list - figure out how to turn this into a command
 (setq neko-package-list '(
+	ace-jump-mode
 	helm
 	magit
 	projectile
 ))
 
 ;; Package Settings
+(when (require 'ace-jump-mode nil t)
+	(global-set-key (kbd "C-z C-a") 'ace-jump-word-mode)
+	(global-set-key (kbd "C-z a") 'ace-jump-word-mode)
+	(global-set-key (kbd "C-z A") 'ace-jump-line-mode)
+)
+
 (when (require 'helm nil t)
-	(helm-mode 1)
+	(helm-mode t)
 )
 
 (when (require 'magit nil t)
