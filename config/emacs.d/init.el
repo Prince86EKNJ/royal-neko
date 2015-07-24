@@ -1,7 +1,8 @@
 ;; Key Bindings
 (global-unset-key (kbd "C-z"))
 
-(global-set-key (kbd "C-z C-i") 'open-init-file)
+(global-set-key (kbd "C-z i") 'open-init-file)
+(global-set-key (kbd "C-z C-i") 'open-royal-init-file)
 (global-set-key (kbd "C-z C-c") 'customize)
 (global-set-key (kbd "C-z C-n") 'open-royal-neko-dir)
 (global-set-key (kbd "C-z C-p") 'open-project)
@@ -11,6 +12,24 @@
 
 (global-set-key (kbd "C-o") 'open-line-forwards)
 (global-set-key (kbd "C-z C-o") 'open-line-backwards)
+
+(defun open-init-file ()
+	(interactive)
+	(setq
+		defaultVal vc-follow-symlinks
+		vc-follow-symlinks nil)
+	(find-file user-init-file)
+	(setq vc-follow-symlinks defaultVal)
+)
+
+(defun open-royal-init-file ()
+	(interactive)
+	(setq
+		defaultVal vc-follow-symlinks
+		vc-follow-symlinks nil)
+	(find-file "~/royal-neko/config/emacs.d/init.el")
+	(setq vc-follow-symlinks defaultVal)
+)
 
 ;; Manual Settings
 (setq
@@ -62,15 +81,6 @@
 			(package-install package)
 		)
 	)
-)
-
-(defun open-init-file ()
-	(interactive)
-	(setq
-		defaultVal vc-follow-symlinks
-		vc-follow-symlinks nil)
-	(find-file user-init-file)
-	(setq vc-follow-symlinks defaultVal)
 )
 
 (defun open-line-forwards ()
