@@ -37,14 +37,6 @@
 	auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
 )
 
-;; Darken inactive window
-; TODO: Restore me
-;(set-face-attribute  'mode-line-inactive
-;                 nil
-;                 :foreground "black"
-;                 :background "white"
-;                 :box '(:line-width 1 :style released-button))
-
 ;; Extra Package Repos
 (require 'package)
 (push '("marmalade" . "http://marmalade-repo.org/packages/") package-archives)
@@ -53,18 +45,11 @@
 
 ;; Package list - figure out how to turn this into a command
 (setq neko-package-list '(
-	ace-jump-mode
+	ace-isearch
 	helm
 	magit
 	projectile
 ))
-
-;; Package Settings
-(when (require 'ace-jump-mode nil t)
-	(global-set-key (kbd "C-z C-a") 'ace-jump-word-mode)
-	(global-set-key (kbd "C-z a") 'ace-jump-char-mode)
-	(global-set-key (kbd "C-z A") 'ace-jump-line-mode)
-)
 
 (when (require 'helm nil t)
 	(helm-mode t)
@@ -139,7 +124,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ace-isearch-function (quote avy-goto-word-1))
  '(column-number-mode t)
+ '(global-ace-isearch-mode t)
  '(global-hl-line-mode t)
  '(linum-format "%d ")
  '(projectile-completion-system (quote helm))
