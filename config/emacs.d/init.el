@@ -57,6 +57,8 @@
 	(setq key-chord-two-keys-delay 0.05)
 
 	(key-chord-define-global "qw" 'whitespace-mode)
+	(key-chord-define-global "l;" 'goto-line)
+
 	(key-chord-define-global "oi" 'open-line-backwards)
 	(key-chord-define-global "op" 'open-line-forwards)
 )
