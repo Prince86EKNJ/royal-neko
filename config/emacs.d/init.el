@@ -51,16 +51,11 @@
 	projectile
 ))
 
-(when (require 'helm-config nil t)
-	(helm-mode t)
-)
-
 (when (require 'magit nil t)
 	(global-set-key (kbd "C-x g") 'magit-status)
 )
 
 (when (require 'projectile nil t)
-	(projectile-global-mode)
 	(global-set-key (kbd "C-p") 'projectile-find-file)
 )
 
@@ -128,8 +123,10 @@
  '(column-number-mode t)
  '(global-ace-isearch-mode t)
  '(global-hl-line-mode t)
+ '(helm-mode t)
  '(linum-format "%d ")
  '(projectile-completion-system (quote helm))
+ '(projectile-global-mode t)
  '(projectile-require-project-root nil)
  '(tab-width 4)
  '(truncate-lines t))
