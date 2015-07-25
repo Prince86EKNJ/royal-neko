@@ -50,7 +50,14 @@
 	key-chord
 	magit
 	projectile
+	yasnippet
 ))
+
+(when (require 'avy nil t)
+	(global-set-key (kbd "C-f") 'avy-goto-word-1)
+	(global-set-key (kbd "C-c SPC") 'avy-goto-char)
+	(global-set-key (kbd "C-c C-SPC") 'avy-goto-char)
+)
 
 (when (require 'key-chord nil t)
 	(key-chord-mode t)
@@ -123,8 +130,13 @@
 )
 
 ;; Mode Hooks
-(add-hook 'text-mode-hook 'linum-mode)
-(add-hook 'prog-mode-hook 'linum-mode)
+(add-hook 'text-mode-hook 'edit-mode-hook-fn)
+(add-hook 'prog-mode-hook 'edit-mode-hook-fn)
+
+(defun edit-mode-hook-fn ()
+  (linum-mode)
+  (yas-minor-mode)
+)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
