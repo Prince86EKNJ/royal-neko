@@ -80,7 +80,8 @@
 	)
 
 (when (require 'yasnippet nil t)
-	(global-set-key (kbd "C-z C-y") 'yas-describe-tables)
+	(global-set-key (kbd "C-z C-y") 'yas-insert-snippet)
+	(global-set-key (kbd "C-z y") 'yas-describe-tables)
 )
 
 ;; Functions
