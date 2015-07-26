@@ -135,13 +135,13 @@
 	)
 )
 
-;; Mode Hooks
-(add-hook 'text-mode-hook 'edit-mode-hook-fn)
-(add-hook 'prog-mode-hook 'edit-mode-hook-fn)
+;; Mode Hooks - Use this later?
+;; (add-hook 'text-mode-hook 'edit-mode-hook-fn)
+;; (add-hook 'prog-mode-hook 'edit-mode-hook-fn)
 
-(defun edit-mode-hook-fn ()
-  (linum-mode)
-)
+;; (defun edit-mode-hook-fn ()
+;;   (linum-mode)
+;; )
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -152,6 +152,7 @@
  '(column-number-mode t)
  '(global-ace-isearch-mode t)
  '(global-hl-line-mode t)
+ '(global-linum-mode t)
  '(helm-mode t)
  '(linum-format "%d ")
  '(projectile-completion-system (quote helm))
