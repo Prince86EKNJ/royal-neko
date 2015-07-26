@@ -62,6 +62,7 @@
 (when (require 'key-chord nil t)
 	(key-chord-mode t)
 	(setq key-chord-two-keys-delay 0.05)
+	(global-set-key (kbd "C-z C-k") 'key-chord-mode)
 
 	(key-chord-define-global "qw" 'whitespace-mode)
 	(key-chord-define-global "l;" 'goto-line)
@@ -76,6 +77,10 @@
 
 (when (require 'projectile nil t)
 	(global-set-key (kbd "C-p") 'projectile-find-file)
+	)
+
+(when (require 'yasnippet nil t)
+	(global-set-key (kbd "C-z C-y") 'yas-describe-tables)
 )
 
 ;; Functions
@@ -135,7 +140,6 @@
 
 (defun edit-mode-hook-fn ()
   (linum-mode)
-  (yas-minor-mode)
 )
 
 (custom-set-variables
@@ -153,7 +157,9 @@
  '(projectile-global-mode t)
  '(projectile-require-project-root nil)
  '(tab-width 4)
- '(truncate-lines t))
+ '(truncate-lines t)
+ '(yas-global-mode t nil (yasnippet))
+ '(yas-snippet-dirs (quote ("~/.emacs.d/snippets")) nil (yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
