@@ -77,7 +77,7 @@
 
 (when (require 'projectile nil t)
 	(global-set-key (kbd "C-p") 'projectile-find-file)
-	(global-set-key (kbd "C-z C-x") 'execute-local)
+	(global-set-key (kbd "C-z C-x") 'execute-index)
 )
 
 (when (require 'yasnippet nil t)
@@ -136,11 +136,10 @@
 	)
 )
 
-(setq execute-local-command "pwd")
-(defun execute-local ()
+(defun execute-index ()
 	(interactive)
 	(cd (projectile-project-root))
-	(async-shell-command execute-local-command)
+	(async-shell-command "./bin/index")
 )
 
 ;; Mode Hooks - Use this later?
@@ -166,7 +165,6 @@
  '(projectile-completion-system (quote helm))
  '(projectile-global-mode t)
  '(projectile-require-project-root nil)
- '(safe-local-variable-values (quote ((linum-mode))))
  '(tab-width 4)
  '(truncate-lines t)
  '(yas-global-mode t nil (yasnippet))
