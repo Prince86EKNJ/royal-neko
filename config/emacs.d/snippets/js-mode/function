@@ -1,5 +1,6 @@
 # -*- mode: snippet -*-
-#name : anonymous function
+# name: function
+# key: f
 # --
 function($1) {
 	`yas-selected-text`$0

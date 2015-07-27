@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: gulp-task
+# key: gt
+# --
+gulp.task("${1:default}", function($2) {
+	`yas-selected-text`$0
+});
