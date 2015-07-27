@@ -168,8 +168,8 @@
  '(projectile-require-project-root nil)
  '(tab-width 4)
  '(truncate-lines t)
- '(yas-global-mode t nil (yasnippet))
- '(yas-snippet-dirs (quote ("~/.emacs.d/snippets")) nil (yasnippet)))
+ '(yas-global-mode t)
+ '(yas-snippet-dirs (quote ("~/.emacs.d/snippets"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
