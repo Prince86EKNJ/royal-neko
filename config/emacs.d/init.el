@@ -72,7 +72,8 @@
 )
 
 (when (require 'magit nil t)
-	(global-set-key (kbd "C-x g") 'magit-status)
+;	(global-set-key (kbd "C-x g") 'magit-status)
+	(global-set-key (kbd "C-z C-g") 'magit-status)
 )
 
 (when (require 'projectile nil t)
