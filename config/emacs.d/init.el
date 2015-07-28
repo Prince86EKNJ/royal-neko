@@ -157,6 +157,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ace-isearch-function (quote avy-goto-word-1))
+ '(async-shell-command-buffer (quote confirm-kill-process))
  '(column-number-mode t)
  '(global-ace-isearch-mode t)
  '(global-hl-line-mode t)
@@ -168,8 +169,8 @@
  '(projectile-require-project-root nil)
  '(tab-width 4)
  '(truncate-lines t)
- '(yas-global-mode t)
- '(yas-snippet-dirs (quote ("~/.emacs.d/snippets"))))
+ '(yas-global-mode t nil (yasnippet))
+ '(yas-snippet-dirs (quote ("~/.emacs.d/snippets")) nil (yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
