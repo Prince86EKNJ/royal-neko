@@ -28,7 +28,11 @@ alias np='neko-pull'
 alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -al'
-alias ls='ls --color=auto'
+if [ "$(uname)" = "Darwin" ]; then
+	alias ls='ls -G'
+else
+	alias ls='ls --color=auto'
+fi
 
 # bookmarks
 alias bm='bookmark'
