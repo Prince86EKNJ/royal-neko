@@ -4,6 +4,7 @@
 (global-set-key (kbd "C-z i") 'open-init-file)
 (global-set-key (kbd "C-z C-i") 'open-royal-init-file)
 (global-set-key (kbd "C-z C-c") 'customize)
+(global-set-key (kbd "C-z C-f") 'helm-recentf)
 (global-set-key (kbd "C-z C-n") 'open-royal-neko-dir)
 (global-set-key (kbd "C-z C-p") 'open-project)
 (global-set-key (kbd "C-z C-r") 'revert-buffer)
