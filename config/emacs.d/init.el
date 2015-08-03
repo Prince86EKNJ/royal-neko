@@ -10,6 +10,7 @@
 (global-set-key (kbd "C-z C-s") 'switch-to-scratch)
 (global-set-key (kbd "C-z C-w") 'whitespace-mode)
 
+(global-set-key (kbd "C-n") 'goto-line)
 (global-set-key (kbd "C-o") 'open-line-forwards)
 (global-set-key (kbd "C-z C-o") 'open-line-backwards)
 
@@ -167,6 +168,7 @@
  '(projectile-completion-system (quote helm))
  '(projectile-global-mode t)
  '(projectile-require-project-root nil)
+ '(recentf-mode t)
  '(tab-width 4)
  '(truncate-lines t)
  '(yas-global-mode t nil (yasnippet))
