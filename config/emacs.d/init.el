@@ -48,8 +48,9 @@
 
 ;; Package list - figure out how to turn this into a command
 (setq neko-package-list '(
-	ace-isearch
+	avy
 	helm
+	helm-swoop
 	key-chord
 	magit
 	projectile
@@ -62,8 +63,11 @@
 	(global-set-key (kbd "C-c C-SPC") 'avy-goto-char)
 )
 
+(when (require 'helm-swoop nil t)
+	(global-set-key (kbd "C-z s") 'helm-swoop)
+)
+
 (when (require 'key-chord nil t)
-	(key-chord-mode t)
 	(setq key-chord-two-keys-delay 0.05)
 	(global-set-key (kbd "C-z C-k") 'key-chord-mode)
 
@@ -159,10 +163,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ace-isearch-function (quote avy-goto-word-1))
  '(async-shell-command-buffer (quote confirm-kill-process))
  '(column-number-mode t)
- '(global-ace-isearch-mode t)
  '(global-hl-line-mode t)
  '(global-linum-mode t)
  '(helm-mode t)
