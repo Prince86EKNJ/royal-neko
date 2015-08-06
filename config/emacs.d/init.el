@@ -84,7 +84,8 @@
 
 (when (require 'projectile nil t)
 	(global-set-key (kbd "C-p") 'projectile-find-file)
-	(global-set-key (kbd "C-z C-x") 'execute-index)
+	(global-set-key (kbd "C-z C-x") 'run-index)
+	(global-set-key (kbd "C-z x") 'run-script)
 )
 
 (when (require 'yasnippet nil t)
@@ -143,10 +144,27 @@
 	)
 )
 
-(defun execute-index ()
+(defun run-index ()
 	(interactive)
 	(cd (projectile-project-root))
 	(async-shell-command "./bin/index")
+)
+
+(defun run-script ()
+	(interactive)
+	(setq project-bin-dir
+		(concat
+			(projectile-project-root)
+			"bin/"
+		)
+	)
+	(async-shell-command
+		(concat project-bin-dir
+			(helm :sources (helm-build-sync-source "scripts"
+				:candidates (directory-files project-bin-dir nil "^[^\\.]"))
+			)
+		)
+	)
 )
 
 ;; Mode Hooks - Use this later?
