@@ -42,7 +42,6 @@
 
 ;; Extra Package Repos
 (require 'package)
-(push '("marmalade" . "http://marmalade-repo.org/packages/") package-archives)
 (push '("melpa" . "http://melpa.org/packages/") package-archives)
 (package-initialize)
 
