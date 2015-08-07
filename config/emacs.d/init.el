@@ -4,6 +4,8 @@
 (global-set-key (kbd "C-z i") 'open-init-file)
 (global-set-key (kbd "C-z C-i") 'open-royal-init-file)
 (global-set-key (kbd "C-z C-c") 'customize)
+(global-set-key (kbd "C-z C-d") 'open-dired)
+(global-set-key (kbd "C-z d") 'projectile-dired)
 (global-set-key (kbd "C-z C-f") 'rgrep)
 (global-set-key (kbd "C-z f") 'helm-recentf)
 (global-set-key (kbd "C-z C-n") 'open-royal-neko-dir)
@@ -85,7 +87,7 @@
 (when (require 'projectile nil t)
 	(global-set-key (kbd "C-p") 'projectile-find-file)
 	(global-set-key (kbd "C-z C-x") 'run-index)
-	(global-set-key (kbd "C-z x") 'run-script)
+	(global-set-key (kbd "C-z x") 'run-script-prompt)
 )
 
 (when (require 'yasnippet nil t)
@@ -146,11 +148,10 @@
 
 (defun run-index ()
 	(interactive)
-	(cd (projectile-project-root))
-	(async-shell-command "./bin/index")
+	(run-script (concat (projectile-project-root) "bin/index"))
 )
 
-(defun run-script ()
+(defun run-script-prompt ()
 	(interactive)
 	(setq project-bin-dir
 		(concat
@@ -158,13 +159,25 @@
 			"bin/"
 		)
 	)
-	(async-shell-command
+	(setq script-path
 		(concat project-bin-dir
 			(helm :sources (helm-build-sync-source "scripts"
 				:candidates (directory-files project-bin-dir nil "^[^\\.]"))
 			)
 		)
 	)
+	(run-script script-path)
+)
+
+(defun run-script (script-path)
+	(async-shell-command script-path
+		(concat "*Async >> " script-path)
+	)
+)
+
+(defun open-dired ()
+	(interactive)
+	(dired default-directory)
 )
 
 ;; Mode Hooks - Use this later?

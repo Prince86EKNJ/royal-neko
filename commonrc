@@ -25,9 +25,16 @@ source ~/royal-neko/functions
 # Include aliases
 source ~/royal-neko/alias
 
-localAlias='~/royal-neko/local/alias'
+localDir=$HOME"/royal-neko/local/"
+
+localAlias=$localDir'alias'
 if [ -f "$localAlias" ]; then
 	source "$localAlias"
+fi
+
+localCommon=$localDir'commonrc'
+if [ -f "$localCommon" ]; then
+	source "$localCommon"
 fi
 
 # Load Bookmarks

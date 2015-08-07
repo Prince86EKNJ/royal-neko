@@ -1,0 +1,5 @@
+# -*- mode: snippet; -*-
+# name: selected-text
+# key: st
+# --
+`yas-selected-text`$0
