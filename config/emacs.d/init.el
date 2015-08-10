@@ -1,6 +1,7 @@
 ;; Key Bindings
 (global-unset-key (kbd "C-z"))
 
+(global-set-key (kbd "C-z b") 'buffer-menu)
 (global-set-key (kbd "C-z i") 'open-init-file)
 (global-set-key (kbd "C-z C-i") 'open-royal-init-file)
 (global-set-key (kbd "C-z C-c") 'customize)
