@@ -13,7 +13,7 @@ PATH=$PATH:node_modules/.bin
 # set DTIME_FORMAT
 DTIME_FORMAT='%Y-%m-%dT%H:%M:%S'
 
-export EDITOR='emacs -nw'
+export EDITOR='emacsclient --alternate-editor="" -t'
 export PAGER='less'
 
 # default less settings
