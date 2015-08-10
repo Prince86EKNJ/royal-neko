@@ -92,4 +92,4 @@ alias dl-playlist="youtube-dl -t 'http://m.youtube.com/playlist?list=PLPtCbDcDJf
 
 # emacs
 alias emacs='emacs -nw'
-alias em='emacs'
+alias em='emacsclient --alternate-editor="" -t'
