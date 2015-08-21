@@ -5,3 +5,7 @@ XTerm*background:black
 XTerm*metaSendsEscape:true
 XTerm*ttyModes:erase ^?
 XTerm*backarrowKey:false
+
+# Enable 256 colors
+*customization: -color
+XTerm*termName:xterm-256color
