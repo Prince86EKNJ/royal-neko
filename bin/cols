@@ -1,0 +1,17 @@
+#!/bin/bash
+
+tabs=''
+while getopts "t" opt; do
+	case "$opt" in
+		t)
+			tabs='\\t'
+			;;
+	esac
+done
+shift $(($OPTIND - 1))
+
+if [ "$#" = 0 ]; then
+	cat
+else
+   awk "$(echo '{ print '$(echo "$@" | sed 's/[0-9]\+/$\0"'$tabs'",/g')' "" }')"
+fi
