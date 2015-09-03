@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: promise
+# key: p
+# --
+new Promise(function(resolve, reject) {
+	`yas-selected-text`$0
+});
