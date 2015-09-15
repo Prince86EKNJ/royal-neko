@@ -1,3 +1,4 @@
+#!/usr/bin/zsh
 source ~/royal-neko/commonrc
 if [ -f ~/royal-neko/local/zshrc ]; then
 	source ~/royal-neko/local/zshrc

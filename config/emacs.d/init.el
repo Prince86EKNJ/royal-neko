@@ -196,6 +196,7 @@
  ;; If there is more than one, they won't work right.
  '(async-shell-command-buffer (quote confirm-kill-process))
  '(column-number-mode t)
+ '(create-lockfiles nil)
  '(global-hl-line-mode t)
  '(global-linum-mode t)
  '(helm-mode t)

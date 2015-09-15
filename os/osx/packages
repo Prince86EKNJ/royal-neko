@@ -1,9 +1,13 @@
+brew-cask
 coreutils
 emacs
-tmux
-wget
-node
+gnu-sed
+hexedit
 htop
-
-# maven
-# tomcat
+node
+node
+tmux
+tmux
+watch
+wget
+wget
