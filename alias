@@ -89,7 +89,8 @@ alias sar='ssh-auth-remote'
 alias tmux='tmux -2'
 
 # youtube-dl
-alias dl-playlist="youtube-dl -t 'http://m.youtube.com/playlist?list=PLPtCbDcDJfWQ5WbU5twB78NLSpBuXk3B9'"
+alias dl-playlist="youtube-dl -t 'http://www.youtube.com/playlist?list=PLPtCbDcDJfWQ5WbU5twB78NLSpBuXk3B9'"
+alias dl-playlist2="youtube-dl -t 'http://www.youtube.com/playlist?list=PLVLjtsD2zOUOFGcXcGgUOMbaPIiK2NhgF'"
 
 # emacs
 alias emacs='emacs -nw'
