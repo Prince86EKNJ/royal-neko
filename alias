@@ -67,6 +67,7 @@ alias aff='apt-file search'
 alias dp='dpkg'
 
 # pacman and yaourt
+alias pacman='pacman --color=auto'
 alias pm='pacman'
 alias pmq='pacman -Q'
 alias pms='pacman -S'
