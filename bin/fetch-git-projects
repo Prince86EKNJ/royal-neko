@@ -1,0 +1,10 @@
+#!/bin/bash
+# compile a list of all .git directories including royal-neko
+GIT_DIRS=$(echo ~/royal-neko/.git && find ~/projects -name ".git" -type d)
+GIT_PROJECTS=$(echo $GIT_DIRS | xargs -n1 dirname) # chop ".git" off of the name of the path
+
+# call 'git fetch' for each project
+for PROJECT in $GIT_PROJECTS; do
+	echo $PROJECT
+	git -C "$PROJECT" fetch --all --prune
+done
