@@ -6,5 +6,5 @@ GIT_PROJECTS=$(echo $GIT_DIRS | xargs -n1 dirname) # chop ".git" off of the name
 # call 'git fetch' for each project
 for PROJECT in $GIT_PROJECTS; do
 	echo $PROJECT
-	git -C "$PROJECT" fetch --all --prune
+	git -C "$PROJECT" fetch --prune
 done
