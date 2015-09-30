@@ -1,37 +1,66 @@
-## optional
-xorg-server
-xorg-xinit
-# xorg-xrandr
-xterm
+##########
+## xorg ##
+##########
 
-## video drivers
-# xf86-video-vesa
+#xorg-server
+#xorg-xinit
+#xorg-xrandr
+#xterm
 
-# lightdm
-lightdm
-lightdm-gtk-greeter
+###################
+## video drivers ##
+###################
 
-## desktop environments
-# xfce4
+#xf86-video-vesa
+#xf86-video-intel
 
-## window managers
-awesome
-i3
-dmenu
+#############
+## lightdm ##
+#############
 
-## wifi-menu packges
-# netctl
-# dialog
-# wpa_supplicant
+#lightdm
+#lightdm-gtk-greeter
 
-# browsers
-firefox
-# lynx
+##########################
+## desktop environments ##
+##########################
 
-# nodejs
-nodejs
-npm
+#xfce4
 
-# utils
-# ascii
-hexedit
+#####################
+## window managers ##
+#####################
+
+#i3
+#dmenu
+
+#awesome
+
+#######################
+## wifi-menu packges ##
+#######################
+
+#netctl
+#dialog
+#wpa_supplicant
+
+##############
+## browsers ##
+##############
+
+#firefox
+#lynx
+
+############
+## nodejs ##
+############
+
+#nodejs
+#npm
+
+###########
+## utils ##
+###########
+
+#ascii
+#hexedit
