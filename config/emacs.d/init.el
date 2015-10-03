@@ -201,6 +201,8 @@
  '(global-linum-mode t)
  '(helm-mode t)
  '(linum-format "%d ")
+ '(magit-fetch-arguments (quote ("--prune")))
+ '(magit-push-arguments (quote ("--set-upstream")))
  '(projectile-completion-system (quote helm))
  '(projectile-global-mode t)
  '(projectile-require-project-root nil)
