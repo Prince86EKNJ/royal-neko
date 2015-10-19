@@ -77,6 +77,9 @@ alias pf='pkgfile'
 alias yao='yaourt'
 alias yaourt='yaourt --pager --color'
 
+# rm
+alias rm="rm -ri"
+
 # systemd
 alias sc='systemctl'
 alias scu='systemctl --user'
