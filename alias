@@ -99,3 +99,7 @@ alias dl-playlist2="youtube-dl -t 'http://www.youtube.com/playlist?list=PLVLjtsD
 # emacs
 alias emacs='emacs -nw'
 alias em='emacsclient --alternate-editor="" -t'
+alias emk="emacsclient -e '(kill-emacs)'"
+
+# docker
+alias dps='docker ps -a'

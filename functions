@@ -28,3 +28,13 @@ gclone () {
 try-emacs () {
 	alias vim='emacs'
 }
+
+# Docker functions
+dsh () {
+	sudo docker exec -it ${1} /bin/bash
+}
+
+drm () {
+	sudo docker stop ${1}
+	sudo docker rm ${1}
+}
