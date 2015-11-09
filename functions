@@ -11,7 +11,7 @@ load-bookmarks () {
 
 gitignore () {
 	if [ ! -f .gitignore ]; then
-		echo ".gitignore" > .gitignore
+	   touch .gitignore
 	fi
 	echo "$1" >> .gitignore
 }
