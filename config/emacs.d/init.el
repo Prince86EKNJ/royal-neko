@@ -54,6 +54,7 @@
 	avy
 	helm
 	helm-swoop
+	js2-mode
 	key-chord
 	magit
 	projectile
@@ -185,6 +186,7 @@
 ;; Mode Hooks - Use this later?
 ;; (add-hook 'text-mode-hook 'edit-mode-hook-fn)
 ;; (add-hook 'prog-mode-hook 'edit-mode-hook-fn)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 ;; (defun edit-mode-hook-fn ()
 ;;   (linum-mode)
