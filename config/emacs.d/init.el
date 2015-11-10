@@ -18,6 +18,7 @@
 (global-set-key (kbd "C-n") 'goto-line)
 (global-set-key (kbd "C-o") 'open-line-forwards)
 (global-set-key (kbd "C-z C-o") 'open-line-backwards)
+(global-set-key (kbd "C-x )") 'kmacro-end-or-call-macro)
 
 (defun open-init-file ()
 	(interactive)
@@ -55,6 +56,7 @@
 	helm
 	helm-swoop
 	js2-mode
+	js2-refactor
 	key-chord
 	magit
 	projectile
@@ -91,6 +93,11 @@
 	(global-set-key (kbd "C-p") 'projectile-find-file)
 	(global-set-key (kbd "C-z C-x") 'run-index)
 	(global-set-key (kbd "C-z x") 'run-script-prompt)
+)
+
+(when (require 'js2-refactor nil t)
+	(add-hook 'js2-mode-hook #'js2-refactor-mode)
+	(js2r-add-keybindings-with-prefix "C-c C-m")
 )
 
 (when (require 'yasnippet nil t)
