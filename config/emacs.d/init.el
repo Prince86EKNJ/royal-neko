@@ -50,6 +50,7 @@
 
 ;; Package list - figure out how to turn this into a command
 (setq neko-package-list '(
+	auto-complete
 	avy
 	helm
 	helm-swoop
@@ -197,6 +198,7 @@
  '(async-shell-command-buffer (quote confirm-kill-process))
  '(column-number-mode t)
  '(create-lockfiles nil)
+ '(global-auto-complete-mode t)
  '(global-hl-line-mode t)
  '(global-linum-mode t)
  '(helm-mode t)
