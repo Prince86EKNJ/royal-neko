@@ -14,6 +14,7 @@
 (global-set-key (kbd "C-z C-r") 'revert-buffer)
 (global-set-key (kbd "C-z C-s") 'switch-to-scratch)
 (global-set-key (kbd "C-z C-w") 'whitespace-mode)
+(global-set-key (kbd "C-z w") 'whitespace-cleanup)
 
 (global-set-key (kbd "C-n") 'goto-line)
 (global-set-key (kbd "C-o") 'open-line-forwards)
