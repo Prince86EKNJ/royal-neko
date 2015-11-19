@@ -1,6 +1,7 @@
 ;; Key Bindings
 (global-unset-key (kbd "C-z"))
 
+(global-set-key (kbd "C-z C-a") 'global-auto-complete-mode)
 (global-set-key (kbd "C-z b") 'buffer-menu)
 (global-set-key (kbd "C-z i") 'open-init-file)
 (global-set-key (kbd "C-z C-i") 'open-royal-init-file)
@@ -104,6 +105,7 @@
 (when (require 'yasnippet nil t)
 	(global-set-key (kbd "C-z C-y") 'yas-insert-snippet)
 	(global-set-key (kbd "C-z y") 'yas-describe-tables)
+	(global-set-key (kbd "C-z M-y") 'yas-new-snippet)
 )
 
 ;; Functions
@@ -208,7 +210,7 @@
  '(async-shell-command-buffer (quote confirm-kill-process))
  '(column-number-mode t)
  '(create-lockfiles nil)
- '(global-auto-complete-mode t)
+ '(global-auto-complete-mode nil)
  '(global-hl-line-mode t)
  '(global-linum-mode t)
  '(helm-mode t)
