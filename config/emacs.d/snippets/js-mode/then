@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: then
+# key: t
+# --
+.then(`yas-selected-text`$0)
