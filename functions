@@ -1,3 +1,8 @@
+md () {
+	  mkdir "$1"
+	  cd "$1"
+}
+
 bookmark () {
 	export $1="$(pwd)"
 	echo "export $1=\"$(pwd)\"" >>! ~/royal-neko/local/bookmarks
