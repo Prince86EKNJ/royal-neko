@@ -1,0 +1,10 @@
+#!/bin/bash
+TEMPLATE_NAME="$1"
+TARGET="$2"
+
+mkdir -p "${TARGET}"
+cd "${TARGET}"
+TEMPLATE_DIR="${HOME}/royal-neko/templates/${TEMPLATE_NAME}"
+
+cp -R $(find "${TEMPLATE_DIR}" -not -name ".install" | sort | tail -n+2) .
+${TEMPLATE_DIR}/.install
