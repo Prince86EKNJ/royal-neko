@@ -7,7 +7,6 @@ net-tools
 openssh
 pkgfile
 tmux
-vim
 wget
 zsh
 zsh-doc
