@@ -1,11 +1,11 @@
 XTerm*foreground:white
 XTerm*background:black
 
-# Fixes for emacs
+! Fixes for emacs
 XTerm*metaSendsEscape:true
 XTerm*ttyModes:erase ^?
 XTerm*backarrowKey:false
 
-# Enable 256 colors
+! Enable 256 colors
 *customization: -color
 XTerm*termName:xterm-256color
