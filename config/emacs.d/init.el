@@ -151,16 +151,17 @@
 )
 
 (defun open-project ()
-	(interactive)
-	(dired
-		(concat
-			"~/projects/"
-			(ido-completing-read "Project: "
-				(directory-files "~/projects" nil "^[^\\.]")
-			)
-		)
-	)
-)
+  (interactive)
+  (dired
+   (concat "~/projects/"
+		   (helm :sources
+				 (helm-build-sync-source "projects"
+				   :candidates (directory-files "~/projects" nil "^[^\\.]")
+				   )
+				 )
+		   )
+   )
+  )
 
 (defun run-index ()
 	(interactive)
