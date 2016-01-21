@@ -22,6 +22,9 @@
 (global-set-key (kbd "C-z C-o") 'open-line-backwards)
 (global-set-key (kbd "C-x )") 'kmacro-end-or-call-macro)
 
+;; Overrides
+(global-set-key (kbd "C-a") 'neko-move-beginning)
+
 (defun open-init-file ()
 	(interactive)
 	(setq
@@ -192,6 +195,15 @@
 	(interactive)
 	(dired default-directory)
 )
+
+(defun neko-move-beginning ()
+  (interactive)
+  (setq before (point))
+  (move-beginning-of-line nil)
+  (if (= before (point))
+	  (back-to-indentation)
+	)
+  )
 
 ;; Mode Hooks - Use this later?
 ;; (add-hook 'text-mode-hook 'edit-mode-hook-fn)
