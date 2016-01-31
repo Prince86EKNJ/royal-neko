@@ -3,19 +3,21 @@
 
 (global-set-key (kbd "C-z C-a") 'global-auto-complete-mode)
 (global-set-key (kbd "C-z b") 'buffer-menu)
-(global-set-key (kbd "C-z i") 'open-init-file)
-(global-set-key (kbd "C-z C-i") 'open-royal-init-file)
 (global-set-key (kbd "C-z C-c") 'customize)
 (global-set-key (kbd "C-z d") 'open-dired)
 (global-set-key (kbd "C-z C-d") 'projectile-dired)
-(global-set-key (kbd "C-z C-f") 'rgrep)
 (global-set-key (kbd "C-z f") 'helm-recentf)
+(global-set-key (kbd "C-z C-f") 'rgrep)
+(global-set-key (kbd "C-z i") 'open-init-file)
+(global-set-key (kbd "C-z C-i") 'open-royal-init-file)
 (global-set-key (kbd "C-z C-n") 'open-royal-neko-dir)
 (global-set-key (kbd "C-z C-p") 'open-project)
 (global-set-key (kbd "C-z C-r") 'revert-buffer)
 (global-set-key (kbd "C-z C-s") 'switch-to-scratch)
 (global-set-key (kbd "C-z C-w") 'whitespace-mode)
 (global-set-key (kbd "C-z w") 'whitespace-cleanup)
+
+(global-set-key (kbd "C-z SPC") 'auto-complete)
 
 (global-set-key (kbd "C-z C-o") 'open-line-backwards)
 (global-set-key (kbd "C-x )") 'kmacro-end-or-call-macro)
@@ -25,7 +27,6 @@
 (global-set-key (kbd "C-n") 'goto-line)
 (global-set-key (kbd "C-o") 'open-line-forwards)
 (global-set-key (kbd "C-r") 'replace-string)
-(global-set-key (kbd "C-S-r") 'replace-regexp)
 
 (defun open-init-file ()
 	(interactive)
@@ -222,10 +223,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ac-auto-show-menu nil)
+ '(ac-auto-start nil)
  '(async-shell-command-buffer (quote confirm-kill-process))
  '(column-number-mode t)
  '(create-lockfiles nil)
- '(global-auto-complete-mode nil)
+ '(global-auto-complete-mode t)
  '(global-hl-line-mode t)
  '(global-linum-mode t)
  '(helm-mode t)
