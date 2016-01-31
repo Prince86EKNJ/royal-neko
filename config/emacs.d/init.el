@@ -17,13 +17,15 @@
 (global-set-key (kbd "C-z C-w") 'whitespace-mode)
 (global-set-key (kbd "C-z w") 'whitespace-cleanup)
 
-(global-set-key (kbd "C-n") 'goto-line)
-(global-set-key (kbd "C-o") 'open-line-forwards)
 (global-set-key (kbd "C-z C-o") 'open-line-backwards)
 (global-set-key (kbd "C-x )") 'kmacro-end-or-call-macro)
 
 ;; Overrides
 (global-set-key (kbd "C-a") 'neko-move-beginning)
+(global-set-key (kbd "C-n") 'goto-line)
+(global-set-key (kbd "C-o") 'open-line-forwards)
+(global-set-key (kbd "C-r") 'replace-string)
+(global-set-key (kbd "C-S-r") 'replace-regexp)
 
 (defun open-init-file ()
 	(interactive)
