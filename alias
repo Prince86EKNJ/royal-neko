@@ -25,10 +25,11 @@ alias neko-pull='git -C ~/royal-neko/ pull'
 alias np='neko-pull'
 
 # ls
+alias ls='ls --color=auto'
 alias l='ls -CF'
 alias la='ls -A'
-alias ll='ls -al'
-alias ls='ls --color=auto'
+alias ll='ls -l'
+alias lal='ls -Al'
 
 # bookmarks
 alias bm='bookmark'
