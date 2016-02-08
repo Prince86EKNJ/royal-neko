@@ -110,7 +110,7 @@
 
 (when (require 'yasnippet nil t)
 	(global-set-key (kbd "C-z C-y") 'yas-insert-snippet)
-	(global-set-key (kbd "C-z y") 'yas-describe-tables)
+	(global-set-key (kbd "C-z y") 'neko-yas-menu)
 	(global-set-key (kbd "C-z M-y") 'yas-new-snippet)
 )
 
@@ -207,6 +207,13 @@
   (if (= before (point))
 	  (back-to-indentation)
 	)
+  )
+
+(defun neko-yas-menu ()
+  (interactive)
+  (yas-describe-tables)
+  (other-window 1)
+  (beginning-of-buffer)
   )
 
 ;; Mode Hooks - Use this later?

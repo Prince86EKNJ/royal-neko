@@ -1,6 +1,6 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: then
-# key: t
+# name: arrow-function
+# key: f
 # binding: direct-keybinding
 # --
-.then(`yas-selected-text`$0)
+$1 => $0
