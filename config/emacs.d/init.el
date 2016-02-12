@@ -11,7 +11,7 @@
 (global-set-key (kbd "C-z i") 'open-init-file)
 (global-set-key (kbd "C-z C-i") 'open-royal-init-file)
 (global-set-key (kbd "C-z C-n") 'open-royal-neko-dir)
-(global-set-key (kbd "C-z C-p") 'open-project)
+(global-set-key (kbd "C-z C-p") 'neko-open-project)
 (global-set-key (kbd "C-z C-r") 'revert-buffer)
 (global-set-key (kbd "C-z C-s") 'switch-to-scratch)
 (global-set-key (kbd "C-z C-w") 'whitespace-mode)
@@ -153,18 +153,19 @@
 	(switch-to-buffer "*scratch*")
 )
 
-(defun open-project ()
+(defun neko-open-project ()
   (interactive)
-  (dired
-   (concat "~/projects/"
-		   (helm :sources
-				 (helm-build-sync-source "projects"
-				   :candidates (directory-files "~/projects" nil "^[^\\.]")
-				   )
-				 )
-		   )
-   )
-  )
+  (setq project-name
+		(helm :sources
+			  (helm-build-sync-source "projects"
+				:candidates (directory-files "~/projects" nil "^[^\\.]")
+				)
+			  )
+		)
+  (if project-name
+	  (dired (concat "~/projects/" project-name))
+	)
+)
 
 (defun run-index ()
 	(interactive)
