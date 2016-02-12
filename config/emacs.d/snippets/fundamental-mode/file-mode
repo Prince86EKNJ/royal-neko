@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: file-mode
+# key: fm
+# binding: direct-keybinding
+# --
+-*- mode: $1 -*-
