@@ -99,6 +99,7 @@
 
 (when (require 'projectile nil t)
 	(global-set-key (kbd "C-p") 'projectile-find-file)
+	(global-set-key (kbd "C-M-p") 'projectile-find-file-other-window)
 	(global-set-key (kbd "C-z C-x") 'run-index)
 	(global-set-key (kbd "C-z x") 'run-script-prompt)
 )
