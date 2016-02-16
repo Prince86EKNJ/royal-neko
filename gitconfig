@@ -1,7 +1,6 @@
 [include]
 	path = ./royal-neko/local/gitconfig
 [user]
-	email = Prince86EKNJ@gmail.com
 	name = Edward Nicholes Jr.
 [push]
 	default = simple
