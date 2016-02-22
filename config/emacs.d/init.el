@@ -29,28 +29,22 @@
 (global-set-key (kbd "C-r") 'replace-string)
 
 (defun open-init-file ()
-	(interactive)
-	(setq
-		defaultVal vc-follow-symlinks
-		vc-follow-symlinks nil)
-	(find-file user-init-file)
-	(setq vc-follow-symlinks defaultVal)
-)
+  (interactive)
+  (setq defaultVal vc-follow-symlinks
+        vc-follow-symlinks nil)
+  (find-file user-init-file)
+  (setq vc-follow-symlinks defaultVal))
 
 (defun open-royal-init-file ()
-	(interactive)
-	(setq
-		defaultVal vc-follow-symlinks
-		vc-follow-symlinks nil)
-	(find-file "~/royal-neko/config/emacs.d/init.el")
-	(setq vc-follow-symlinks defaultVal)
-)
+  (interactive)
+  (setq defaultVal vc-follow-symlinks
+        vc-follow-symlinks nil)
+  (find-file "~/royal-neko/config/emacs.d/init.el")
+  (setq vc-follow-symlinks defaultVal))
 
 ;; Manual Settings
-(setq
-	backup-directory-alist `((".*" . ,temporary-file-directory))
-	auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
-)
+(setq backup-directory-alist `((".*" . ,temporary-file-directory))
+      auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
 ;; Extra Package Repos
 (require 'package)
@@ -59,164 +53,131 @@
 
 ;; Package list - figure out how to turn this into a command
 (setq neko-package-list '(
-	auto-complete
-	avy
-	helm
-	helm-swoop
-	js2-mode
-	js2-refactor
-	key-chord
-	magit
-	projectile
-	yasnippet
-))
+  auto-complete
+  avy
+  helm
+  helm-swoop
+  js2-mode
+  js2-refactor
+  key-chord
+  magit
+  projectile
+  yasnippet))
 
 (when (require 'avy nil t)
-	(global-set-key (kbd "C-f") 'avy-goto-word-1)
-	(global-set-key (kbd "C-c SPC") 'avy-goto-char)
-	(global-set-key (kbd "C-c C-SPC") 'avy-goto-char)
-)
+  (global-set-key (kbd "C-f") 'avy-goto-word-1)
+  (global-set-key (kbd "C-c SPC") 'avy-goto-char)
+  (global-set-key (kbd "C-c C-SPC") 'avy-goto-char))
 
 (when (require 'helm-swoop nil t)
-	(global-set-key (kbd "C-z s") 'helm-swoop)
-)
+  (global-set-key (kbd "C-z s") 'helm-swoop))
 
 (when (require 'key-chord nil t)
-	(setq key-chord-two-keys-delay 0.05)
-	(global-set-key (kbd "C-z C-k") 'key-chord-mode)
+  (setq key-chord-two-keys-delay 0.05)
+  (global-set-key (kbd "C-z C-k") 'key-chord-mode)
 
-	(key-chord-define-global "qw" 'whitespace-mode)
-	(key-chord-define-global "l;" 'goto-line)
+  (key-chord-define-global "qw" 'whitespace-mode)
+  (key-chord-define-global "l;" 'goto-line)
 
-	(key-chord-define-global "oi" 'open-line-backwards)
-	(key-chord-define-global "op" 'open-line-forwards)
-)
+  (key-chord-define-global "oi" 'open-line-backwards)
+  (key-chord-define-global "op" 'open-line-forwards))
 
 (when (require 'magit nil t)
-;	(global-set-key (kbd "C-x g") 'magit-status)
-	(global-set-key (kbd "C-z C-g") 'magit-status)
-)
+  (global-set-key (kbd "C-z C-g") 'magit-status))
 
 (when (require 'projectile nil t)
-	(global-set-key (kbd "C-p") 'projectile-find-file)
-	(global-set-key (kbd "C-M-p") 'projectile-find-file-other-window)
-	(global-set-key (kbd "C-z C-x") 'run-index)
-	(global-set-key (kbd "C-z x") 'run-script-prompt)
-)
+  (global-set-key (kbd "C-p") 'projectile-find-file)
+  (global-set-key (kbd "C-M-p") 'projectile-find-file-other-window)
+  (global-set-key (kbd "C-z C-x") 'run-index)
+  (global-set-key (kbd "C-z x") 'run-script-prompt))
 
 (when (require 'js2-refactor nil t)
-	(add-hook 'js2-mode-hook #'js2-refactor-mode)
-	(js2r-add-keybindings-with-prefix "C-c C-m")
-)
+  (add-hook 'js2-mode-hook #'js2-refactor-mode)
+  (js2r-add-keybindings-with-prefix "C-c C-m"))
 
 (when (require 'yasnippet nil t)
-	(global-set-key (kbd "C-z C-y") 'yas-insert-snippet)
-	(global-set-key (kbd "C-z y") 'neko-yas-menu)
-	(global-set-key (kbd "C-z M-y") 'yas-new-snippet)
-)
+  (global-set-key (kbd "C-z C-y") 'yas-insert-snippet)
+  (global-set-key (kbd "C-z y") 'neko-yas-menu)
+  (global-set-key (kbd "C-z M-y") 'yas-new-snippet))
 
 ;; Functions
 (defun install-neko-packages ()
-	(interactive)
-	(dolist (package neko-package-list)
-		(if (require package nil t)
-			nil
-			(package-install package)
-		)
-	)
-)
+  (interactive)
+  (dolist (package neko-package-list)
+    (unless (require package nil t)
+      (package-install package))))
 
 (defun open-line-forwards ()
-	(interactive)
-	(move-end-of-line nil)
-	(newline)
-)
+  (interactive)
+  (move-end-of-line nil)
+  (newline))
 
 (defun open-line-backwards ()
-	(interactive)
-	(move-beginning-of-line nil)
-	(newline)
-	(previous-line)
-)
+  (interactive)
+  (move-beginning-of-line nil)
+  (newline)
+  (previous-line))
 
 (defun reload-init-file ()
-	(interactive)
-	(load-file user-init-file)
-)
+  (interactive)
+  (load-file user-init-file))
 
 (defun open-royal-neko-dir ()
-	(interactive)
-	(find-file "~/royal-neko")
-)
+  (interactive)
+  (find-file "~/royal-neko"))
 
 (defun switch-to-scratch ()
-	(interactive)
-	(switch-to-buffer "*scratch*")
-)
+  (interactive)
+  (switch-to-buffer "*scratch*"))
 
 (defun neko-open-project ()
   (interactive)
-  (setq project-name
-		(helm :sources
-			  (helm-build-sync-source "projects"
-				:candidates (directory-files "~/projects" nil "^[^\\.]")
-				)
-			  )
-		)
+  (setq project-name (helm
+                       :sources
+                       (helm-build-sync-source "projects"
+                         :candidates
+                         (directory-files "~/projects" nil "^[^\\.]"))))
   (if project-name
-	  (dired (concat "~/projects/" project-name))
-	)
-)
+      (dired (concat "~/projects/" project-name))))
 
 (defun run-index ()
-	(interactive)
-	(run-script (concat (projectile-project-root) "bin/index"))
-)
+  (interactive)
+  (run-script (concat (projectile-project-root) "bin/index")))
 
 (defun run-script-prompt ()
-	(interactive)
-	(setq project-bin-dir
-		(concat
-			(projectile-project-root)
-			"bin/"
-		)
-	)
-	(setq script-path
-		(concat project-bin-dir
-			(helm :sources (helm-build-sync-source "scripts"
-				:candidates (directory-files project-bin-dir nil "^[^\\.]"))
-			)
-		)
-	)
-	(run-script script-path)
-)
+  (interactive)
+  (setq project-bin-dir
+        (concat (projectile-project-root) "bin/"))
+  (setq script-path
+        (concat project-bin-dir
+                (helm
+                  :sources
+                  (helm-build-sync-source "scripts"
+                    :candidates
+                    (directory-files project-bin-dir nil "^[^\\.]")))))
+  (run-script script-path))
 
 (defun run-script (script-path)
-	(async-shell-command script-path
-		(concat "*Async >> " script-path)
-	)
-)
+  (async-shell-command
+    script-path
+    (concat "*Async >> " script-path)))
 
 (defun open-dired ()
-	(interactive)
-	(dired default-directory)
-)
+  (interactive)
+  (dired default-directory))
 
 (defun neko-move-beginning ()
   (interactive)
   (setq before (point))
   (move-beginning-of-line nil)
   (if (= before (point))
-	  (back-to-indentation)
-	)
-  )
+      (back-to-indentation)))
 
 (defun neko-yas-menu ()
   (interactive)
   (yas-describe-tables)
   (other-window 1)
-  (beginning-of-buffer)
-  )
+  (beginning-of-buffer))
 
 ;; Mode Hooks - Use this later?
 ;; (add-hook 'text-mode-hook 'edit-mode-hook-fn)
@@ -241,6 +202,7 @@
  '(global-hl-line-mode t)
  '(global-linum-mode t)
  '(helm-mode t)
+ '(indent-tabs-mode nil)
  '(linum-format "%d ")
  '(magit-fetch-arguments (quote ("--prune")))
  '(magit-push-arguments (quote ("--set-upstream")))
@@ -248,7 +210,6 @@
  '(projectile-global-mode t)
  '(projectile-require-project-root nil)
  '(recentf-mode t)
- '(tab-width 4)
  '(truncate-lines t)
  '(yas-global-mode t nil (yasnippet))
  '(yas-snippet-dirs (quote ("~/.emacs.d/snippets")) nil (yasnippet)))
