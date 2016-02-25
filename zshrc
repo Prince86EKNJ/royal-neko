@@ -45,10 +45,15 @@ alias -g 'NS+'='--name-status' # git option
 bindkey -e # emacs
 bindkey "^[[A" up-line-or-search
 bindkey "^[[B" down-line-or-search
-bindkey "^{[1;5C" forward-word
-bindkey "^{[1;5D" backward-word
-# bindkey "^[OC" forward-word
-# bindkey "^[OD" backward-word
+
+if [ -n "$TMUX" ]; then
+    bindkey "^[OC" forward-word
+    bindkey "^[OD" backward-word
+else
+    bindkey "^{[1;5C" forward-word
+    bindkey "^{[1;5D" backward-word
+fi
+
 bindkey "^[[3~" delete-char # del key
 
 prompt=$'
