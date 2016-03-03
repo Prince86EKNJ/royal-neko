@@ -38,7 +38,7 @@ alias -g 'G+'='| grep' # Grep
 alias -g 'L+'='| lines' # Lines
 alias -g 'Q+'='>/dev/null 2>&1' # Quiet - no stdout or stderr
 alias -g 'NE+'='2>/dev/null' # no error, or NULL error
-alias -g 'X+'='| xargs ' # Xargs
+alias -g 'X+'='| xargs -n1 -J % ' # Xargs
 alias -g 'NS+'='--name-status' # git option
 
 # keymap
