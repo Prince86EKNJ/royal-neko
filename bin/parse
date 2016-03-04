@@ -6,7 +6,7 @@ var _ = require("lodash");
 
 var cmd = '';
 
-var parseFn = function(value, key) {
+var parseFn = (value, key) => {
     var parts = value.split(/\s/);
     var parts = _.filter(parts, function(part) {
         return part.trim().length != 0;
@@ -21,7 +21,7 @@ cmd = (cmd.length) ? cmd : process.argv[2];
 
 var stdout = exec(cmd).toString();
 var lines = stdout.split(/\n/);
-lines = _.filter(lines, function(line) { return line.trim().length > 0  });
+lines = _.filter(lines, line => line.trim().length > 0);
 
 // Parse lines
 var result = _.map(lines, parseFn);
