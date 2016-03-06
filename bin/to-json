@@ -6,17 +6,14 @@ var concat = require("concat-stream");
 
 var opt = require("node-getopt").create([
     ["a", "array", "array mode"],
+    ["h", "help", "display this help"],
     ["o", "object=KEY", "object mode"],
-    ["t", "trim-top=NUM", "trim NUM limes from the top"],
-    ["b", "trim-bottom=NUM", "trim NUM limes from the bottom"],
-    ["s", "split", "split args"],
     ["p", "pretty", "output pretty json"],
-    ["h", "help", "display this help"]
+    ["s", "split", "split args"],
+    ["t", "trim=NUM+", "trim NUM limes from the top (positive) or bottom (negative)"],
 ])
         .bindHelp()
         .parseSystem();
-
-// console.log(opt);
 
 var options = opt.options;
 
@@ -35,11 +32,13 @@ var chain = readStdin.then(input => input.split(/\n/))
     .then(lines => _.filter(lines, line => line.trim().length != 0));
 
 // Options
-if(options["trim-bottom"])
-    chain = chain.then(lines => lines.slice(0, lines.length-options["trim-bottom"]));
-
-if(options["trim-top"])
-    chain = chain.then(lines => lines.slice(options["trim-top"]));
+_.each(options.trim, trim => {
+    trim = parseInt(trim);
+    if(trim > 0)
+        chain = chain.then(lines => lines.slice(trim));
+    else
+        chain = chain.then(lines => lines.slice(0, lines.length + trim));
+});
 
 if(options.split)
     chain = chain.then(lines => _.map(lines, line  => line.split(/\s+/)))
