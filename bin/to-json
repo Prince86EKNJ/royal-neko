@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 // -*- mode: js2 -*-
 
-var exec = require("child_process").execSync;
-
 var _ = require("lodash");
 var concat = require("concat-stream");
 
@@ -12,6 +10,7 @@ var opt = require("node-getopt").create([
     ["t", "trim-top=NUM", "trim NUM limes from the top"],
     ["b", "trim-bottom=NUM", "trim NUM limes from the bottom"],
     ["s", "split", "split args"],
+    ["p", "pretty", "output pretty json"],
     ["h", "help", "display this help"]
 ])
         .bindHelp()
@@ -59,4 +58,4 @@ if(options.object) {
     }));
 }
 
-chain.then(result => console.log(result));
+chain.then(result => console.log(JSON.stringify(result, null, options.pretty ? 2 : undefined)));
