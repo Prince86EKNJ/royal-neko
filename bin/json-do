@@ -7,6 +7,7 @@ var _ = require("lodash");
 var concat = require("concat-stream");
 var opt = require("node-getopt").create([
     ["n", "name=NAME", "name of the input variable"],
+    ["o", "std-out", "print command result to stdout instad of returning json"],
     ["p", "pretty", "output pretty json"],
 ])
         .parseSystem();
@@ -28,7 +29,7 @@ var readStdin = new Promise((resolve, reject) => {
 var cmdTpl = args.join(" ");
 var template = _.template(cmdTpl);
 
-readStdin.then(input => {
+var chain = readStdin.then(input => {
     return _.map(input, item => {
         if(!_.isPlainObject(item)) {
             var newItem = {};
@@ -38,6 +39,13 @@ readStdin.then(input => {
 
         var cmd = template(item);
         var stdOut = exec(cmd).toString();
+
+        if(options["std-out"])
+            process.stdout.write(stdOut);
+
         return stdOut.trim();
     });
-}).then(result => console.log(JSON.stringify(result, null, options.pretty ? 2 : undefined)));
+})
+
+if(!options["std-out"])
+    chain.then(result => console.log(JSON.stringify(result, null, options.pretty ? 2 : undefined)));
