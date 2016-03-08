@@ -35,6 +35,7 @@ alias mobile-mode='source ~/royal-neko/mobile/zsh-mobile'
 
 # global aliases
 alias -g 'G+'='| grep' # Grep
+alias -g 'J+'='| to-json'
 alias -g 'L+'='| lines' # Lines
 alias -g 'NE+'='2>/dev/null' # no error, or NULL error
 alias -g 'NS+'='--name-status' # git option
