@@ -1,66 +1,45 @@
-##########
-## xorg ##
-##########
+## xorg
+xorg-server
+xorg-xinit
+xorg-xrandr
+xterm
 
-#xorg-server
-#xorg-xinit
-#xorg-xrandr
-#xterm
-
-###################
-## video drivers ##
-###################
-
+## video drivers
 #xf86-video-vesa
 #xf86-video-intel
 
-#############
-## lightdm ##
-#############
+## lightdm
+lightdm
+lightdm-gtk-greeter
 
-#lightdm
-#lightdm-gtk-greeter
-
-##########################
-## desktop environments ##
-##########################
-
+## desktop environments
 #xfce4
 
-#####################
-## window managers ##
-#####################
-
-#i3
-#dmenu
-
+## window managers
+i3
+dmenu
 #awesome
 
-#######################
-## wifi-menu packges ##
-#######################
-
+## wifi-menu packges
 #netctl
 #dialog
 #wpa_supplicant
 
-##############
-## browsers ##
-##############
-
-#firefox
+## browsers
+firefox
 #lynx
 
-############
-## nodejs ##
-############
+## nodejs
+nodejs
+npm
 
-#nodejs
-#npm
+## utils
+ascii
+curl
+hexedit
+#mlocate
+wget
 
-###########
-## utils ##
-###########
-
-#ascii
-#hexedit
+## other
+compton # composite manager
+feh     # wallpaper displayer

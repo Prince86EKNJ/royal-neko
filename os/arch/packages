@@ -1,13 +1,10 @@
-curl
 emacs
 git
 htop
-mlocate
 net-tools
 openssh
 pkgfile
 tmux
-wget
 zsh
 zsh-doc
 zsh-syntax-highlighting
