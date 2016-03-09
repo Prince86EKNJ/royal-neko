@@ -1,18 +1,14 @@
 #!/usr/bin/env node
 // -*- mode: js2 -*-
 
-var exec = require("child_process").execSync;
-
 var _ = require("lodash");
-var concat = require("concat-stream");
-var opt = require("node-getopt").create([
-    ["h", "help", "display this help"],
+var c = require("./json-common");
+
+var opt = c.getOpt([
     ["n", "name=NAME", "name of the input variable"],
     ["o", "std-out", "print command result to stdout instad of returning json"],
     ["p", "pretty", "output pretty json"],
-])
-        .bindHelp()
-        .parseSystem();
+]);
 
 var args = opt.argv;
 var options = opt.options;
@@ -20,32 +16,20 @@ var options = opt.options;
 var varName = options.name ? options.name : "x";
 
 // Start
-var readStdin = new Promise((resolve, reject) => {
-    process.stdin.pipe(concat(input => {
-        var inputStr = input.toString();
-        var json = JSON.parse(inputStr);
-        resolve(json);
-    }));
-});
+var stdinP = c.readStdinP().then(input => JSON.parse(input));
 
 var cmdTpl = args.join(" ");
 var template = _.template(cmdTpl);
 
-var chain = readStdin.then(input => {
+var chain = stdinP.then(input => {
     return _.map(input, item => {
-        if(!_.isPlainObject(item)) {
-            var newItem = {};
-            newItem[varName] = item;
-            item = newItem;
-        };
-
-        var cmd = template(item);
-        var stdOut = exec(cmd).toString();
+        var input = c.toObj(item, varName);
+        var output = c.exec(template, input).trim();
 
         if(options["std-out"])
-            process.stdout.write(stdOut);
+            process.stdout.write(output);
 
-        return stdOut.trim();
+        return output;
     });
 })
 
