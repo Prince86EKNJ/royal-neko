@@ -7,6 +7,7 @@ var c = require("./json-common.js");
 var opt = c.getOpt([
     ["n", "name=NAME", "name of the input variable"],
     ["p", "pretty", "output pretty json"],
+    ["t", "type=TYPE", "convert to result to given type"],
 ]);
 
 var args = opt.argv;
@@ -27,10 +28,22 @@ var chain = stdinP.then(input => {
     return _.map(input, item => {
         var input = c.toObj(item, varName);
 
+        var output = undefined;
         try {
-            var output = c.exec(template, input).trim();
+            output = c.exec(template, input).trim();
         } catch(e) {
             process.stderr.write(e.toString());
+        }
+
+        if(options.type) {
+            switch(options.type.charAt(0)) {
+            case "n":
+                output = parseFloat(output);
+                break;
+            case "d":
+                output = new Date(output);
+                break;
+            }
         }
 
         input[key] = output;
