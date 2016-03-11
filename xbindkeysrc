@@ -11,6 +11,8 @@
 
 "amixer set Master toggle"
 	XF86AudioMute
+"amixer set Master toggle"
+	Mod4 + m
 
 # lock
 "i3lock -c 000000"
