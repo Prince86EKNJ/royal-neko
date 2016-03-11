@@ -43,6 +43,7 @@ hexedit
 wget
 
 ## other
-compton # composite manager
-feh     # wallpaper displayer
-konsole # favorite terminal
+compton         # composite manager
+feh             # wallpaper displayer
+konsole         # favorite terminal
+ttf-droid       # font that supports japanese characters (like in Chrome and Firefox)
