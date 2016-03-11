@@ -1,5 +1,5 @@
 # -*- mode: shell-script -*-
 export TERMINAL=konsole
 
-[ -x /usr/bin/xbindkeys ] && xbindkeys &
 [ -x /usr/bin/cairo-compmgr ] && cairo-compmgr &
+[ -x /usr/bin/xbindkeys ] && xbindkeys &

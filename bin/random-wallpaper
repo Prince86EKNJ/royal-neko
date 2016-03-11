@@ -4,7 +4,7 @@ touch ~/.config/royal-neko/current-wallpaper
 
 lastImage=$(cat ~/.config/royal-neko/current-wallpaper)
 
-image=$(find /usr/share/backgrounds/fox -type f | shuf)
+image=$(find /usr/share/backgrounds/fox -type f | shuf | head -n1)
 while [ "${image}" == "${lastImage}" ]; do
     image=$(find /usr/share/backgrounds/fox -type f | shuf | head -n1)
 done
