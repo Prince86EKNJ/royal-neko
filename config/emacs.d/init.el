@@ -69,6 +69,12 @@
   (global-set-key (kbd "C-c SPC") 'avy-goto-char)
   (global-set-key (kbd "C-c C-SPC") 'avy-goto-char))
 
+(when (require 'helm nil t)
+  (global-set-key (kbd "M-x") 'helm-M-x)
+  (global-set-key (kbd "C-x C-f") 'helm-find-files)
+  (global-set-key (kbd "C-z C-h") 'helm-apropos)
+  (global-set-key (kbd "C-z C-m") 'helm-imenu))
+
 (when (require 'helm-swoop nil t)
   (global-set-key (kbd "C-z s") 'helm-swoop))
 
