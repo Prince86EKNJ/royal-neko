@@ -2,7 +2,9 @@
 xorg-server
 xorg-xinit
 xorg-xrandr
+
 xterm
+xbindkeys
 
 ## video drivers
 #xf86-video-vesa
@@ -43,3 +45,4 @@ wget
 ## other
 compton # composite manager
 feh     # wallpaper displayer
+konsole # favorite terminal
