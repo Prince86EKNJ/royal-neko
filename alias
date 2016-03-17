@@ -102,6 +102,8 @@ alias dl-playlist2="youtube-dl -t 'http://www.youtube.com/playlist?list=PLVLjtsD
 alias emacs='emacs -nw'
 alias em='emacsclient --alternate-editor="" -t'
 alias emk="emacsclient -e '(kill-emacs)'"
+alias elisp='emacs -nw --no-init-file --load'
+alias emacs-upgrade='elisp ~/royal-neko/scripts/upgrade-emacs-packages'
 
 # docker
 alias dps='docker ps -a'
