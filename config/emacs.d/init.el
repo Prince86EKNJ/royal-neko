@@ -211,6 +211,7 @@
  '(indent-tabs-mode nil)
  '(linum-format "%d ")
  '(magit-fetch-arguments (quote ("--prune")))
+ '(magit-log-arguments (quote ("--graph" "--color" "--decorate" "-n256")))
  '(magit-push-arguments (quote ("--set-upstream")))
  '(projectile-completion-system (quote helm))
  '(projectile-global-mode t)
