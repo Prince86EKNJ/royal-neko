@@ -13,6 +13,12 @@ xbindkeys
 ## lightdm
 lightdm
 lightdm-gtk-greeter
+lightdm-gtk-greeter-settings
+
+## gtk
+gtk-theme-switch2
+## themes
+breeze-gtk
 
 ## desktop environments
 #xfce4
@@ -43,7 +49,7 @@ hexedit
 wget
 
 ## other
-compton         # composite manager
+# compton         # composite manager
 feh             # wallpaper displayer
 konsole         # favorite terminal
 ttf-droid       # font that supports japanese characters (like in Chrome and Firefox)
