@@ -1,0 +1,1 @@
+cat ~/royal-neko/os/arch/packages.optional | filter-comments
