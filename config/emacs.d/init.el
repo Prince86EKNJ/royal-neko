@@ -92,7 +92,8 @@
   (global-set-key (kbd "C-z C-g") 'magit-status))
 
 (when (require 'projectile nil t)
-  (global-set-key (kbd "C-p") 'projectile-find-file)
+  (global-set-key (kbd "C-p") 'projectile-find-file-in-directory)
+  (global-set-key (kbd "C-z p") 'neko-find-file-in-directory)
   (global-set-key (kbd "C-M-p") 'projectile-find-file-other-window)
   (global-set-key (kbd "C-z C-x") 'run-index)
   (global-set-key (kbd "C-z x") 'run-script-prompt))
@@ -131,6 +132,10 @@
 (defun open-royal-neko-dir ()
   (interactive)
   (find-file "~/royal-neko"))
+
+(defun neko-find-file-in-directory ()
+  (interactive)
+  (projectile-find-file-in-directory default-directory))
 
 (defun switch-to-scratch ()
   (interactive)
