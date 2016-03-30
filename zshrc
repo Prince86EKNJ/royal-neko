@@ -73,6 +73,9 @@ if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
+# highlight stderr in red
+exec 2>>( while read X; do print "\e[91m${X}\e[0m" > /dev/tty; done & )
+
 # reminder
 echo "Make sure you do these things regularly:"
 echo "* Update royal-neko"
