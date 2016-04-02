@@ -2,5 +2,6 @@
 	path = ./royal-neko/local/gitconfig
 [user]
 	name = Edward Nicholes Jr.
+	useConfigOnly = true
 [push]
 	default = simple
