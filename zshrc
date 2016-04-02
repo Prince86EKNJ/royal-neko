@@ -74,7 +74,7 @@ if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 fi
 
 # highlight stderr in red
-exec 2>>( while read X; do print "\e[91m${X}\e[0m" > /dev/tty; done & )
+# exec 2>>( while read X; do print "\e[91m${X}\e[0m" > /dev/tty; done & )
 
 # reminder
 echo "Make sure you do these things regularly:"
