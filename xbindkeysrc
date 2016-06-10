@@ -18,6 +18,10 @@
 	XF86KbdBrightnessUp
 "kbdlight down"
 	XF86KbdBrightnessDown
+"kbdlight max"
+	Mod4 + XF86KbdBrightnessUp
+"kbdlight off"
+	Mod4 + XF86KbdBrightnessDown
 
 # lock
 "i3lock -c 000000; sleep 1; xset dpms force off"
