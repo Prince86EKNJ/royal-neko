@@ -14,6 +14,11 @@
 "amixer set Master toggle"
 	Mod4 + m
 
+"kbdlight up"
+	XF86KbdBrightnessUp
+"kbdlight down"
+	XF86KbdBrightnessDown
+
 # lock
-"i3lock -c 000000"
+"i3lock -c 000000; sleep 1; xset dpms force off"
 	Mod4 + l
