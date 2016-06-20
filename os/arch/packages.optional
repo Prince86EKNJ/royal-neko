@@ -53,3 +53,4 @@ wget
 feh             # wallpaper displayer
 konsole         # favorite terminal
 ttf-droid       # font that supports japanese characters (like in Chrome and Firefox)
+keepassx2
