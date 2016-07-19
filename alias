@@ -107,3 +107,5 @@ alias emacs-upgrade='elisp ~/royal-neko/scripts/upgrade-emacs-packages'
 
 # docker
 alias dps='docker ps -a'
+alias docker-dangling-images='docker images --filter "dangling=true"'
+alias docker-rm-dangling-images='docker rmi $(docker-dangling-images -q)'
