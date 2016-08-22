@@ -1,0 +1,14 @@
+".source.js":
+  "angular module":
+    "prefix": "ngMod"
+    "body": """
+(function(angular) {
+
+    'use strict';
+
+    var mod = angular.module("${1:module name}");
+
+    $2
+
+})(angular);
+"""
