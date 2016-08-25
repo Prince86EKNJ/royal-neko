@@ -1,0 +1,7 @@
+#!/bin/bash
+SERVICE=${1}
+
+[ -f service.pid ] && kill $(cat service.pid)
+
+${SERVICE} >> service.log 2>> service.err &
+echo $! > service.pid
