@@ -4,3 +4,13 @@
 "atom-workspace atom-text-editor":
     "ctrl-a": "editor:move-to-beginning-of-line",
     "ctrl-shift-a": "core:select-all"
+
+"body":
+    "ctrl-space c": "application:open-your-config"
+    "ctrl-space i": "application:open-your-init-script"
+    "ctrl-space k": "application:open-your-keymap"
+    "ctrl-space ctrl-k": "settings-view:show-keybindings"
+    "ctrl-space p": "settings-view:view-installed-packages"
+    "ctrl-space ctrl-p": "settings-view:install-packages-and-themes"
+    "ctrl-space s": "application:open-your-snippets"
+    "ctrl-space ctrl-s": "application:open-your-stylesheet"
