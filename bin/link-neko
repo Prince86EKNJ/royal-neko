@@ -22,5 +22,6 @@ ln -s ~/royal-neko/config/i3status/config ~/.config/i3status/config
 
 # atom
 mkdir -p ~/.atom
-ln -s ~/royal-neko/config/atom/snippets.cson ~/.atom/snippets.cson
+ln -s ~/royal-neko/config/atom/init.coffee ~/.atom/init.coffee
 ln -s ~/royal-neko/config/atom/keymap.cson ~/.atom/keymap.cson
+ln -s ~/royal-neko/config/atom/snippets.cson ~/.atom/snippets.cson

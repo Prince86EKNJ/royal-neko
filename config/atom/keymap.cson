@@ -12,5 +12,8 @@
     "ctrl-space ctrl-k": "settings-view:show-keybindings"
     "ctrl-space p": "settings-view:view-installed-packages"
     "ctrl-space ctrl-p": "settings-view:install-packages-and-themes"
+    "ctrl-space q": "neko:auto-indent-all"
     "ctrl-space s": "application:open-your-snippets"
     "ctrl-space ctrl-s": "application:open-your-stylesheet"
+    "ctrl-space t": "neko:test"
+    "ctrl-space ctrl-t": "neko:test2"
