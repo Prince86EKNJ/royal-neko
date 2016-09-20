@@ -1,6 +1,7 @@
 emacs
 git
 htop
+lsof
 net-tools
 openssh
 pkgfile
