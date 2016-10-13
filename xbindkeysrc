@@ -33,5 +33,5 @@
 	Mod4 + XF86MonBrightnessDown
 
 # lock
-"i3lock -c 000000; sleep 1; xset dpms force off"
+"lock"
 	Mod4 + l
