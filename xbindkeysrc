@@ -33,5 +33,5 @@
 	Mod4 + XF86MonBrightnessDown
 
 # lock
-"lock"
+"~/royal-neko/bin/lock"
 	Mod4 + l
