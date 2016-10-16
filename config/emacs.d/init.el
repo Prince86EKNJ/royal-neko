@@ -110,6 +110,7 @@
 ;; Functions
 (defun install-neko-packages ()
   (interactive)
+  (list-packages)
   (dolist (package neko-package-list)
     (unless (require package nil t)
       (package-install package))))
