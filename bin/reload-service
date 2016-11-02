@@ -1,5 +1,5 @@
 #!/bin/bash
-SERVICE=${1}
+SERVICE=$@
 
 [ -f service.pid ] && kill $(cat service.pid)
 
