@@ -1,0 +1,8 @@
+if [ "$(whoami)" != "root" ]; then
+   echo "Please use as root"
+   exit
+fi
+
+lock
+sleep 2
+echo mem > /sys/power/state
