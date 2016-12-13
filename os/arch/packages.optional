@@ -55,7 +55,6 @@ ascii
 curl
 hexedit
 #mlocate
-wget
 
 ## other
 # compton         # composite manager
