@@ -58,11 +58,14 @@ hexedit
 wget
 
 ## other
-# compton         # composite manager
-# feh             # wallpaper displayer
 konsole         # favorite terminal
 ttf-droid       # font that supports japanese characters (like in Chrome and Firefox)
 keepassx2
 tlp             # energy saver
 youtube-dl
+vlc
+mplayer
+# steam
 # dnsmasq
+# compton         # composite manager
+# feh             # wallpaper displayer
