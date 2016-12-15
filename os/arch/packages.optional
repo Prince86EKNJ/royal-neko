@@ -6,7 +6,10 @@ xorg-xrandr
 xterm
 xbindkeys
 
+arandr
+
 ## video drivers
+xorg-drivers
 #xf86-video-vesa
 #xf86-video-intel
 
@@ -22,16 +25,22 @@ breeze-gtk
 
 ## desktop environments
 #xfce4
+gnome
+gnome-extra
 
 ## window managers
 i3
 dmenu
 #awesome
 
+## audio
+alsa-utils
+
 ## wifi-menu packges
 #netctl
 #dialog
 #wpa_supplicant
+networkmanager
 
 ## browsers
 firefox
@@ -46,12 +55,13 @@ ascii
 curl
 hexedit
 #mlocate
-wget
 
 ## other
 # compton         # composite manager
-feh             # wallpaper displayer
+# feh             # wallpaper displayer
 konsole         # favorite terminal
 ttf-droid       # font that supports japanese characters (like in Chrome and Firefox)
 keepassx2
-dnsmasq
+tlp             # energy saver
+youtube-dl
+# dnsmasq
