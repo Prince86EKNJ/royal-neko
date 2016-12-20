@@ -1,0 +1,8 @@
+if [ "$(whoami)" != "root" ]; then
+   echo "Please use as root"
+   exit
+fi
+
+i3lock -c 000000
+sleep 2
+echo disk > /sys/power/state
