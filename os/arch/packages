@@ -6,6 +6,7 @@ net-tools
 openssh
 pkgfile
 tmux
+wget
 zsh
 zsh-doc
 zsh-syntax-highlighting
