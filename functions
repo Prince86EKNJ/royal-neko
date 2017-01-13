@@ -45,5 +45,9 @@ drm () {
 }
 
 java-debug () {
-    echo '-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=1044'
+        echo '-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=1044'
+}
+
+nplayer () {
+        mplayer -xy .2 "$1" NE+
 }
