@@ -34,18 +34,18 @@ try-emacs () {
         alias vim='emacs'
 }
 
+java-debug () {
+        echo '-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=1044'
+}
+
 # Docker functions
 dsh () {
-        sudo docker exec -it ${1} /bin/bash
+        docker exec -it ${1} ${2:-/bin/bash}
 }
 
 drm () {
-        sudo docker stop ${1}
-        sudo docker rm ${1}
-}
-
-java-debug () {
-        echo '-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=1044'
+        docker stop ${1}
+        docker rm ${1}
 }
 
 nplayer () {
