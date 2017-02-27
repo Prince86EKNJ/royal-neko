@@ -55,6 +55,7 @@
 (setq neko-package-list '(
   auto-complete
   avy
+  editorconfig
   helm
   helm-swoop
   js2-mode
@@ -210,6 +211,7 @@
  '(async-shell-command-buffer (quote confirm-kill-process))
  '(column-number-mode t)
  '(create-lockfiles nil)
+ '(editorconfig-mode t)
  '(global-auto-complete-mode t)
  '(global-hl-line-mode t)
  '(global-linum-mode t)
