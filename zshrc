@@ -23,7 +23,7 @@ setopt rcquotes
 
 # Environment variables / settings
 export HISTFILE="$HOME/.history"
-export HISTSIZE=999
+export HISTSIZE=1000000
 export SAVEHIST="$HISTSIZE"
 
 # Default bookmarks
