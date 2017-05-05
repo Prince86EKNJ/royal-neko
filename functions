@@ -38,6 +38,10 @@ java-debug () {
         echo '-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=1044'
 }
 
+nplayer () {
+        mplayer -xy .2 $@ 2> /dev/null
+}
+
 # Docker functions
 dsh () {
         docker exec -it ${1} ${2:-/bin/bash}
@@ -48,6 +52,8 @@ drm () {
         docker rm ${1}
 }
 
-nplayer () {
-        mplayer -xy .2 "$1" NE+
+dcrm () {
+        docker-compose stop ${1}
+        docker-compose rm ${1}
 }
+
