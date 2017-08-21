@@ -43,15 +43,21 @@ nplayer () {
 }
 
 export-env () {
-        exports=$(sed 's/^/export /' $1)
-        $(echo $exports)
-        echo $exports
+        exports=$(sed 's/#.*//;' $1)
+        echo $exports | while read in; do
+             key=$(echo $in | awk -F'=' '{ print $1 }')
+             value=$(echo $in | awk -F'=' '{ print $2 }')
+             export ${key}=${value}
+             echo export ${key}=${value}
+        done
+        # echo $exports | awk -F '=' '{ cmd = "export " $1 "=\"" $2 "\""; print system }')
 }
 
 unset-env () {
-        exports=$(sed 's/^/unset /; s/=.*//' $1)
-        $(echo $exports)
+        exports=$(sed 's/#.*//;' $1)
+        exports=$(echo $exports | awk -F '=' '{ print "unset " $1 }')
         echo $exports
+        $(echo $exports)
 }
 
 # Docker functions
