@@ -75,10 +75,3 @@ fi
 
 # highlight stderr in red
 # exec 2>>( while read X; do print "\e[91m${X}\e[0m" > /dev/tty; done & )
-
-# reminder
-echo "Make sure you do these things regularly:"
-echo "* Update royal-neko"
-echo "* Update packages"
-echo "* Update git projects"
-echo "* Update emacs packages"
