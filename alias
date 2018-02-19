@@ -24,6 +24,12 @@ alias watch='watch --color'
 alias neko-pull='git -C ~/royal-neko/ pull'
 alias np='neko-pull'
 
+# kubernetes
+alias mk='minikube'
+alias kc='kubectl'
+alias kca='kubectl get all'
+alias kcw='watch -n0.5 kubectl get all'
+
 # ls
 alias ls='ls --color=auto'
 alias l='ls -CF'
@@ -60,7 +66,7 @@ alias mobile-mode='source ~/royal-neko/mobile/mobile-mode'
 alias mvim='vim -S ~/royal-neko/mobile/vimrc-mobile'
 
 # dpkg and apt-*
-alias ag='apt-get'
+alias aget='apt-get'
 alias agg='apt-get install'
 alias ac='apt-cache'
 alias acc='apt-cache search'
@@ -107,5 +113,18 @@ alias emacs-upgrade='elisp ~/royal-neko/scripts/upgrade-emacs-packages'
 
 # docker
 alias dps='docker ps -a'
-alias docker-dangling-images='docker images --filter "dangling=true"'
-alias docker-rm-dangling-images='docker rmi $(docker-dangling-images -q)'
+alias di='docker image'
+alias dv='docker volume'
+# docker-compose
+alias dc='docker-compose'
+alias dcd='docker-compose down'
+alias dcl='docker-compose logs'
+alias dcu='docker-compose up'
+alias dcuu='docker-compose up --force-recreate'
+
+# docker-machine
+alias dm='docker-machine'
+alias dms='docker-machine start'
+alias dmr='docker-machine restart'
+
+alias npv='mpv --geometry=600'

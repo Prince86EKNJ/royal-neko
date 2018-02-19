@@ -1,14 +1,17 @@
 ".source.js":
-  "angular module":
-    "prefix": "ngMod"
-    "body": """
-(function(angular) {
+	"angular module":
+		prefix: "ngMod"
+		body: '''
+			(function(angular) {
 
-    'use strict';
+			    'use strict';
 
-    var mod = angular.module("${1:module name}");
+			    var mod = angular.module("${1:module name}");
 
-    $2
+			    $2
 
-})(angular);
-"""
+			})(angular);
+		'''
+	"debugger":
+		prefix: "db"
+		body: "debugger; // eslint-disable-line"

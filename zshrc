@@ -1,7 +1,8 @@
 #!/usr/bin/zsh
 source ~/royal-neko/commonrc
+
 if [ -f ~/royal-neko/local/zshrc ]; then
-	source ~/royal-neko/local/zshrc
+        source ~/royal-neko/local/zshrc
 fi
 
 # Options
@@ -20,6 +21,7 @@ setopt hist_no_functions
 setopt nohistverify
 setopt pushdignoredups
 setopt rcquotes
+setopt sharehistory
 
 # Environment variables / settings
 export HISTFILE="$HOME/.history"
@@ -68,9 +70,14 @@ zstyle ':completion:*' menu select=1
 autoload -Uz compinit
 compinit
 
+# kubectl completion
+if [ -f =kubectl ]; then
+    source <(kubectl completion zsh)
+fi
+
 # highlighting
 if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+        source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 # highlight stderr in red

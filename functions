@@ -47,8 +47,8 @@ export-env () {
         echo $exports | while read in; do
              key=$(echo $in | awk -F'=' '{ print $1 }')
              value=$(echo $in | awk -F'=' '{ print $2 }')
+             # echo export ${key}=${value}
              export ${key}=${value}
-             echo export ${key}=${value}
         done
         # echo $exports | awk -F '=' '{ cmd = "export " $1 "=\"" $2 "\""; print system }')
 }
@@ -73,5 +73,9 @@ drm () {
 dcrm () {
         docker-compose stop ${1}
         docker-compose rm -f ${1}
+}
+
+dn () {
+  cat .drone-name
 }
 

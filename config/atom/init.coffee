@@ -28,6 +28,3 @@ atom.commands.add 'atom-text-editor', 'neko:test', (e) ->
 
 atom.commands.add 'atom-text-editor', 'neko:test2', (e) ->
   loadSelection()
-
-window.onKeyDown = ->
-    console.log arguments
