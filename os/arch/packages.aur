@@ -1,10 +1,5 @@
+arch-silence-grub-theme
 cairo-compmgr
 dropbox
 google-chrome
-
-# arch-silence-grub-theme
-
-# package-query
-# yaourt
-
-# pam_usb
+pam_usb

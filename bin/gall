@@ -1,8 +1,0 @@
-#!/bin/bash
-projects=$(echo . && git submodule | awk '{ print $2 }')
-echo $projects
-for path in $projects; do
-	echo
-	echo git -C $path $@
-	git -C $path $@
-done
