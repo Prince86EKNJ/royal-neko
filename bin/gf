@@ -1,8 +1,0 @@
-#!/bin/bash
-if [ "$1" == "all" ]; then
-	git status -s | sed 's/.\{3\}//'
-elif [ -n "$1" ]; then
-	git status -s | sed 's/.\{3\}//' | lines "$@"
-else
-	git status -s | nl
-fi
