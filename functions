@@ -1,81 +1,80 @@
 md () {
-          mkdir -p $1
-          cd $1
+    mkdir -p $1
+    cd $1
 }
 
 bookmark () {
-        export $1="$(pwd)"
-        echo "export $1=\"$(pwd)\"" >>! ~/royal-neko/local/bookmarks
+    export $1="$(pwd)"
+    echo "export $1=\"$(pwd)\"" >>! ~/royal-neko/local/bookmarks
 }
 
 load-bookmarks () {
-        if [ -e ~/royal-neko/local/bookmarks ]; then
-                source ~/royal-neko/local/bookmarks
-        fi
+    if [ -e ~/royal-neko/local/bookmarks ]; then
+        source ~/royal-neko/local/bookmarks
+    fi
 }
 
 gitignore () {
-        if [ ! -f .gitignore ]; then
-           touch .gitignore
-        fi
-        echo "$1" >> .gitignore
+    if [ ! -f .gitignore ]; then
+       touch .gitignore
+    fi
+    echo "$1" >> .gitignore
 }
 
 gurl () {
-        user=${1%/*}
-        echo "https://$user@github.com/$user/$2"
+    user=${1%/*}
+    echo "https://$user@github.com/$user/$2"
 }
 
 gclone () {
-        git clone $(gurl $*)
+    git clone $(gurl $*)
 }
 
 try-emacs () {
-        alias vim='emacs'
+    alias vim='emacs'
 }
 
 java-debug () {
-        echo '-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=1044'
+    echo '-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=1044'
 }
 
 nplayer () {
-        mplayer -xy .2 $@ 2> /dev/null
+    mplayer -xy .2 $@ 2> /dev/null
 }
 
 export-env () {
-        exports=$(sed 's/#.*//;' $1)
-        echo $exports | while read in; do
-             key=$(echo $in | awk -F'=' '{ print $1 }')
-             value=$(echo $in | awk -F'=' '{ print $2 }')
-             # echo export ${key}=${value}
-             export ${key}=${value}
-        done
-        # echo $exports | awk -F '=' '{ cmd = "export " $1 "=\"" $2 "\""; print system }')
+    exports=$(sed 's/#.*//;' $1)
+    echo $exports | while read in; do
+         key=$(echo $in | awk -F'=' '{ print $1 }')
+         value=$(echo $in | awk -F'=' '{ print $2 }')
+         # echo export ${key}=${value}
+         export ${key}=${value}
+    done
+    # echo $exports | awk -F '=' '{ cmd = "export " $1 "=\"" $2 "\""; print system }')
 }
 
 unset-env () {
-        exports=$(sed 's/#.*//;' $1)
-        exports=$(echo $exports | awk -F '=' '{ print "unset " $1 }')
-        echo $exports
-        $(echo $exports)
+    exports=$(sed 's/#.*//;' $1)
+    exports=$(echo $exports | awk -F '=' '{ print "unset " $1 }')
+    echo $exports
+    $(echo $exports)
 }
 
 # Docker functions
 dsh () {
-        docker exec -it ${1} ${2:-/bin/bash}
+    docker exec -it ${1} ${2:-/bin/bash}
 }
 
 drm () {
-        docker stop ${1}
-        docker rm ${1}
+    docker stop ${1}
+    docker rm ${1}
 }
 
 dcrm () {
-        docker-compose stop ${1}
-        docker-compose rm -f ${1}
+    docker-compose stop ${1}
+    docker-compose rm -f ${1}
 }
 
 dn () {
-  cat .drone-name
+    cat .drone-name
 }
-

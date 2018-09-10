@@ -27,8 +27,8 @@ alias np='neko-pull'
 # kubernetes
 alias mk='minikube'
 alias kc='kubectl'
-alias kca='kubectl get all'
-alias kcw='watch -n0.5 kubectl get all'
+alias kca='kubectl get -a all'
+alias kcw='watch kubectl get -a all'
 
 # ls
 alias ls='ls --color=auto'
@@ -42,48 +42,24 @@ alias bm='bookmark'
 alias lbm='load-bookmarks'
 
 # git
-alias ga='git add'
-alias gb='git branch'
 alias gbb='git branch -avv'
-alias gc='git commit'
-alias gco='git checkout'
-alias gd='git diff'
-alias gdd='git diff --staged'
-alias gds='git diff --staged'
 alias gfa='git-fetch-all'
-alias gl='git log'
 alias gll='git log --all --graph --decorate --oneline'
-alias gp='git pull'
-alias gpsh='git push'
 alias gr='git reset HEAD'
 alias grr='git reset --hard HEAD'
-alias gs='git status'
-alias gsh='git show'
-alias gsub='git submodule'
 
 # mobile
-alias mobile-mode='source ~/royal-neko/mobile/mobile-mode'
-alias mvim='vim -S ~/royal-neko/mobile/vimrc-mobile'
+alias mobile-mode='source ~/royal-neko/os/mobile/mobile-mode'
+alias mvim='vim -S ~/royal-neko/os/mobile/vimrc-mobile'
 
 # dpkg and apt-*
-alias aget='apt-get'
 alias agg='apt-get install'
-alias ac='apt-cache'
 alias acc='apt-cache search'
-alias af='apt-file'
 alias aff='apt-file search'
-alias dp='dpkg'
 
-# pacman and yaourt
+# pacman
 alias pacman='pacman --color=auto'
 alias pm='pacman'
-alias pmq='pacman -Q'
-alias pms='pacman -S'
-
-alias pf='pkgfile'
-
-alias yao='yaourt'
-alias yaourt='yaourt --pager --color'
 
 # rm
 alias rm="rm -ri"
@@ -92,17 +68,11 @@ alias rm="rm -ri"
 alias sc='systemctl'
 alias scu='systemctl --user'
 
-# ssh
-alias ssh-fox-empire='ssh prince@fox.everempire.com'
-alias ssh-home-media='ssh prince@home.everempire.com -p2222'
-alias sar='ssh-auth-remote'
-
 #tmux
 alias tmux='tmux -2'
 
 # youtube-dl
-alias dl-playlist="youtube-dl -t 'http://www.youtube.com/playlist?list=PLPtCbDcDJfWQ5WbU5twB78NLSpBuXk3B9'"
-alias dl-playlist2="youtube-dl -t 'http://www.youtube.com/playlist?list=PLVLjtsD2zOUOFGcXcGgUOMbaPIiK2NhgF'"
+alias dl-playlist="youtube-dl -t 'http://www.youtube.com/playlist?list=PLVLjtsD2zOUOFGcXcGgUOMbaPIiK2NhgF'"
 
 # emacs
 alias emacs='emacs -nw'
@@ -113,18 +83,7 @@ alias emacs-upgrade='elisp ~/royal-neko/scripts/upgrade-emacs-packages'
 
 # docker
 alias dps='docker ps -a'
-alias di='docker image'
-alias dv='docker volume'
-# docker-compose
 alias dc='docker-compose'
-alias dcd='docker-compose down'
-alias dcl='docker-compose logs'
-alias dcu='docker-compose up'
-alias dcuu='docker-compose up --force-recreate'
-
-# docker-machine
 alias dm='docker-machine'
-alias dms='docker-machine start'
-alias dmr='docker-machine restart'
 
 alias npv='mpv --geometry=600'

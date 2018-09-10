@@ -2,7 +2,7 @@
 source ~/royal-neko/commonrc
 
 if [ -f ~/royal-neko/local/zshrc ]; then
-        source ~/royal-neko/local/zshrc
+  source ~/royal-neko/local/zshrc
 fi
 
 # Options
@@ -50,11 +50,11 @@ bindkey "^[[A" up-line-or-search
 bindkey "^[[B" down-line-or-search
 
 if [ -n "$TMUX" ]; then
-    bindkey "^[OC" forward-word
-    bindkey "^[OD" backward-word
+  bindkey "^[OC" forward-word
+  bindkey "^[OD" backward-word
 else
-    bindkey "^{[1;5C" forward-word
-    bindkey "^{[1;5D" backward-word
+  bindkey "^{[1;5C" forward-word
+  bindkey "^{[1;5D" backward-word
 fi
 
 bindkey "^[[3~" delete-char # del key
@@ -72,12 +72,12 @@ compinit
 
 # kubectl completion
 if [ -f =kubectl ]; then
-    source <(kubectl completion zsh)
+  source <(kubectl completion zsh)
 fi
 
 # highlighting
 if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-        source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 # highlight stderr in red
