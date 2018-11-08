@@ -70,11 +70,6 @@ zstyle ':completion:*' menu select=1
 autoload -Uz compinit
 compinit
 
-# kubectl completion
-if [ -f =kubectl ]; then
-  source <(kubectl completion zsh)
-fi
-
 # highlighting
 if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
