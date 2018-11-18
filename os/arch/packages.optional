@@ -2,7 +2,6 @@
 xorg-server
 xorg-xinit
 xorg-xrandr
-
 xterm
 xbindkeys
 
@@ -57,10 +56,11 @@ mpv
 #vlc
 
 ## other
-the_silver_searcher
-#konsole         # favorite terminal
-ttf-droid       # font that supports japanese characters (like in Chrome and Firefox)
+emacs
 keepassx2
+#konsole         # favorite terminal
+the_silver_searcher
+ttf-droid       # font that supports japanese characters (like in Chrome and Firefox)
 tlp             # energy saver
 youtube-dl
 
