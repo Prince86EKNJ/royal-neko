@@ -7,6 +7,7 @@ openssh
 pkgfile
 tmux
 wget
+wpa_supplicant
 zsh
 zsh-doc
 zsh-syntax-highlighting

@@ -40,7 +40,6 @@ alsa-utils
 #dialog
 #netctl
 #networkmanager
-wpa_supplicant
 
 ## browsers
 firefox
@@ -56,7 +55,6 @@ hexedit
 #mplayer
 mpv
 #vlc
-
 
 ## other
 the_silver_searcher
