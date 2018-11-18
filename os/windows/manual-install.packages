@@ -1,21 +1,22 @@
 General
 =======
+7-zip
+Atom
+AutoHotkey
+Battle.net
+Chocolatey
+Cygwin
 Firefox
 Google Chrome
-Cygwin
-KeePass
-VirtuaWin
-	Icons
-7-zip
+KeePassX
 Process Explorer
-Notepad++
-AutoHotkey
+Steam
+WSL (Windows Subsystem for Linux)
 
 Development
 ===========
+IntelliJ
 JDK
-Maven
-Tomcat
 
 Extra
 =====

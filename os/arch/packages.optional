@@ -16,17 +16,17 @@ xorg-drivers
 ## lightdm
 lightdm
 lightdm-gtk-greeter
-lightdm-gtk-greeter-settings
+#lightdm-gtk-greeter-settings
 
 ## gtk
-gtk-theme-switch2
+#gtk-theme-switch2
 ## themes
-breeze-gtk
+#breeze-gtk
 
 ## desktop environments
+#gnome
+#gnome-extra
 #xfce4
-gnome
-gnome-extra
 
 ## window managers
 i3
@@ -37,18 +37,14 @@ dmenu
 alsa-utils
 
 ## wifi-menu packges
-#netctl
 #dialog
-#wpa_supplicant
-networkmanager
+#netctl
+#networkmanager
+wpa_supplicant
 
 ## browsers
 firefox
 #lynx
-
-## nodejs
-nodejs
-npm
 
 ## utils
 ascii
@@ -56,15 +52,20 @@ curl
 hexedit
 #mlocate
 
+## media players
+#mplayer
+mpv
+#vlc
+
+
 ## other
-ag # the silver searcher
-konsole         # favorite terminal
+the_silver_searcher
+#konsole         # favorite terminal
 ttf-droid       # font that supports japanese characters (like in Chrome and Firefox)
 keepassx2
 tlp             # energy saver
 youtube-dl
-vlc
-mplayer
+
 # steam
 # dnsmasq
 # compton         # composite manager
