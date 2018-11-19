@@ -1,10 +1,6 @@
 #!/usr/bin/zsh
 source ~/royal-neko/commonrc
 
-if [ -f ~/royal-neko/local/zshrc ]; then
-  source ~/royal-neko/local/zshrc
-fi
-
 # Options
 setopt append_history
 setopt autocd
@@ -77,3 +73,5 @@ fi
 
 # highlight stderr in red
 # exec 2>>( while read X; do print "\e[91m${X}\e[0m" > /dev/tty; done & )
+
+[ -f ~/.local-neko/.zshrc ] && . ~/.local-neko/.zshrc
