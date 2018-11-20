@@ -2,22 +2,10 @@
 source ~/royal-neko/commonrc
 
 # Options
-setopt append_history
-setopt autocd
-setopt automenu
-setopt autonamedirs
-setopt braceccl
-setopt cdablevars
-setopt noclobber
-setopt nocorrect
-setopt extendedhistory
-setopt hist_ignore_dups
-setopt hist_ignore_space
-setopt hist_no_functions
-setopt nohistverify
-setopt pushdignoredups
-setopt rcquotes
-setopt sharehistory
+setopt \
+  append_history autocd automenu autonamedirs braceccl cdablevars noclobber \
+  nocorrect extendedhistory hist_ignore_dups hist_ignore_space hist_no_functions \
+  nohistverify pushdignoredups rcquotes sharehistory
 
 # Environment variables / settings
 export HISTFILE="$HOME/.history"
@@ -26,7 +14,6 @@ export SAVEHIST="$HISTSIZE"
 
 # Default bookmarks
 export neko="$HOME/royal-neko"
-export os="$neko/os/arch"
 
 alias help='info zsh "Shell Builtin Commands"'
 alias mobile-mode='source ~/royal-neko/mobile/zsh-mobile'
@@ -37,7 +24,7 @@ alias -g 'J+'='| to-json'
 alias -g 'L+'='| lines' # Lines
 alias -g 'NE+'='2>/dev/null' # no error, or NULL error
 alias -g 'NS+'='--name-status' # git option
-alias -g 'Q+'='>/dev/null 2>&1' # Quiet - no stdout or stderr
+alias -g 'Q+'='> /dev/null 2>&1' # Quiet - no stdout or stderr
 alias -g 'X+'='| xargs -n1 -i' # Xargs
 
 # keymap
@@ -75,3 +62,6 @@ fi
 # exec 2>>( while read X; do print "\e[91m${X}\e[0m" > /dev/tty; done & )
 
 [ -f ~/.local-neko/.zshrc ] && . ~/.local-neko/.zshrc
+
+# TODO: Move
+# export os="$neko/os/arch"

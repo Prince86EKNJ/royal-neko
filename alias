@@ -1,24 +1,28 @@
 #!/bin/bash
 
-# Training
-alias vim='echo "Try emacs instead" || true'
+# extend alias (trailing space aliases check next word for alias substitution)
+alias man='man '
+alias sudo='sudo '
+
+# auto options
+alias emacs='emacs -nw'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias ls='ls --color=auto'
+alias nl='nl -ba'
+alias pacman='pacman --color=auto'
+alias rm="rm -ri"
+alias tmux='tmux -2'
+alias watch='watch --color'
 
 # sudo
-alias sudo='sudo '
 alias s='sudo'
 alias se='sudo -E '
 
-# man
-alias man='man '
-
 # general
 alias dtime="date +$DTIME_FORMAT"
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias nl='nl -ba'
 alias pu='pushd'
 alias po='popd'
-alias watch='watch --color'
 
 # extra
 alias neko-pull='git -C ~/royal-neko/ pull'
@@ -31,7 +35,6 @@ alias kca='kubectl get -a all'
 alias kcw='watch kubectl get -a all'
 
 # ls
-alias ls='ls --color=auto'
 alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -l'
@@ -48,34 +51,19 @@ alias gll='git log --all --graph --decorate --oneline'
 alias gr='git reset HEAD'
 alias grr='git reset --hard HEAD'
 
-# mobile
-alias mobile-mode='source ~/royal-neko/os/mobile/mobile-mode'
-alias mvim='vim -S ~/royal-neko/os/mobile/vimrc-mobile'
-
 # dpkg and apt-*
 alias agg='apt-get install'
 alias acc='apt-cache search'
 alias aff='apt-file search'
 
 # pacman
-alias pacman='pacman --color=auto'
 alias pm='pacman'
-
-# rm
-alias rm="rm -ri"
 
 # systemd
 alias sc='systemctl'
 alias scu='systemctl --user'
 
-#tmux
-alias tmux='tmux -2'
-
-# youtube-dl
-alias dl-playlist="youtube-dl -t 'http://www.youtube.com/playlist?list=PLVLjtsD2zOUOFGcXcGgUOMbaPIiK2NhgF'"
-
 # emacs
-alias emacs='emacs -nw'
 alias em='emacsclient --alternate-editor="" -t'
 alias emk="emacsclient -e '(kill-emacs)'"
 alias elisp='emacs -nw --no-init-file --load'
@@ -86,4 +74,11 @@ alias dps='docker ps -a'
 alias dc='docker-compose'
 alias dm='docker-machine'
 
+# media player
 alias npv='mpv --geometry=600'
+
+# graveyard
+
+## mobile
+#alias mobile-mode='source ~/royal-neko/os/mobile/mobile-mode'
+#alias mvim='vim -S ~/royal-neko/os/mobile/vimrc-mobile'

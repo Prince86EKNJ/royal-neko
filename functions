@@ -1,3 +1,5 @@
+BOOKMARKS_PATH=~/.local-neko/bookmarks
+
 md () {
     mkdir -p $1
     cd $1
@@ -5,12 +7,12 @@ md () {
 
 bookmark () {
     export $1="$(pwd)"
-    echo "export $1=\"$(pwd)\"" >>! ~/royal-neko/local/bookmarks
+    echo "export $1=\"$(pwd)\"" >>! $BOOKMARKS_PATH
 }
 
 load-bookmarks () {
-    if [ -e ~/royal-neko/local/bookmarks ]; then
-        source ~/royal-neko/local/bookmarks
+    if [ -e $BOOKMARKS_PATH ]; then
+        source $BOOKMARKS_PATH
     fi
 }
 
@@ -30,16 +32,8 @@ gclone () {
     git clone $(gurl $*)
 }
 
-try-emacs () {
-    alias vim='emacs'
-}
-
 java-debug () {
     echo '-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=1044'
-}
-
-nplayer () {
-    mplayer -xy .2 $@ 2> /dev/null
 }
 
 export-env () {
@@ -78,3 +72,9 @@ dcrm () {
 dn () {
     cat .drone-name
 }
+
+# graveyard
+
+#nplayer () {
+#    mplayer -xy .2 $@ 2> /dev/null
+#}
