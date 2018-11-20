@@ -1,0 +1,27 @@
+#!/bin/bash
+service=$@
+
+if [ "${service}" == "reload" ]; then
+  if [ -f service.pid ]; then
+    kill $(cat service.pid)
+    echo "Reloading service."
+  else
+    echo "Error: Could not find running service (i.e. there is \`service.pid\` file)" > /dev/stderr
+  fi
+  exit;
+fi
+
+function cleanup() {
+  echo 'Terminating service...'
+  rm service.pid
+}
+
+trap cleanup EXIT
+
+while true; do
+  echo -e "\nRunning \"${service}\" ...\n"
+  ${service} &
+  pid=$(echo $!)
+  echo $pid > service.pid
+  wait $pid
+done
