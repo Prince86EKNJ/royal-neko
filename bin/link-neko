@@ -1,3 +1,5 @@
+## files
+
 ln -s ~/royal-neko/config/.gdbinit ~/.gdbinit
 ln -s ~/royal-neko/config/.gitconfig ~/.gitconfig
 ln -s ~/royal-neko/config/.tmux.conf ~/.tmux.conf
@@ -7,21 +9,25 @@ ln -s ~/royal-neko/config/.Xdefaults ~/.Xdefaults
 ln -s ~/royal-neko/config/.xprofile ~/.xprofile
 ln -s ~/royal-neko/config/.zshrc ~/.zshrc
 
-mkdir -p ~/.config/htop
-ln -s ~/royal-neko/config/htop/htoprc ~/.config/htop/htoprc
-
-mkdir -p ~/.emacs.d/
-ln -s ~/royal-neko/config/emacs.d/init.el ~/.emacs.d
-ln -s ~/royal-neko/config/emacs.d/snippets ~/.emacs.d
-
-mkdir -p ~/.i3/
-ln -s ~/royal-neko/config/i3/config ~/.i3
-
-mkdir -p ~/.config/i3status
-ln -s ~/royal-neko/config/i3status/config ~/.config/i3status/config
+## directories
 
 # atom
 mkdir -p ~/.atom
 ln -s ~/royal-neko/config/atom/init.coffee ~/.atom/init.coffee
 ln -s ~/royal-neko/config/atom/keymap.cson ~/.atom/keymap.cson
 ln -s ~/royal-neko/config/atom/snippets.cson ~/.atom/snippets.cson
+
+mkdir -p ~/.emacs.d/
+ln -s ~/royal-neko/config/emacs.d/init.el ~/.emacs.d
+ln -s ~/royal-neko/config/emacs.d/snippets ~/.emacs.d
+
+## .config
+
+mkdir -p ~/.config/htop
+ln -s ~/royal-neko/config/htop/htoprc ~/.config/htop/htoprc
+
+mkdir -p ~/.config/i3/
+ln -s ~/royal-neko/config/i3/config ~/.config/i3
+
+mkdir -p ~/.config/i3status
+ln -s ~/royal-neko/config/i3status/config ~/.config/i3status/config
