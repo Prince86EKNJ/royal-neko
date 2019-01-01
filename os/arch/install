@@ -1,12 +1,14 @@
 #!/bin/bash
 
 # Before install:
-# * Create partition
+# * Create partition (use fdisk or cfdisk)
 #	ex. fdisk /dev/sda
 # * Format partition
-# 	ex. mkfs.ext4 /dev/sda1
+#   ex. mkfs.ext4 /dev/sda1
+# * Format swap partition
+#   ex. mkswap /dev/sda2
 # * Mount partitions
-#	ex. mount /dev/sda1 /mnt
+#	  ex. mount /dev/sda1 /mnt
 #	    mount /dev/vol-group/home /mnt/home
 #	    mount /dev/sdb5 /mnt/boot
 

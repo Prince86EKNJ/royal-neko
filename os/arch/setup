@@ -1,4 +1,4 @@
-ln -s /usr/share/zoneinfo/America/Chicago /etc/localtime
+ln -fs /usr/share/zoneinfo/America/Chicago /etc/localtime
 
 # Generate locale
 sed -i '/^#en_US\.UTF-8 UTF-8/ s/#//' /etc/locale.gen
@@ -10,9 +10,10 @@ mkinitcpio -p linux
 # setup fox user
 useradd -m -s /usr/bin/zsh -u 10000 fox
 
-# update /etc/sudoers directly here (carefully)
-echo "fox ALL=(ALL) ALL" >> /etc/sudoers
-echo "fox ALL=(ALL) NOPASSWD: /sbin/reboot" >> /etc/sudoers
+# add user `fox` to group `wheel`
+usermod -aG wheel fox
+
+# TODO: update /etc/sudoers directly (enable wheel line)
 
 # Get git so we can clone royal-neko
 pacman --noconfirm -S git
