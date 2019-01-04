@@ -9,3 +9,9 @@ XTerm*backarrowKey:false
 ! Enable 256 colors
 *customization: -color
 XTerm*termName:xterm-256color
+
+Rxvt*background:black
+Rxvt*foreground:white
+
+Rxvt*scrollBar:False
+Rxvt*fading:50
