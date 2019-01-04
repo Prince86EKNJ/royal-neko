@@ -1,0 +1,26 @@
+## xorg
+xorg-server
+#xorg-xinit
+#xorg-xrandr
+#xbindkeys
+
+## video drivers
+xorg-drivers
+#xf86-video-vesa
+#xf86-video-intel
+
+## lightdm
+lightdm
+lightdm-gtk-greeter
+#lightdm-gtk-greeter-settings
+
+## window manager
+i3-gaps
+
+## terminals
+rxvt-unicode
+#xterm
+
+## utilties
+arandr
+dmenu

@@ -1,22 +1,3 @@
-## xorg
-xorg-server
-xorg-xinit
-xorg-xrandr
-xterm
-xbindkeys
-
-arandr
-
-## video drivers
-xorg-drivers
-#xf86-video-vesa
-#xf86-video-intel
-
-## lightdm
-lightdm
-lightdm-gtk-greeter
-#lightdm-gtk-greeter-settings
-
 ## gtk
 #gtk-theme-switch2
 ## themes
@@ -28,8 +9,7 @@ lightdm-gtk-greeter
 #xfce4
 
 ## window managers
-i3
-dmenu
+#i3
 #awesome
 
 ## audio
