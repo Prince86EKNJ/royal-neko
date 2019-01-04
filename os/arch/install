@@ -27,6 +27,9 @@ read -p "Enter swap partition: " swapPart
 
 swapon "$swapPart"
 
+# Make sure we have the latest keyring
+pacman -S archlinux-keyring
+
 # Install base
 pacstrap /mnt base base-devel
 genfstab -p /mnt >> /mnt/etc/fstab

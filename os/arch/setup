@@ -4,6 +4,9 @@ useradd -m -s /usr/bin/zsh -u 10000 fox
 # add user `fox` to group `wheel`
 usermod -aG wheel fox
 
+# add wheel rule to sudoers.d
+echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
+
 # Get git so we can clone royal-neko
 pacman --noconfirm -S git
 
