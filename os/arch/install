@@ -28,7 +28,7 @@ read -p "Enter swap partition: " swapPart
 swapon "$swapPart"
 
 # Make sure we have the latest keyring
-pacman -S archlinux-keyring
+pacman --noconfirm -Sy archlinux-keyring
 
 # Install base
 pacstrap /mnt base base-devel
