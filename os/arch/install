@@ -44,3 +44,6 @@ arch-chroot /mnt /bin/bash /root/setup
 rm /mnt/root/setup
 
 echo "Done!"
+
+# chroot into installation
+arch-chroot /mnt /bin/bash

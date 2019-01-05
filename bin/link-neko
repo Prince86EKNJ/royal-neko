@@ -3,7 +3,8 @@
 ln -s ~/royal-neko/config/.gdbinit ~/.gdbinit
 ln -s ~/royal-neko/config/.gitconfig ~/.gitconfig
 ln -s ~/royal-neko/config/.tmux.conf ~/.tmux.conf
-ln -s ~/royal-neko/config/.vimrc ~/.vimrc
+# Disabled until we clean it up
+# ln -s ~/royal-neko/config/.vimrc ~/.vimrc
 ln -s ~/royal-neko/config/.xbindkeysrc ~/.xbindkeysrc
 ln -s ~/royal-neko/config/.Xdefaults ~/.Xdefaults
 ln -s ~/royal-neko/config/.xprofile ~/.xprofile
