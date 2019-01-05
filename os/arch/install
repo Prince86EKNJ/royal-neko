@@ -35,17 +35,6 @@ pacstrap /mnt base base-devel
 genfstab -p /mnt >> /mnt/etc/fstab
 echo "$hostname" >/mnt/etc/hostname
 
-# Link timezone
-ln -fs /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
-
-# Generate locale
-sed -i '/^#en_US\.UTF-8 UTF-8/ s/#//' /etc/locale.gen
-locale-gen
-echo LANG=en_US.UTF-8 > /etc/locale.conf
-
-# Make init ram disk
-mkinitcpio -p linux
-
 # Copy setup file and execute
 wget https://raw.github.com/Prince86EKNJ/royal-neko/master/os/arch/setup -O /mnt/root/setup
 chmod +x /mnt/root/setup
