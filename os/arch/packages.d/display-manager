@@ -1,11 +1,10 @@
 ## xorg
 xorg-server
-#xorg-xinit
 #xorg-xrandr
 #xbindkeys
 
 ## video drivers
-xorg-drivers
+#xorg-drivers
 #xf86-video-vesa
 #xf86-video-intel
 
@@ -16,10 +15,11 @@ lightdm-gtk-greeter
 
 ## window manager
 i3-gaps
+i3status
 
 ## terminals
-rxvt-unicode
-#xterm
+#rxvt-unicode
+xterm
 
 ## utilties
 arandr
