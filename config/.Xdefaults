@@ -1,3 +1,15 @@
+UXTerm*foreground:white
+UXTerm*background:black
+
+! Fixes for emacs
+UXTerm*metaSendsEscape:true
+UXTerm*ttyModes:erase ^?
+UXTerm*backarrowKey:false
+
+! Enable 256 colors
+*customization: -color
+UXTerm*termName:xterm-256color
+
 XTerm*foreground:white
 XTerm*background:black
 
