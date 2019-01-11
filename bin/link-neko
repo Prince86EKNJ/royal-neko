@@ -2,6 +2,7 @@
 
 ln -s ~/royal-neko/config/.gdbinit ~/.gdbinit
 ln -s ~/royal-neko/config/.gitconfig ~/.gitconfig
+ln -s ~/royal-neko/config/.profile ~/.profile
 ln -s ~/royal-neko/config/.tmux.conf ~/.tmux.conf
 # Disabled until we clean it up
 # ln -s ~/royal-neko/config/.vimrc ~/.vimrc

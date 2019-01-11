@@ -26,4 +26,4 @@ Rxvt*background:black
 Rxvt*foreground:white
 
 Rxvt*scrollBar:False
-Rxvt*fading:50
+!Rxvt*fading:50

@@ -1,5 +1,5 @@
 #!/usr/bin/zsh
-source ~/royal-neko/commonrc
+source "$NEKO/commonrc"
 
 # Options
 setopt \
@@ -11,9 +11,6 @@ setopt \
 export HISTFILE="$HOME/.history"
 export HISTSIZE=1000000
 export SAVEHIST="$HISTSIZE"
-
-# Default bookmarks
-export neko="$HOME/royal-neko"
 
 alias help='info zsh "Shell Builtin Commands"'
 alias mobile-mode='source ~/royal-neko/mobile/zsh-mobile'

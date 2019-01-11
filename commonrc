@@ -1,10 +1,8 @@
-#!/bin/bash
-
 # Include user "bin" dir
-PATH=~/bin:~/royal-neko/bin:$PATH
+PATH="$HOME/bin:$PATH"
 
 # Include local binaries
-PATH=./bin:$PATH
+PATH="./bin:$PATH"
 
 # set DTIME_FORMAT
 DTIME_FORMAT='%Y-%m-%dT%H:%M:%S'
