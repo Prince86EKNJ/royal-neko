@@ -1,5 +1,10 @@
 arch-silence-grub-theme
-cairo-compmgr
 dropbox
 google-chrome
-pam_usb
+lightdm-slick-greeter
+nvm
+# most likely already installed
+#yay
+
+#cairo-compmgr
+#pam_usb

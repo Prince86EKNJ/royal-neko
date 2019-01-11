@@ -1,26 +1,27 @@
 ## xorg
 xorg-server
-#xorg-xrandr
-#xbindkeys
 
-## video drivers
 #xorg-drivers
-#xf86-video-vesa
-#xf86-video-intel
+#xbindkeys
 
 ## lightdm
 lightdm
 lightdm-gtk-greeter
 #lightdm-gtk-greeter-settings
 
-## window manager
+## a window manager
 i3-gaps
 i3status
 
-## terminals
-#rxvt-unicode
-xterm
+## a terminal
+rxvt-unicode
+#xterm
 
 ## utilties
 arandr
 dmenu
+
+## extra
+#compton    # composite manager
+#feh        # wallpaper util
+#nitrogen   # wallpaper util

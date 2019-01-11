@@ -1,50 +1,42 @@
 ## gtk
-#gtk-theme-switch2
-## themes
-#breeze-gtk
+gtk-theme-switch2
+breeze-gtk    # gtk theme
 
 ## desktop environments
-#gnome
-#gnome-extra
-#xfce4
+gnome
+gnome-extra
+xfce4
 
 ## window managers
-#i3
-#awesome
+i3   (hint: use i3-gaps instead)
+awesome
 
 ## audio
 alsa-utils
 
-## wifi-menu packges
-#dialog
-#netctl
-#networkmanager
+## wifi
+netctl
 
 ## browsers
 firefox
-#lynx
+lynx
 
 ## utils
 ascii
-curl
-hexedit
-#mlocate
+mlocate
 
 ## media players
-#mplayer
-mpv
-#vlc
+mplayer
+vlc
 
 ## other
+dnsmasq
 emacs
 keepassx2
-#konsole         # favorite terminal
+konsole         # a good but heavy terminal
+qterminal
+steam
 the_silver_searcher
-ttf-droid       # font that supports japanese characters (like in Chrome and Firefox)
-tlp             # energy saver
-youtube-dl
-
-# steam
-# dnsmasq
-# compton         # composite manager
-# feh             # wallpaper displayer
+ttf-dejavu
+ttf-droid       # font that supports Japanese characters (for Chrome and Firefox)
+tlp             # power management and energy saver (good for laptops)
