@@ -1,28 +1,14 @@
 #!/bin/sh
 TARGET="$HOME/videos"
-TARGET_FILE=/tmp/.rofi-video-target
 
 if [ "$#" -eq 0 ]; then
-  rm -f "$TARGET_FILE"
-
-  ls "$TARGET"
+  find "$TARGET" -type f -print0 | xargs -0 realpath --relative-to="$TARGET"
   exit
 fi
 
-if [ -f "$TARGET_FILE" ]; then
-  TARGET=$(realpath $(cat "$TARGET_FILE"))
-  rm "$TARGET_FILE"
-fi
-
-echo "Target: $TARGET" >&2
-
 FILE="$TARGET/$1"
 
-if [ -d "$FILE" ]; then
-  echo $FILE > "$TARGET_FILE"
-  echo ".."
-  ls "$FILE"
-else
+if [ -f "$FILE" ]; then
   echo "Play: $FILE" >&2
   mpv --geometry=600 "$FILE" > /dev/null 2>&1 &
 fi
