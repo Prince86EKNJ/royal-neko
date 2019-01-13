@@ -1,5 +1,5 @@
 #!/usr/bin/zsh
-source "$NEKO/commonrc"
+source "$NEKO/shell/commonrc"
 
 # Options
 setopt \
@@ -13,7 +13,7 @@ export HISTSIZE=1000000
 export SAVEHIST="$HISTSIZE"
 
 alias help='info zsh "Shell Builtin Commands"'
-alias mobile-mode='source ~/royal-neko/mobile/zsh-mobile'
+alias mobile-mode='source $NEKO/mobile/zsh-mobile'
 
 # global aliases
 alias -g 'G+'='| grep' # Grep

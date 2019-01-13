@@ -14,10 +14,10 @@ export PAGER='less'
 export LESS='-SRX'
 
 # Include functions
-source ~/royal-neko/functions
+source $NEKO/shell/functions
 
 # Include aliases
-source ~/royal-neko/alias
+source $NEKO/shell/alias
 
 # Load Bookmarks
 load-bookmarks

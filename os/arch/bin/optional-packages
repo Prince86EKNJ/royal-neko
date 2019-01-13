@@ -1,1 +1,1 @@
-cat ~/royal-neko/os/arch/packages/other | filter-comments
+cat $NEKO/os/arch/packages/other | filter-comments

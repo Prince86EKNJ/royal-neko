@@ -1,15 +1,32 @@
-## files
+CONFIG_PATH="$NEKO/config"
 
-ln -s ~/royal-neko/config/.gdbinit ~/.gdbinit
-ln -s ~/royal-neko/config/.gitconfig ~/.gitconfig
-ln -s ~/royal-neko/config/.profile ~/.profile
-ln -s ~/royal-neko/config/.tmux.conf ~/.tmux.conf
-# Disabled until we clean it up
-# ln -s ~/royal-neko/config/.vimrc ~/.vimrc
-ln -s ~/royal-neko/config/.xbindkeysrc ~/.xbindkeysrc
-ln -s ~/royal-neko/config/.Xdefaults ~/.Xdefaults
-ln -s ~/royal-neko/config/.xprofile ~/.xprofile
-ln -s ~/royal-neko/config/.zshrc ~/.zshrc
+function try_link () {
+  LINE=$1
+
+  NEKO_PATH="$(realpath --relative-to="$CONFIG_PATH" $LINE)"
+  LINK_PATH="$HOME/$NEKO_PATH"
+
+  if [ -h "$LINK_PATH" ]; then
+    echo "Link ~/$NEKO_PATH already exists"
+  else
+    ln -s "$LINE" .
+    echo "Created ~/$NEKO_PATH link"
+  fi
+}
+
+find $NEKO/config -type f -depth 1 | sort | while read LINE; do
+  try_link $LINE
+done
+
+# find $NEKO/config | sort | tail -n+2 | while read LINE; do
+#   if [ -f "$LINE" ]; then
+#     echo "LINK: $LINE"
+#   elif [ -d "$LINE" ]; then
+#     echo "DIR: $LINE"
+#   else
+#     echo "Error: $LINE"
+#   fi
+# done
 
 ## directories
 
@@ -24,7 +41,6 @@ ln -s ~/royal-neko/config/emacs.d/init.el ~/.emacs.d
 ln -s ~/royal-neko/config/emacs.d/snippets ~/.emacs.d
 
 ## .config
-
 mkdir -p ~/.config/htop
 ln -s ~/royal-neko/config/htop/htoprc ~/.config/htop/htoprc
 
