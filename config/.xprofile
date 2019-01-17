@@ -1,5 +1,5 @@
 # -*- mode: shell-script -*-
-export TERMINAL=konsole
+export TERMINAL=gnome-terminal
 
 # if i3 is running, run cairo-compmgr
 if [[ "$DESKTOP_SESSION" == "i3" ]] && [[ -x /usr/bin/cairo-compmgr ]]; then
