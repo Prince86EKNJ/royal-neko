@@ -44,7 +44,6 @@ rules:
   quotes:
     - error
     - single
-    - avoidEscape: true
   space-before-function-paren:
     - error
     - never

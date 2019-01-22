@@ -31,6 +31,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 focus_follows_mouse no
+focus_wrapping no
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -186,6 +187,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+bindsym $mod+l exec lock-screen
+
 bindsym $mod+Shift+a exec atom
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+g exec google-chrome-stable
@@ -199,4 +202,4 @@ bar {
         status_command i3status
 }
 
-for_window [class="^Keepassx2"] floating enable
+for_window [class="^Keepassx2$"] floating enable
