@@ -1,4 +1,4 @@
-BOOKMARKS_PATH=~/.local-neko/bookmarks
+BOOKMARKS_PATH=~/.neko/bookmarks
 
 md () {
     mkdir -p $1

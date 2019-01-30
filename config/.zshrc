@@ -1,9 +1,14 @@
 #!/usr/bin/zsh
+if [ -z "$NEKO" ]; then
+  export NEKO="$HOME/royal-neko"
+  PATH="$NEKO/bin:$PATH"
+fi
+
 source "$NEKO/shell/commonrc"
 
 # Options
 setopt \
-  append_history autocd automenu autonamedirs braceccl cdablevars noclobber \
+  append_history automenu autonamedirs braceccl cdablevars noclobber \
   nocorrect extendedhistory hist_ignore_dups hist_ignore_space hist_no_functions \
   nohistverify pushdignoredups rcquotes sharehistory
 
@@ -40,7 +45,8 @@ fi
 bindkey "^[[3~" delete-char # del key
 
 prompt=$'
-%F{cyan}%n%f at %F{green}%m%f in %F{yellow}%~%f
+%(?..%F{red}=> %?
+)%F{white}%B[%h]%b %F{cyan}%n%f at %F{green}%M%f in %F{yellow}%~%f
 $ '
 
 # completion
@@ -50,15 +56,18 @@ zstyle ':completion:*' menu select=1
 autoload -Uz compinit
 compinit
 
-# highlighting
-if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
+auto_source=(
+  "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+  "$HOME/.neko/.zshrc"
+)
+
+for file in $auto_source; do
+  if [ -f "$file" ]; then
+    source "$file"
+  fi
+done
+
+# extra
 
 # highlight stderr in red
 # exec 2>>( while read X; do print "\e[91m${X}\e[0m" > /dev/tty; done & )
-
-[ -f ~/.local-neko/.zshrc ] && . ~/.local-neko/.zshrc
-
-# TODO: Move
-# export os="$neko/os/arch"

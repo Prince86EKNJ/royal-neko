@@ -1,35 +1,38 @@
-## files
+neko-config="$NEKO/config"
+neko-dot-config="$neko-config/.config"
 
-ln -s ~/royal-neko/config/.gdbinit ~/.gdbinit
-ln -s ~/royal-neko/config/.gitconfig ~/.gitconfig
-ln -s ~/royal-neko/config/.profile ~/.profile
-ln -s ~/royal-neko/config/.tmux.conf ~/.tmux.conf
+###########
+## files ##
+ln -s $neko-config/.gdbinit ~/.gdbinit
+ln -s $neko-config/.gitconfig ~/.gitconfig
+ln -s $neko-config/.profile ~/.profile
+ln -s $neko-config/.tmux.conf ~/.tmux.conf
 # Disabled until we clean it up
-# ln -s ~/royal-neko/config/.vimrc ~/.vimrc
-ln -s ~/royal-neko/config/.xbindkeysrc ~/.xbindkeysrc
-ln -s ~/royal-neko/config/.Xdefaults ~/.Xdefaults
-ln -s ~/royal-neko/config/.xprofile ~/.xprofile
-ln -s ~/royal-neko/config/.zshrc ~/.zshrc
+# ln -s $neko-config/.vimrc ~/.vimrc
+ln -s $neko-config/.xbindkeysrc ~/.xbindkeysrc
+ln -s $neko-config/.Xdefaults ~/.Xdefaults
+ln -s $neko-config/.xprofile ~/.xprofile
+ln -s $neko-config/.zshrc ~/.zshrc
 
-## directories
-
+#################
+## directories ##
 # atom
 mkdir -p ~/.atom
-ln -s ~/royal-neko/config/atom/init.coffee ~/.atom/init.coffee
-ln -s ~/royal-neko/config/atom/keymap.cson ~/.atom/keymap.cson
-ln -s ~/royal-neko/config/atom/snippets.cson ~/.atom/snippets.cson
+ln -s $neko-config/atom/init.coffee ~/.atom/init.coffee
+ln -s $neko-config/atom/keymap.cson ~/.atom/keymap.cson
+ln -s $neko-config/atom/snippets.cson ~/.atom/snippets.cson
 
 mkdir -p ~/.emacs.d/
-ln -s ~/royal-neko/config/emacs.d/init.el ~/.emacs.d
-ln -s ~/royal-neko/config/emacs.d/snippets ~/.emacs.d
+ln -s $neko-config/emacs.d/init.el ~/.emacs.d
+ln -s $neko-config/emacs.d/snippets ~/.emacs.d
 
 ## .config
 
 mkdir -p ~/.config/htop
-ln -s ~/royal-neko/config/htop/htoprc ~/.config/htop/htoprc
+ln -s $neko-config/htop/htoprc ~/.config/htop/htoprc
 
 mkdir -p ~/.config/i3/
-ln -s ~/royal-neko/config/.config/i3/config ~/.config/i3
+ln -s $neko-dot-config/i3/config ~/.config/i3
 
 mkdir -p ~/.config/i3status
-ln -s ~/royal-neko/config/i3status/config ~/.config/i3status/config
+ln -s $neko-config/i3status/config ~/.config/i3status/config
