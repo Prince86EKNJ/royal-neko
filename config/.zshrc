@@ -8,9 +8,10 @@ source "$NEKO/shell/commonrc"
 
 # Options
 setopt \
-  append_history automenu autonamedirs braceccl cdablevars noclobber \
-  nocorrect extendedhistory hist_ignore_dups hist_ignore_space hist_no_functions \
-  nohistverify pushdignoredups rcquotes sharehistory
+  append_history auto_menu auto_name_dirs brace_ccl cd_able_vars no_clobber \
+  no_correct extended_history no_flow_control hist_ignore_dups \
+  hist_ignore_space hist_no_functions no_hist_verify inc_append_history_time \
+  pushd_ignore_dups rc_quotes
 
 # Environment variables / settings
 export HISTFILE="$HOME/.history"
