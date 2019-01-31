@@ -31,8 +31,9 @@ alias np='neko-pull'
 # kubernetes
 alias mk='minikube'
 alias kc='kubectl'
-alias kca='kubectl get -a all'
-alias kcw='watch kubectl get -a all'
+alias kcga='kubectl get all'
+alias kcc='kubectl config'
+alias kcw='watch kubectl get all'
 
 # ls
 alias l='ls -CF'
