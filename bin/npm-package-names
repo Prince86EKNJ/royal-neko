@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require 'json'
+
+package = File.read 'package.json'
+deps = JSON.parse(package)["devDependencies"]
+
+puts deps.keys.join " "
