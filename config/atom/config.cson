@@ -1,0 +1,7 @@
+"*":
+  core:
+    telemetryConsent: "limited"
+  editor:
+    showInvisibles: true
+  welcome:
+    showOnStartup: false
