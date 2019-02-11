@@ -6,22 +6,25 @@ if [ "${service}" == "reload" ]; then
     kill $(cat service.pid)
     echo "Reloading service."
   else
-    echo "Error: Could not find running service (i.e. there is \`service.pid\` file)" > /dev/stderr
+    echo "Error: Could not find running service (i.e. there is \`service.pid\` file)" >&2
   fi
   exit;
 fi
 
 function cleanup() {
-  echo 'Terminating service...'
+  echo "Terminating service $(cat service.pid)..."
   rm service.pid
 }
 
 trap cleanup EXIT
 
 while true; do
-  echo -e "\nRunning \"${service}\" ...\n"
+  echo -e "\nRunning \"${service}\" ..."
   ${service} &
   pid=$(echo $!)
   echo $pid > service.pid
+  echo -e "PID: ${pid}\n"
   wait $pid
+  echo "Exit status $?"
+  sleep 0.5
 done
