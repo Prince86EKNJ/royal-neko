@@ -30,20 +30,35 @@ alias -g 'NS+'='--name-status' # git option
 alias -g 'Q+'='> /dev/null 2>&1' # Quiet - no stdout or stderr
 alias -g 'X+'='| xargs -n1 -i' # Xargs
 
+alt_widgets=(forward-word backward-word backward-delete-word)
+
+for wname in ${alt_widgets}; do
+  eval "
+  alt-${wname} () {
+    OLD_WORDCHARS=\"\$WORDCHARS\"
+    WORDCHARS=\"\${WORDCHARS/\/}\"
+
+    # Do something
+    zle ${wname}
+
+    WORDCHARS=\"\$OLD_WORDCHARS\"
+  }
+  zle -N alt-${wname}
+  "
+done
+
+bindkey "^[[1;3C" alt-forward-word
+bindkey "^[[1;3D" alt-backward-word
+bindkey "^[w" alt-backward-delete-word
+
 # keymap
 bindkey -e # emacs
 bindkey "^[[A" up-line-or-search
 bindkey "^[[B" down-line-or-search
 
-if [ -n "$TMUX" ]; then
-  bindkey "^[OC" forward-word
-  bindkey "^[OD" backward-word
-else
-  bindkey "^{[1;5C" forward-word
-  bindkey "^{[1;5D" backward-word
-fi
-
 bindkey "^[[3~" delete-char # del key
+bindkey "^[[1;5C" forward-word # ctrl-right
+bindkey "^[[1;5D" backward-word # ctrl-left
 
 prompt=$'
 %(?..%F{red}=> %?
