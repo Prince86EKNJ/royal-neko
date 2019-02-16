@@ -3,5 +3,7 @@
     telemetryConsent: "limited"
   editor:
     showInvisibles: true
+  "file-icons":
+    onChanges: true
   welcome:
     showOnStartup: false

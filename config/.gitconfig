@@ -1,7 +1,7 @@
 [include]
 	path = ./royal-neko/local/gitconfig
+[push]
+	default = simple
 [user]
 	name = Edward Nicholes Jr.
 	useConfigOnly = true
-[push]
-	default = simple
