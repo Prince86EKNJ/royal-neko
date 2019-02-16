@@ -10,7 +10,6 @@ rules:
   curly:
     - error
     - multi-or-nest
-    - consistent
   keyword-spacing:
     - error
     - overrides:
