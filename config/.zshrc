@@ -47,10 +47,6 @@ for wname in ${alt_widgets}; do
   "
 done
 
-bindkey "^[[1;3C" alt-forward-word
-bindkey "^[[1;3D" alt-backward-word
-bindkey "^[w" alt-backward-delete-word
-
 # keymap
 bindkey -e # emacs
 bindkey "^[[A" up-line-or-search
@@ -59,6 +55,10 @@ bindkey "^[[B" down-line-or-search
 bindkey "^[[3~" delete-char # del key
 bindkey "^[[1;5C" forward-word # ctrl-right
 bindkey "^[[1;5D" backward-word # ctrl-left
+
+bindkey "^[[1;3C" alt-forward-word
+bindkey "^[[1;3D" alt-backward-word
+bindkey "^[w" alt-backward-delete-word
 
 prompt=$'
 %(?..%F{red}=> %?
