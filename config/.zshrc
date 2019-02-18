@@ -47,10 +47,29 @@ for wname in ${alt_widgets}; do
   "
 done
 
+neko-pushd () {
+  pushd $NEKO > /dev/null
+  zle reset-prompt
+}
+zle -N neko-pushd
+
+neko-popd () {
+  dir_count=$(dirs -p | wc -l)
+  if [ "$dir_count" = "1" ]; then
+    zle -M "neko: directory stack empty"
+  else
+    popd > /dev/null
+    zle reset-prompt
+  fi
+}
+zle -N neko-popd
+
 # keymap
 bindkey -e # emacs
 bindkey "^[[A" up-line-or-search
 bindkey "^[[B" down-line-or-search
+bindkey "^N" neko-pushd
+bindkey "^P" neko-popd
 
 bindkey "^[[3~" delete-char # del key
 bindkey "^[[1;5C" forward-word # ctrl-right
