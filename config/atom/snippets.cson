@@ -9,7 +9,7 @@
       describe('$1', () => {
         it('$2', () => {
           $3true.should.be.false;
-        })
+        });
       });
     """
 
