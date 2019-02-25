@@ -3,6 +3,16 @@
     prefix: "db"
     body: "debugger; // eslint-disable-line"
 
+  describe:
+    prefix: "desc"
+    body: """
+      describe('$1', () => {
+        it('$2', () => {
+          $3true.should.be.false;
+        })
+      });
+    """
+
   "eslint disable":
     prefix: "esl"
     body: "/* eslint-disable */"

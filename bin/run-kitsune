@@ -1,0 +1,3 @@
+ON_BUILD="service reload" npm run build:watch &
+KITSUNE_ON_STARTED="touch ./src/index.spec.int.js" \
+  service node --require=source-map-support/register dist/main
