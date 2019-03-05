@@ -1,38 +1,40 @@
-neko-config="$NEKO/config"
-neko-dot-config="$neko-config/.config"
+#!/bin/bash
+NEKO="$HOME/royal-neko"
+neko_config="$NEKO/config"
+neko_dot_config="$neko_config/.config"
 
 ###########
 ## files ##
-ln -s $neko-config/.gdbinit ~/.gdbinit
-ln -s $neko-config/.gitconfig ~/.gitconfig
-ln -s $neko-config/.profile ~/.profile
-ln -s $neko-config/.tmux.conf ~/.tmux.conf
+ln -s $neko_config/.gdbinit ~/.gdbinit
+ln -s $neko_config/.gitconfig ~/.gitconfig
+ln -s $neko_config/.profile ~/.profile
+ln -s $neko_config/.tmux.conf ~/.tmux.conf
 # Disabled until we clean it up
-# ln -s $neko-config/.vimrc ~/.vimrc
-ln -s $neko-config/.xbindkeysrc ~/.xbindkeysrc
-ln -s $neko-config/.Xdefaults ~/.Xdefaults
-ln -s $neko-config/.xprofile ~/.xprofile
-ln -s $neko-config/.zshrc ~/.zshrc
+# ln -s $neko_config/.vimrc ~/.vimrc
+ln -s $neko_config/.xbindkeysrc ~/.xbindkeysrc
+ln -s $neko_config/.Xdefaults ~/.Xdefaults
+ln -s $neko_config/.xprofile ~/.xprofile
+ln -s $neko_config/.zshrc ~/.zshrc
 
 #################
 ## directories ##
 # atom
 mkdir -p ~/.atom
-ln -s $neko-config/atom/init.coffee ~/.atom/init.coffee
-ln -s $neko-config/atom/keymap.cson ~/.atom/keymap.cson
-ln -s $neko-config/atom/snippets.cson ~/.atom/snippets.cson
+ln -s $neko_config/atom/init.coffee ~/.atom/init.coffee
+ln -s $neko_config/atom/keymap.cson ~/.atom/keymap.cson
+ln -s $neko_config/atom/snippets.cson ~/.atom/snippets.cson
 
 mkdir -p ~/.emacs.d/
-ln -s $neko-config/emacs.d/init.el ~/.emacs.d
-ln -s $neko-config/emacs.d/snippets ~/.emacs.d
+ln -s $neko_config/emacs.d/init.el ~/.emacs.d
+ln -s $neko_config/emacs.d/snippets ~/.emacs.d
 
 ## .config
 
 mkdir -p ~/.config/htop
-ln -s $neko-config/htop/htoprc ~/.config/htop/htoprc
+ln -s $neko_config/htop/htoprc ~/.config/htop/htoprc
 
 mkdir -p ~/.config/i3/
-ln -s $neko-dot-config/i3/config ~/.config/i3
+ln -s $neko_dot_config/i3/config ~/.config/i3
 
 mkdir -p ~/.config/i3status
-ln -s $neko-config/i3status/config ~/.config/i3status/config
+ln -s $neko_config/i3status/config ~/.config/i3status/config
