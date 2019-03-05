@@ -73,6 +73,12 @@ dn () {
     cat .drone-name
 }
 
+tmpfile () {
+  file_name="/tmp/$(date +$FLAT_DATE_NANO_FORMAT).tmpfile"
+  cat > $file_name
+  echo $file_name
+}
+
 # graveyard
 
 #nplayer () {
