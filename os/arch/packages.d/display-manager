@@ -21,6 +21,10 @@ gnome-terminal
 arandr
 dmenu
 
+# fonts
+ttf-dejavu # For gnome-terminal
+ttf-droid  # For google-chrome
+
 ## extra
 #compton    # composite manager
 #feh        # wallpaper util
