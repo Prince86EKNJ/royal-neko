@@ -47,10 +47,16 @@ alias lbm='load-bookmarks'
 
 # git
 alias gbb='git branch -avv'
-alias gfa='git-fetch-all'
+alias gd='git diff'
+alias gdd='git diff --staged'
+alias gf='git fetch'
+alias gl='git log'
 alias gll='git log --all --graph --decorate --oneline'
+alias gp='git pull'
+alias gpp='git push'
 alias gr='git reset HEAD'
 alias grr='git reset --hard HEAD'
+alias gss='git status'
 
 # dpkg and apt-*
 alias agg='apt-get install'
@@ -75,8 +81,9 @@ alias dps='docker ps -a'
 alias dc='docker-compose'
 alias dm='docker-machine'
 
-# media player
+# misx
 alias npv='mpv --geometry=600'
+alias xc='xclip -selection clipboard'
 
 # graveyard
 
