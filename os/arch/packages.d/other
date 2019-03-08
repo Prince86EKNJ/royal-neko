@@ -8,7 +8,7 @@ gnome-extra
 xfce4
 
 ## window managers
-i3   (hint: use i3-gaps instead)
+i3-gaps
 awesome
 
 ## audio
