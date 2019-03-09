@@ -46,6 +46,7 @@ alias bm='bookmark'
 alias lbm='load-bookmarks'
 
 # git
+alias g='git status'
 alias ga='git add'
 alias gbb='git branch -avv'
 alias gc='git commit'

@@ -5,6 +5,7 @@ htop
 lsof
 net-tools
 openssh
+polkit
 pkgfile
 tmux
 wget
