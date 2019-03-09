@@ -48,6 +48,7 @@ alias lbm='load-bookmarks'
 # git
 alias ga='git add'
 alias gbb='git branch -avv'
+alias gc='git commit'
 alias gd='git diff'
 alias gdd='git diff --staged'
 alias gf='git fetch'
@@ -82,7 +83,8 @@ alias dps='docker ps -a'
 alias dc='docker-compose'
 alias dm='docker-machine'
 
-# misx
+# misc
+alias he='hexedit'
 alias npv='mpv --geometry=600'
 alias xc='xclip -selection clipboard'
 

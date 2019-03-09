@@ -35,6 +35,9 @@ fi
 archPackages=$(cat ~fox/royal-neko/os/arch/packages | grep -v "^#")
 pacman --noconfirm --needed -S ${archPackages}
 
+# create projects directory
+mkdir $HOME/projects
+
 # Finished it off with a password
 passwd fox
 

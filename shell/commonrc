@@ -5,9 +5,9 @@ PATH="$HOME/bin:$PATH"
 PATH="./bin:$PATH"
 
 # set DTIME_FORMAT
-DTIME_FORMAT='%Y-%m-%dT%H:%M:%S'
-FLAT_DATE_FORMAT='%Y%m%d-%H%M%S'
-FLAT_DATE_NANO_FORMAT='%Y%m%d-%H%M%S-%N'
+export DTIME_FORMAT='%Y-%m-%dT%H:%M:%S'
+export FLAT_DATE_FORMAT='%Y%m%d-%H%M%S'
+export FLAT_DATE_NANO_FORMAT='%Y%m%d-%H%M%S-%N'
 
 export EDITOR='vim'
 export PAGER='less'
