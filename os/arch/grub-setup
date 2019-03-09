@@ -6,7 +6,7 @@ if [ "$drive" -z ]; then
 	exit 1
 fi
 
-pacman -S grub os-prober
+pacman -S grub
 grub-install --target=i386-pc "$drive"
 grub-mkconfig -o /boot/grub/grub.cfg
 
