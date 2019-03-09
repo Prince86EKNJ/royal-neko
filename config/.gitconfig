@@ -1,10 +1,11 @@
 [core]
 	excludesFile = ~/.gitignore
+[credential]
+	helper = cache
+[include]
+	path = ./.neko/.gitconfig
 [push]
 	default = simple
 [user]
 	name = Edward Nicholes Jr.
 	useConfigOnly = true
-
-[include]
-	path = ./.neko/.gitconfig
