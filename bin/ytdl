@@ -1,0 +1,7 @@
+#!/bin/bash
+url=$(xclip -selection clipboard -out)
+
+mkdir $HOME/videos
+cd $HOME/videos
+
+youtube-dl "$url"
