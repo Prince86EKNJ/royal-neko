@@ -9,3 +9,7 @@
 [user]
 	name = Edward Nicholes Jr.
 	useConfigOnly = true
+[credential "https://github.com"]
+	username = Prince86EKNJ
+[credential "https://gitlab.com"]
+	username = GameDevFox

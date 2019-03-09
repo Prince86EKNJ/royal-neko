@@ -24,7 +24,7 @@ pacman --noconfirm -S git
 # royal-neko setup
 if [ ! -d /home/fox/royal-neko ]; then
   pushd ~fox
-    sudo -u fox git clone https://Prince86EKNJ@github.com/Prince86EKNJ/royal-neko
+    sudo -u fox git clone https://github.com/Prince86EKNJ/royal-neko.git
 
     # Run royal-neko install script
     sudo -u fox royal-neko/bin/link-neko
