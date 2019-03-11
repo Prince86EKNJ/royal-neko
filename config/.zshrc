@@ -72,12 +72,20 @@ bindkey "^N" neko-pushd
 bindkey "^P" neko-popd
 
 bindkey "^[[3~" delete-char # del key
-bindkey "^[[1;5C" forward-word # ctrl-right
-bindkey "^[[1;5D" backward-word # ctrl-left
 
-bindkey "^[[1;3C" alt-forward-word
-bindkey "^[[1;3D" alt-backward-word
-bindkey "^[w" alt-backward-delete-word
+bindkey "^[[1;5C" forward-word # ctrl-right
+bindkey "^[OC" forward-word # ctrl-right (tmux)
+
+bindkey "^[[1;5D" backward-word # ctrl-left
+bindkey "^[OD" backward-word # ctrl-left (tmux)
+
+bindkey "^[[1;3C" alt-forward-word # alt-right
+bindkey "^[^[[C" alt-forward-word # alt-right (tmux)
+
+bindkey "^[[1;3D" alt-backward-word # alt-left
+bindkey "^[^[[D" alt-backward-word # alt-left (tmux)
+
+bindkey "^[w" alt-backward-delete-word # alt-w
 
 prompt=$'
 %(?..%F{red}=> %?
