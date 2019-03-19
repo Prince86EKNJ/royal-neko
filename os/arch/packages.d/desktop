@@ -1,9 +1,5 @@
-# File Manager
-thunar
-
-# Image Viewer
-# eye-of-gnome
-eog
-
-# System Monitor
-gnome-system-monitor
+eog # Image Viewer (eye of gnome)
+gnome-screenshot # Screenshots
+gnome-system-monitor # System Monitor
+# nautilus # File Manager
+thunar # File Manager
