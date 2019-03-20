@@ -24,7 +24,7 @@ pacman --noconfirm -S git
 # royal-neko setup
 pushd ~fox
   sudo -u fox git clone https://github.com/Prince86EKNJ/royal-neko.git
-  sudo -u fox ./royal-neko/os/arch/user-setup
+  sudo -u fox bash ./royal-neko/os/arch/user-setup
 popd
 
 # get package list from royal-neko
