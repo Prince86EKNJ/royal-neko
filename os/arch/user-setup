@@ -1,4 +1,4 @@
 $HOME/royal-neko/bin/link-neko
 
 # create projects directory
-mkdir /home/fox/projects
+mkdir -p /home/fox/projects
