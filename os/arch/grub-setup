@@ -1,7 +1,7 @@
 #!/bin/bash
 drive='/dev/sda'
 
-if [ "$drive" -z ]; then
+if [ -z "$drive" ]; then
 	echo "Please set \"\$drive\" in this script"
 	exit 1
 fi
