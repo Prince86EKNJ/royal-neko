@@ -5,7 +5,7 @@ neko_config="${NEKO:-$HOME/royal-neko}/config"
 cd "$neko_config"
 files=$()
 
-find . -type f -print0 | while read -d $'\0' file; do
+find . -type f | sort | while read file; do
   base_dir="$(dirname "$file")"
   base_name="$(basename "$file")"
 
@@ -15,7 +15,7 @@ find . -type f -print0 | while read -d $'\0' file; do
 
   mkdir -p $dest_dir
   if [ "$source" != "$dest"  ]; then
-    ln -s "$source" "$dest"
+    ln -s "$source" "$dest_dir/$base_name"
     [ "$?" = "0" ] && echo "Created link from $source to $dest"
   fi
 done
