@@ -10,3 +10,6 @@
     "ctrl-space ctrl-p": "settings-view:install-packages-and-themes"
     "ctrl-space s": "application:open-your-snippets"
     "ctrl-space ctrl-s": "application:open-your-stylesheet"
+
+    "shift-enter": "easy-motion-redux:words_starting"
+    "ctrl-shift-enter": "easy-motion-redux:words"

@@ -1,6 +1,0 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: Error
-# key: e
-# binding: direct-keybinding
-# --
-new Error(`yas-selected-text`$1);$0

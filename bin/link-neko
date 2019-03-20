@@ -1,40 +1,21 @@
 #!/bin/bash
-NEKO="$HOME/royal-neko"
-neko_config="$NEKO/config"
-neko_dot_config="$neko_config/.config"
+config="$HOME/.config"
+neko_config="${NEKO:-$HOME/royal-neko}/config"
 
-###########
-## files ##
-ln -s $neko_config/.gdbinit ~/.gdbinit
-ln -s $neko_config/.gitconfig ~/.gitconfig
-ln -s $neko_config/.profile ~/.profile
-ln -s $neko_config/.tmux.conf ~/.tmux.conf
-# Disabled until we clean it up
-# ln -s $neko_config/.vimrc ~/.vimrc
-ln -s $neko_config/.xbindkeysrc ~/.xbindkeysrc
-ln -s $neko_config/.Xdefaults ~/.Xdefaults
-ln -s $neko_config/.xprofile ~/.xprofile
-ln -s $neko_config/.zshrc ~/.zshrc
+cd "$neko_config"
+files=$()
 
-#################
-## directories ##
-# atom
-mkdir -p ~/.atom
-ln -s $neko_config/atom/init.coffee ~/.atom/init.coffee
-ln -s $neko_config/atom/keymap.cson ~/.atom/keymap.cson
-ln -s $neko_config/atom/snippets.cson ~/.atom/snippets.cson
+find . -type f -print0 | while read -d $'\0' file; do
+  base_dir="$(dirname "$file")"
+  base_name="$(basename "$file")"
 
-mkdir -p ~/.emacs.d/
-ln -s $neko_config/emacs.d/init.el ~/.emacs.d
-ln -s $neko_config/emacs.d/snippets ~/.emacs.d
+  dest_dir="$(realpath "$HOME/$base_dir")"
+  source="$(realpath "$neko_config/$file")"
+  dest="$(realpath "$dest_dir/$base_name")"
 
-## .config
-
-mkdir -p ~/.config/htop
-ln -s $neko_config/htop/htoprc ~/.config/htop/htoprc
-
-mkdir -p ~/.config/i3/
-ln -s $neko_dot_config/i3/config ~/.config/i3
-
-mkdir -p ~/.config/i3status
-ln -s $neko_config/i3status/config ~/.config/i3status/config
+  mkdir -p $dest_dir
+  if [ "$source" != "$dest"  ]; then
+    ln -s "$source" "$dest"
+    [ "$?" = "0" ] && echo "Created link from $source to $dest"
+  fi
+done
