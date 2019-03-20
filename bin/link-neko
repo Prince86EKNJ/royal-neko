@@ -9,9 +9,9 @@ find . -type f | sort | while read file; do
   base_dir="$(dirname "$file")"
   base_name="$(basename "$file")"
 
-  dest_dir="$(realpath "$HOME/$base_dir")"
   source="$(realpath "$neko_config/$file")"
-  dest="$(realpath "$dest_dir/$base_name")"
+  dest_dir="$(realpath -m "$HOME/$base_dir")"
+  dest="$(realpath -m "$dest_dir/$base_name")"
 
   mkdir -p $dest_dir
   if [ "$source" != "$dest"  ]; then

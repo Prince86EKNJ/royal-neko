@@ -37,7 +37,6 @@ echo "$hostname" >/mnt/etc/hostname
 
 # Copy setup file and execute
 wget https://raw.github.com/Prince86EKNJ/royal-neko/master/os/arch/setup -O /mnt/root/setup
-chmod +x /mnt/root/setup
 arch-chroot /mnt /bin/bash /root/setup
 
 # Clean up setup file
@@ -46,4 +45,4 @@ rm /mnt/root/setup
 echo "Done!"
 
 # chroot into installation
-arch-chroot /mnt /bin/bash
+arch-chroot /mnt sudo -u fox sh -c "cd \$HOME; zsh"
