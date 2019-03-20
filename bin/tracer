@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+if ENV["TRACE_ENV"] == "true"
+  ENV.to_a.sort.each do |name, value|
+    puts "#{name}: #{value}"
+  end
+end
+
+unless STDIN.tty?
+  puts "==== STDIN ===="
+  while line = STDIN.gets
+    print line
+  end
+  puts "== END STDIN =="
+end
+
+puts "Args: #{ARGV.inspect}" unless ARGV.empty?
