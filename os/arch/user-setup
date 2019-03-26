@@ -2,3 +2,6 @@ $HOME/royal-neko/bin/link-neko
 
 # create projects directory
 mkdir -p /home/fox/projects
+
+# Default colors for gnome-terminal
+dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors false
