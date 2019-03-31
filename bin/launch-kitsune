@@ -1,0 +1,6 @@
+cd ~/projects/kitsune
+atom ~/.kitsune ~/projects/kitsune ~/projects/kitsune-web
+open-term run-kitsune
+
+cd ~/projects/kitsune-web
+open-term git fetch

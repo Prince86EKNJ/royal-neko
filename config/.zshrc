@@ -47,6 +47,16 @@ for wname in ${alt_widgets}; do
   "
 done
 
+kitsune-pushd () {
+  if [ "$(pwd)" = "$HOME/projects/kitsune" ]; then
+    pushd "$HOME/projects/kitsune-web" > /dev/null
+  else
+    pushd "$HOME/projects/kitsune" > /dev/null
+  fi
+  zle reset-prompt
+}
+zle -N kitsune-pushd
+
 neko-pushd () {
   pushd $NEKO > /dev/null
   zle reset-prompt
@@ -64,12 +74,20 @@ neko-popd () {
 }
 zle -N neko-popd
 
+reload-config () {
+  source ~/.zshrc > /dev/null
+  zle -M "Config reloaded"
+}
+zle -N reload-config
+
 # keymap
 bindkey -e # emacs
 bindkey "^[[A" up-line-or-search
 bindkey "^[[B" down-line-or-search
 bindkey "^N" neko-pushd
 bindkey "^P" neko-popd
+bindkey "^[k" kitsune-pushd
+bindkey "^[r" reload-config
 
 bindkey "^[[3~" delete-char # del key
 
