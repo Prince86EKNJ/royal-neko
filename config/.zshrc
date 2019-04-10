@@ -113,6 +113,7 @@ $ '
 # completion
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu select=1
+zstyle ':completion:*' rehash true
 
 autoload -Uz compinit
 compinit
