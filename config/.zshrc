@@ -1,7 +1,7 @@
 #!/usr/bin/zsh
 if [ -z "$NEKO" ]; then
   export NEKO="$HOME/royal-neko"
-  PATH="$NEKO/bin:$PATH"
+  PATH="$PATH:$NEKO/bin"
 fi
 
 source "$NEKO/shell/commonrc"

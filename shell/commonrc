@@ -1,8 +1,8 @@
 # Include user "bin" dir
-PATH="$HOME/bin:$PATH"
+PATH="$PATH:$HOME/bin"
 
 # Include local binaries
-PATH="./bin:$PATH"
+PATH="$PATH:./bin"
 
 # set DTIME_FORMAT
 export DTIME_FORMAT='%Y-%m-%dT%H:%M:%S'
