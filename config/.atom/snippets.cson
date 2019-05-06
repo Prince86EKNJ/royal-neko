@@ -7,8 +7,8 @@
     prefix: "desc"
     body: """
       describe('$1', () => {
-        it('$2', () => {
-          $3true.should.be.false;
+        it('${2:should work}', () => {
+          ${3:true.should.be.false};
         });
       });
     """
@@ -16,3 +16,11 @@
   "eslint disable":
     prefix: "esl"
     body: "/* eslint-disable */"
+
+  it:
+    prefix: "it"
+    body: """
+    it('${1:should work}', () => {
+      ${2:true.should.be.false};
+    });
+    """
