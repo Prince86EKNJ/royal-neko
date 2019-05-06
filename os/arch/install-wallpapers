@@ -1,0 +1,2 @@
+wget 'https://www.dropbox.com/sh/m3i0igbw0g7v57x/AADfT0JFm-pKBqj5PWn5J8aRa?dl=0' -O /tmp/wallpapers.zip
+unzip -n /tmp/wallpapers.zip -d "$HOME/images/wallpaper"
