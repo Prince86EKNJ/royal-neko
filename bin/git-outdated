@@ -1,0 +1,2 @@
+remoteBranch=${1:-master}
+git log --oneline origin/${remoteBranch}..HEAD

@@ -1,0 +1,1 @@
+find -L ~/projects -name '.git' | sed 's!/\.git$!!'
