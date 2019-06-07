@@ -1,0 +1,1 @@
+find -L ~/projects -name '.git' | xargs -IX bash -c 'cd X/..; echo \`git fetch\` on $(pwd) ...; git fetch'
