@@ -4,9 +4,10 @@ git branch --remote | grep "origin/master" >/dev/null 2>&1
 exitCode="$?"
 
 if [ "$exitCode" = "0" ]; then
-  count=$(git-outdated)
-  echo "$count commits ahead in X"
+  commits=$(git-outdated)
+  files=$(git status --short | wc -l)
+  echo "$commits / $files commits ahead in X"
 else
-  echo "- commits ahead in X"
+  echo "----- commits ahead in X"
 fi
 '
