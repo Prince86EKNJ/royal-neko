@@ -5,5 +5,7 @@
     showInvisibles: true
   "file-icons":
     onChanges: true
+  "tree-view":
+    autoReveal: true
   welcome:
     showOnStartup: false
