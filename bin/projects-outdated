@@ -6,8 +6,9 @@ exitCode="$?"
 if [ "$exitCode" = "0" ]; then
   commits=$(git-outdated)
   files=$(git status --short | wc -l)
-  echo "$commits / $files commits ahead in X"
+  stash=$(git stash list | wc -l)
+  echo "$commits / $files ($stash) commits ahead in X"
 else
-  echo "----- commits ahead in X"
+  echo "--------- commits ahead in X"
 fi
 '
