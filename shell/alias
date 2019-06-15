@@ -48,6 +48,7 @@ alias lbm='load-bookmarks'
 # git
 alias g='git status'
 alias ga='git add'
+alias gam='git commit --amend --no-edit'
 alias gb='git branch'
 alias gbb='git branch -avv'
 alias gc='git commit'
