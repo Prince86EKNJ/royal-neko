@@ -1,7 +1,9 @@
 #!/bin/bash
 url=$(xclip -selection clipboard -out)
 
-mkdir $HOME/videos
-cd $HOME/videos
+newVideoDir="$HOME/videos/new"
+
+mkdir -p "$newVideoDir"
+cd "$newVideoDir"
 
 youtube-dl "$url"

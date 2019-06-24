@@ -88,11 +88,13 @@ bindsym $mod+Shift+s sticky toggle
 bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+# bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+z move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+# bindsym $mod+minus scratchpad show
+bindsym $mod+x scratchpad show
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -221,24 +223,36 @@ bindsym $mod+Shift+k exec keepassx2
 bindsym $mod+Shift+m exec gnome-system-monitor
 bindsym $mod+Shift+v exec rofi -modi "videos:modi-videos" -show videos
 
-bindsym $mod+x move scratchpad
-bindsym $mod+z scratchpad show
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer set Master 5%-
+bindsym XF86AudioMute exec amixer set Master toggle
+
+bindsym $mod+plus exec amixer set Master 5%+
+bindsym $mod+minus exec amixer set Master 5%-
+bindsym $mod+m exec amixer set Master toggle
+
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
+
+bindsym $mod+XF86AudioRaiseVolume exec light -A 5
+bindsym $mod+XF86AudioLowerVolume exec light -U 5
 
 bindsym Print exec gnome-screenshot --area
 bindsym $mod+Print exec gnome-screenshot --window
+
+bindsym $mod+y exec ytdl
+
+# set $left LeftDisplay
+# set $center CenterDisplay
+# set $right RightDisplay
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
         status_command i3status
-        tray_output $center
+        # tray_output $center
 }
 
-for_window [class="^Keepassx2$"] floating enable
-
-# set $left LeftDisplay
-# set $center CenterDisplay
-# set $right RightDisplay
 #
 # workspace 1 output $left
 # workspace 4 output $left
@@ -252,3 +266,6 @@ for_window [class="^Keepassx2$"] floating enable
 # workspace 3 output $right
 # workspace 6 output $right
 # workspace 9 output $right
+
+for_window [class="^Keepassx2$"] floating enable
+for_window [title="QEMU"] floating enable
