@@ -4,6 +4,8 @@ PATH="$PATH:$HOME/bin"
 # Include local binaries
 PATH="$PATH:./bin"
 
+PATH="$PATH:./node_modules/.bin"
+
 # set DTIME_FORMAT
 export DTIME_FORMAT='%Y-%m-%dT%H:%M:%S'
 export FLAT_DATE_FORMAT='%Y%m%d-%H%M%S'
