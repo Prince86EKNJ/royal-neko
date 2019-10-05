@@ -32,6 +32,20 @@ gclone () {
     git clone $(gurl $*)
 }
 
+gnl () {
+  if [ -z "$1" ]; then
+    # Show lines
+    git -c color.status=always status --short | nl
+  else
+    local awkCommand
+    # Select line
+    for line in "$@"; do
+      awkCommand="$awkCommand if(NR == $line) print \$2;"
+    done
+    git status --short | awk '{'$awkCommand' }'
+  fi
+}
+
 java-debug () {
     echo '-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=1044'
 }
