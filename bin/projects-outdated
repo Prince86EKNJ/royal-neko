@@ -1,6 +1,6 @@
 #!/bin/bash
 (
-  echo "files stash commits project"
+  echo "unstaged staged stash commits project"
 
   for project in $(projects-list | sort); do
     cd "$project"
@@ -8,17 +8,19 @@
     exitCode="$?"
 
     if [ "$exitCode" = "0" ]; then
-      files=$(git status --short | wc -l)
+      staged=$(git status --short | grep '^\w' | wc -l)
+      unstaged=$(git status --short | grep '^.\S' | wc -l)
       stash=$(git stash list | wc -l)
       commits=$(git-outdated)
 
-      if [ "$files" = "0" ] && [ "$stash" = "0" ] && [ "$commits" = "0" ]; then
-        echo "- - - $project";
+      if [ "$staged" = "0" ] && [ "$unstaged" = "0" ] && \
+          [ "$stash" = "0" ] && [ "$commits" = "0" ]; then
+        echo "- - - - $project";
       else
-        echo "$files $stash $commits $project"
+        echo "$unstaged $staged $stash $commits $project"
       fi
     else
-      echo "? ? ? $project"
+      echo "? ? ? ? $project"
     fi
   done
 ) | column -t
