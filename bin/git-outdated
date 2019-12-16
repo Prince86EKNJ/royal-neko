@@ -1,2 +1,4 @@
-remoteBranch=${1:-master}
-git log --oneline origin/${remoteBranch}..HEAD | wc -l
+remoteBranch="${1:-master}"
+latestCommit="$(git log --all --oneline | head -n1 | awk '{ print $1 }')"
+
+git log --oneline "origin/${remoteBranch}..${latestCommit}" | wc -l

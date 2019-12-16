@@ -2,7 +2,7 @@
 (
   echo "files stash commits project"
 
-  for project in $(projects-list); do
+  for project in $(projects-list | sort); do
     cd "$project"
     git branch --remote | grep "origin/master" >/dev/null 2>&1
     exitCode="$?"
