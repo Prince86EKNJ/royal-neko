@@ -1,5 +1,5 @@
 # Include user "bin" dir
-PATH="$PATH:$HOME/bin"
+PATH="$HOME/bin:$PATH"
 
 # Include local binaries
 PATH="$PATH:./bin"
