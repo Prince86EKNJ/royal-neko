@@ -1,1 +1,1 @@
-find -L ~/projects -name '.git' | sed 's!/\.git$!!'
+find -L ~/projects -name '.git' -depth 2 | sed 's!/\.git$!!'

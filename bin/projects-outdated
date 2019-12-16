@@ -1,14 +1,19 @@
-projects-list | xargs -IX bash -c '
-cd X
-git branch --remote | grep "origin/master" >/dev/null 2>&1
-exitCode="$?"
+#!/bin/bash
+(
+  echo "commits-past-master files stash project"
 
-if [ "$exitCode" = "0" ]; then
-  commits=$(git-outdated)
-  files=$(git status --short | wc -l)
-  stash=$(git stash list | wc -l)
-  echo "$commits / $files ($stash) commits ahead in X"
-else
-  echo "--------- commits ahead in X"
-fi
-'
+  for project in $(projects-list); do
+    cd "$project"
+    git branch --remote | grep "origin/master" >/dev/null 2>&1
+    exitCode="$?"
+
+    if [ "$exitCode" = "0" ]; then
+      commits=$(git-outdated)
+      files=$(git status --short | wc -l)
+      stash=$(git stash list | wc -l)
+      echo "$commits $files $stash $project"
+    else
+      echo "- - - $project"
+    fi
+  done
+) | column -t
