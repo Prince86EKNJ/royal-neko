@@ -1,6 +1,6 @@
 #!/bin/bash
 (
-  echo "commits-past-master files stash project"
+  echo "files stash commits project"
 
   for project in $(projects-list); do
     cd "$project"
@@ -8,12 +8,17 @@
     exitCode="$?"
 
     if [ "$exitCode" = "0" ]; then
-      commits=$(git-outdated)
       files=$(git status --short | wc -l)
       stash=$(git stash list | wc -l)
-      echo "$commits $files $stash $project"
+      commits=$(git-outdated)
+
+      if [ "$files" = "0" ] && [ "$stash" = "0" ] && [ "$commits" = "0" ]; then
+        echo "- - - $project";
+      else
+        echo "$files $stash $commits $project"
+      fi
     else
-      echo "- - - $project"
+      echo "? ? ? $project"
     fi
   done
 ) | column -t
