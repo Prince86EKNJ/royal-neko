@@ -1,1 +1,1 @@
-projects-list | xargs -IX bash -c 'cd X; echo \`git fetch\` on X ...; git fetch'
+projects-list | xargs -IX bash -c 'cd X; echo \`git fetch --prune\` on X ...; git fetch --prune'
