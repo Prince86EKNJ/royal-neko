@@ -24,3 +24,11 @@
       ${2:true.should.be.false};
     });
     """
+
+  katana:
+    prefix: "katana"
+    body: "@gamedevfox/katana"
+
+  "kitsune-common":
+    prefix: "common"
+    body: "@kitsune-system/common"

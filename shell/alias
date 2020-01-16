@@ -66,6 +66,8 @@ alias gp='git pull'
 alias gpp='git push'
 alias gr='git reset'
 alias grr='git reset --hard HEAD'
+alias grb='git rebase'
+alias gri='git rebase -i'
 alias gss='git status'
 
 # dpkg and apt-*
