@@ -1,5 +1,5 @@
 # Link timezone
-ln -fs /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
+ln -fs /usr/share/zoneinfo/America/Chicago /etc/localtime
 
 # Generate locale
 sed -i '/^#en_US\.UTF-8 UTF-8/ s/#//' /etc/locale.gen

@@ -2,6 +2,7 @@
   core:
     telemetryConsent: "limited"
   editor:
+    preferredLineLength: 120
     showInvisibles: true
   "file-icons":
     onChanges: true

@@ -2,23 +2,24 @@
 
 # Before install:
 # * Create partition (use fdisk or cfdisk)
-#	ex. fdisk /dev/sda
+#     ex. fdisk /dev/sda
 # * Format partition
-#   ex. mkfs.ext4 /dev/sda1
+#     ex. mkfs.ext4 /dev/sda1
 # * Format swap partition
-#   ex. mkswap /dev/sda2
+#     ex. mkswap /dev/sda2
 # * Mount partitions
-#	  ex. mount /dev/sda1 /mnt
-#	    mount /dev/vol-group/home /mnt/home
-#	    mount /dev/sdb5 /mnt/boot
+#     ex. mount /dev/sda1 /mnt
+#         mount /dev/vol-group/home /mnt/home
+#         mount /dev/sdb5 /mnt/boot
 
 # After install
 # * Install grub
-#	ex. vim ./grub-setup
-#	    sudo ./grub-setup
+#     ex. vim ./grub-setup
+#         sudo ./grub-setup
 # * Setup networking
-#	ex. ip link
-#	    sudo systemctl enable dhcpcd@interface
+#     ex. sudo pacman -S dhcpcd
+#         ip link
+#         sudo systemctl enable dhcpcd@interface
 
 read -p "Enter hostname: " hostname
 
@@ -31,7 +32,7 @@ swapon "$swapPart"
 pacman --noconfirm -Sy archlinux-keyring
 
 # Install base
-pacstrap /mnt base base-devel
+pacstrap /mnt base base-devel linux linux-firmware
 genfstab -p /mnt >> /mnt/etc/fstab
 echo "$hostname" >/mnt/etc/hostname
 
