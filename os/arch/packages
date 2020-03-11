@@ -1,4 +1,5 @@
 curl
+dhcpcd
 git
 hexedit
 htop
