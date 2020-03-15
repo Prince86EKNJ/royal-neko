@@ -1,3 +1,6 @@
+echo "NOTE: \`Prince86EKNJ/royal-neko\` is now deprecated"
+echo "Please use \`GameDevFox/neko\` instead"
+
 #!/usr/bin/zsh
 if [ -z "$NEKO" ]; then
   export NEKO="$HOME/royal-neko"
